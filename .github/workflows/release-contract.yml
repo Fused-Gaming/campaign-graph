@@ -1,0 +1,49 @@
+name: release-contract
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python package
+        run: pip install -e '.[dev]'
+
+      - name: Python tests
+        run: python -m pytest
+
+      - name: Python compile check
+        run: python -m compileall -q src
+
+      - name: Version synchronization
+        run: npm run version:check
+
+      - name: Rock-Hardened release evidence
+        run: npx --yes @h4shed/rock-hardened@1.0.0 ci ${{ github.event_name == 'pull_request' && '--require-changed' || '' }}
+
+      - name: Upload release evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-evidence-${{ github.sha }}
+          path: release-artifacts/
+          if-no-files-found: ignore
+          retention-days: 7
