@@ -1,0 +1,21 @@
+{
+  "changelogPath": "CHANGELOG.md",
+  "unreleasedHeading": "Unreleased",
+  "outputDir": "release-artifacts",
+  "siteUrl": "https://github.com/Fused-Gaming/campaign-graph",
+  "brand": {
+    "name": "Campaign Graph",
+    "tagline": "Evidence-first network analysis",
+    "foreground": "#ffffff",
+    "background": "#090b10",
+    "muted": "#a3a3a3"
+  },
+  "render": {
+    "width": 1200,
+    "height": 630,
+    "maxHighlights": 4
+  },
+  "git": {
+    "defaultBaseRef": "origin/main"
+  }
+}
