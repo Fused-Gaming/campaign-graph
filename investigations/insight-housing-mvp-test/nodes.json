@@ -28,5 +28,19 @@
       "service_area": ["Alameda", "Amador", "Contra Costa", "Sacramento", "San Joaquin", "Solano", "San Francisco"],
       "source_note": "EIN, exempt ruling year, and service area per GuideStar/Candid profile, accessed 2026-09-24: https://www.guidestar.org/profile/94-2979073 and https://insighthousing.org/who-we-are/our-new-name/"
     }
+  },
+  {
+    "id": "org-bridge-housing-corporation",
+    "label": "BRIDGE Housing Corporation",
+    "type": "NONPROFIT",
+    "aliases": ["Bridge Housing"],
+    "identifiers": {
+      "ein": "94-2827909"
+    },
+    "metadata": {
+      "location": "San Francisco, CA",
+      "irs_exempt_ruling_year": 1983,
+      "source_note": "Legal name, EIN, city/state, and exemption year per ProPublica Nonprofit Explorer, accessed 2026-09-24: https://projects.propublica.org/nonprofits/organizations/942827909. CA Secretary of State entity number NOT independently verified as of this writing — a search-engine result purporting to show a CA SoS filing for this org could not be confirmed against the live SOS business search and is deliberately omitted. See identity_resolution.json for the open collision/verification item."
+    }
   }
 ]

@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "investigation_slug": "insight-housing-mvp-test",
+  "workstream": "issue-3-entity-resolution",
+  "identifiers_confirmed": [
+    {
+      "node_id": "org-insight-housing",
+      "identifier_type": "ein",
+      "value": "94-2979073",
+      "source": "GuideStar/Candid profile, accessed 2026-09-24: https://www.guidestar.org/profile/94-2979073",
+      "confidence": "high"
+    },
+    {
+      "node_id": "org-bridge-housing-corporation",
+      "identifier_type": "ein",
+      "value": "94-2827909",
+      "source": "ProPublica Nonprofit Explorer, accessed 2026-09-24: https://projects.propublica.org/nonprofits/organizations/942827909",
+      "confidence": "high"
+    },
+    {
+      "node_id": "person-lateefah-simon",
+      "identifier_type": "fec_candidate_id",
+      "value": "H4CA12154",
+      "source": "FEC.gov candidate profile, accessed 2026-09-24: https://www.fec.gov/data/candidate/H4CA12154/",
+      "confidence": "high"
+    }
+  ],
+  "unresolved_identity_items": [
+    {
+      "id": "collision-bridge-housing-ca-sos-entity-number",
+      "node_ids": ["org-bridge-housing-corporation"],
+      "description": "A generic web search returned a candidate California Secretary of State bizfileonline.sos.ca.gov document link alongside BRIDGE Housing Corporation search results, but the link could not be confirmed as belonging to this specific entity (the search results also surfaced several unrelated 'Bridge'-named California nonprofits: The Bridge Fellowship Socal, BRIDGE MISSION USA, Legacy Bridge Foundation). Per repo rule 'never merge on name alone,' no CA SoS entity number is recorded for BRIDGE Housing Corporation until confirmed directly against https://bizfileonline.sos.ca.gov business search.",
+      "status": "UNRESOLVED",
+      "next_steps": [
+        "Query bizfileonline.sos.ca.gov business search directly for 'BRIDGE Housing Corporation' and confirm entity number, registered agent, and filing status",
+        "Cross-check against BRIDGE Housing Corporation's IRS Form 990 Schedule (Part VI) for its principal officer / state of incorporation details",
+        "Do not conflate with same-name entities: The Bridge Fellowship Socal, BRIDGE MISSION USA, Legacy Bridge Foundation"
+      ]
+    },
+    {
+      "id": "collision-insight-housing-ca-sos-entity-number",
+      "node_ids": ["org-insight-housing"],
+      "description": "A web search result asserted a CA Secretary of State entity number (202463514869) and characterized it as an LLC registration for Insight Housing at 2855 Telegraph Avenue, Suite 601, Berkeley, CA. This does not match Insight Housing's known status as a 501(c)(3) nonprofit corporation (EIN 94-2979073, exempt since 1986) and was not independently verified against the live SOS business search or an official Insight Housing filing. Treated as unverified and not recorded as fact.",
+      "status": "UNRESOLVED",
+      "next_steps": [
+        "Query bizfileonline.sos.ca.gov business search directly for 'Insight Housing' and 'Berkeley Food and Housing Project' (former legal name) to confirm the correct nonprofit-corporation entity number",
+        "Confirm 2855 Telegraph Avenue, Suite 601, Berkeley, CA 94705 as a current registered address via an independent primary source (IRS Form 990 Part VII header, or organization's own filings) before adding to the addresses ledger"
+      ]
+    },
+    {
+      "id": "identity-item-bridge-scope-ambiguity",
+      "node_ids": ["org-bridge-housing-corporation"],
+      "description": "Issue #2 refers to 'Bridge' without disambiguating which organization is intended. This package assumes BRIDGE Housing Corporation (San Francisco-based affordable-housing developer, EIN 94-2827909) as the most plausible referent given the housing/Bay Area context shared with Insight Housing, but this assumption itself needs confirmation from whoever opened issue #2 before further edges are built on it.",
+      "status": "UNRESOLVED",
+      "next_steps": [
+        "Confirm with issue #2's author whether 'Bridge' refers to BRIDGE Housing Corporation, or a different Bridge-named entity (e.g. a housing authority program, a different nonprofit, or a for-profit vendor)"
+      ]
+    }
+  ],
+  "roles": [],
+  "addresses": [],
+  "merge_decisions": [
+    {
+      "decision": "no merge",
+      "node_ids": ["org-insight-housing", "org-bridge-housing-corporation"],
+      "rationale": "Distinct EINs, distinct headquarters cities (Berkeley vs. San Francisco), distinct IRS exemption years (1986 vs. 1983). No shared officer, address, or control relationship has been sourced as of this writing. Kept as separate nodes pending further evidence."
+    }
+  ]
+}
