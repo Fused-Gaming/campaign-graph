@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Campaign Contribution",
+  "type": "object",
+  "required": ["donor_name", "recipient", "committee_id", "amount", "date", "transaction_id", "source_url", "source_agency", "confidence"],
+  "properties": {
+    "donor_name": {"type": "string"},
+    "donor_type": {"type": "string"},
+    "donor_employer": {"type": ["string", "null"]},
+    "donor_occupation": {"type": ["string", "null"]},
+    "donor_city": {"type": ["string", "null"]},
+    "donor_state": {"type": ["string", "null"]},
+    "donor_zip": {"type": ["string", "null"]},
+    "recipient": {"type": "string"},
+    "committee_id": {"type": "string"},
+    "amount": {"type": "number"},
+    "date": {"type": "string", "format": "date"},
+    "election_cycle": {"type": ["string", "integer", "null"]},
+    "transaction_id": {"type": "string"},
+    "contribution_type": {"type": ["string", "null"]},
+    "intermediary": {"type": ["string", "null"]},
+    "memo": {"type": ["string", "null"]},
+    "source_url": {"type": "string"},
+    "source_agency": {"type": "string"},
+    "confidence": {"enum": ["A", "B", "C", "D"]}
+  }
+}

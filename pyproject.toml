@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "campaign-graph"
+version = "0.1.0"
+description = "Evidence-first political finance and influence network analysis"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "Campaign Graph contributors"}]
+dependencies = [
+  "fastapi>=0.115",
+  "uvicorn>=0.30",
+  "pandas>=2.2",
+  "networkx>=3.3",
+  "pydantic>=2.8",
+  "typer>=0.12",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.6"]
+
+[project.scripts]
+campaign-graph = "campaign_graph.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100

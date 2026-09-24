@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Campaign Graph</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/cytoscape@3.31.2/dist/cytoscape.min.js"></script>
+</head>
+<body>
+  <header>
+    <div><h1>Campaign Graph</h1><p>Evidence-first political finance + influence network</p></div>
+    <div class="controls">
+      <select id="view">
+        <option value="all">All relationships</option>
+        <option value="money">Money</option>
+        <option value="influence">Influence / access</option>
+        <option value="decision">Government decisions</option>
+      </select>
+      <select id="status">
+        <option value="">All evidence statuses</option>
+        <option>DOCUMENTED</option><option>INFERRED</option><option>UNRESOLVED</option><option>CONTRADICTED</option>
+      </select>
+    </div>
+  </header>
+  <section id="metrics"></section>
+  <main><div id="cy"></div><aside id="details"><h2>Evidence</h2><p>Select an edge to inspect its source, date, amount, evidence summary, confidence, and verification status.</p></aside></main>
+  <footer><strong>Interpretation rule:</strong> proximity, shared addresses, common vendors, and access relationships are research leads, not findings of wrongdoing.</footer>
+  <script src="/static/app.js"></script>
+</body>
+</html>
