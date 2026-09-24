@@ -18,8 +18,8 @@
     "start_date": null,
     "end_date": null,
     "status": "current",
-    "confidence": "medium",
-    "source": "RE:Source (StopWaste.org) vendor directory, accessed 2026-09-24: https://resource.stopwaste.org/vendor/insight-housing-berkeley-2855-telegraph-ave; corroborated by the Berkeley Chamber of Commerce member directory listing for 'Insight Housing (formerly Berkeley Food & Housing Project)'",
-    "notes": "Confidence downgraded to medium: insighthousing.org's own contact page could not be fetched directly (returned empty content), and one secondary aggregator (Charity Navigator) lists a conflicting street number, '2588 Telegraph Avenue,' for the same suite/city/zip. 2855 was treated as more likely correct because it is corroborated by two independent directories and matches the number most commonly cited across search results, but this has NOT been confirmed against the organization's own filing or website. Do not treat as fully resolved."
+    "confidence": "medium-high",
+    "source": "Three independently fetched directory sources agree: RE:Source/StopWaste.org vendor page (https://resource.stopwaste.org/vendor/insight-housing-berkeley-2855-telegraph-ave), Berkeley Chamber of Commerce member directory (https://web.berkeleychamber.com/Local-Services/Insight-Housing-(formerly-Berkeley-Food-Housing-Project)-1190, fetched directly 2026-09-24, gives '2855 Telegraph Ave Berkeley, CA 94705' and phone 510-649-4965), and web search results surfacing the same number from findhelp.org/1degree.org listings.",
+    "notes": "Raised from medium to medium-high after independently fetching the Berkeley Chamber listing directly (not just via search synthesis) and finding three agreeing sources. Still not upgraded to 'high' because insighthousing.org's own site remains unfetchable in this environment (returns empty content) and one secondary aggregator, Charity Navigator, lists a conflicting '2588 Telegraph Avenue' for the same suite/city/zip — treat 2588 as likely a transposition error, not a second real address, but do not fully close this until confirmed against the org's own site or an IRS filing header."
   }
 ]

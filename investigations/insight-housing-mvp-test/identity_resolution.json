@@ -34,7 +34,8 @@
       "next_steps": [
         "Query bizfileonline.sos.ca.gov business search directly for 'BRIDGE Housing Corporation' and confirm entity number, registered agent, and filing status",
         "Cross-check against BRIDGE Housing Corporation's IRS Form 990 Schedule (Part VI) for its principal officer / state of incorporation details",
-        "Do not conflate with same-name entities: The Bridge Fellowship Socal, BRIDGE MISSION USA, Legacy Bridge Foundation"
+        "Do not conflate with same-name entities: The Bridge Fellowship Socal, BRIDGE MISSION USA, Legacy Bridge Foundation",
+        "OpenCorporates attempted 2026-09-24 as an alternative registry lookup: opencorporates.com returns HTTP 403 'Forbidden' (bot-mitigation challenge, confirmed via both WebFetch and a raw curl request with a browser user-agent) to this environment for every page, including company detail pages and the v0.4 API (401 Unauthorized without an API key). A WebSearch result surfaced a candidate URL, https://opencorporates.com/companies/us_ca/C3014935, whose title suggested it might be BRIDGE Housing Corporation, but its content was NEVER actually retrieved/verified — do not record C3014935 as BRIDGE Housing Corporation's CA entity number without independently confirming that page's contents through a working access path (a human with a browser, or an OpenCorporates API key)."
       ]
     },
     {
