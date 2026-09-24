@@ -1,0 +1,13 @@
+[
+  {
+    "id": "addr-bridge-housing-hq-350-california",
+    "node_id": "org-bridge-housing-corporation",
+    "address": "350 California St, Suite 1600, San Francisco, CA 94104",
+    "capacity": "headquarters",
+    "start_date": null,
+    "end_date": null,
+    "status": "current",
+    "source": "BRIDGE Housing official contact page, accessed 2026-09-24: https://bridgehousing.com/contact/",
+    "notes": "No start date given on the source page; treat as 'current as of retrieval date' only, not as a historical range."
+  }
+]

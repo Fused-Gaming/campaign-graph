@@ -44,7 +44,8 @@
       "status": "UNRESOLVED",
       "next_steps": [
         "Query bizfileonline.sos.ca.gov business search directly for 'Insight Housing' and 'Berkeley Food and Housing Project' (former legal name) to confirm the correct nonprofit-corporation entity number",
-        "Confirm 2855 Telegraph Avenue, Suite 601, Berkeley, CA 94705 as a current registered address via an independent primary source (IRS Form 990 Part VII header, or organization's own filings) before adding to the addresses ledger"
+        "Confirm 2855 Telegraph Avenue, Suite 601, Berkeley, CA 94705 as a current registered address via an independent primary source (IRS Form 990 Part VII header, or organization's own filings) before adding to the addresses ledger",
+        "insighthousing.org pages (contact, who-we-are, homepage) returned empty content on WebFetch as of 2026-09-24 (likely JS-rendered/bot-blocked) — leadership and address for Insight Housing remain unverified from the org's own site; retry with a different fetch method or use the IRS Form 990 Part VII / GuideStar full filing instead"
       ]
     },
     {
