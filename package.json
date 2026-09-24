@@ -1,0 +1,20 @@
+{
+  "name": "campaign-graph-tooling",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Repository tooling and release evidence gate for Campaign Graph",
+  "license": "SEE LICENSE IN LICENSE",
+  "engines": {
+    "node": ">=20",
+    "npm": ">=9"
+  },
+  "scripts": {
+    "version:check": "node scripts/check-version.mjs",
+    "test:python": "python -m pytest",
+    "compile:python": "python -m compileall -q src",
+    "release:validate": "npx --yes @h4shed/rock-hardened@1.0.0 validate",
+    "release:evidence": "npx --yes @h4shed/rock-hardened@1.0.0 ci",
+    "release:verify": "npx --yes @h4shed/rock-hardened@1.0.0 verify",
+    "gate": "npm run version:check && npm run release:evidence"
+  }
+}

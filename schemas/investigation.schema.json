@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://campaign-graph.dev/schemas/investigation.schema.json",
+  "title": "Campaign Graph Investigation Package",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "slug", "title", "description", "status", "hypotheses"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "slug": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "title": {"type": "string", "minLength": 1},
+    "description": {"type": "string", "minLength": 1},
+    "status": {"enum": ["planned", "active", "paused", "complete", "archived"]},
+    "jurisdictions": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "date_range": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "start": {"type": ["string", "null"], "format": "date"},
+        "end": {"type": ["string", "null"], "format": "date"}
+      }
+    },
+    "hypotheses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "statement", "status"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "statement": {"type": "string", "minLength": 1},
+          "status": {"enum": ["SUPPORTED", "PARTIALLY_SUPPORTED", "NOT_SUPPORTED", "INSUFFICIENT_EVIDENCE"]},
+          "required_elements": {"type": "array", "items": {"type": "string"}},
+          "supporting_edge_ids": {"type": "array", "items": {"type": "string"}},
+          "contradicting_edge_ids": {"type": "array", "items": {"type": "string"}},
+          "alternative_explanations": {"type": "array", "items": {"type": "string"}},
+          "missing_records": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "entry_nodes": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "tags": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "maintainers": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
+  }
+}
