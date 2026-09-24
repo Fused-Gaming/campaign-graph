@@ -95,6 +95,53 @@
         "Does any contact or advocacy by the entity toward her office implicate House rules on official act solicitation?"
       ],
       "source": "https://ethics.house.gov/ (accessed 2026-09-24) — general framework identification only; specific rule text should be pulled from ethics.house.gov before citing in a finished finding"
+    },
+    {
+      "id": "rule-ca-gov-code-1090-financial-interest-in-contracts",
+      "jurisdiction": "US-CA",
+      "title": "California Government Code § 1090 — public officials' financial interest in contracts they make",
+      "citation": "Cal. Gov. Code §§ 1090–1097",
+      "issuing_authority": "Enforced via California courts (criminal prosecution, civil actions to void contracts) and the CA Attorney General/local district attorneys; distinct from and can overlap with FPPC's Political Reform Act disqualification rules (§§ 87100/87103) covering the same underlying facts.",
+      "applies_to": "Any CA state, county, district, judicial district, or city officer/employee (and certain consultants/independent contractors performing officer-like public-contracting functions) who is financially interested in a contract they make in their official capacity or that is made by a body/board they sit on. Would apply to, e.g., an Oakland or Berkeley official/board member with an undisclosed financial interest in a grant or contract awarded to Insight Housing or BRIDGE Housing Corporation. Does not apply to Rep. Simon in her federal capacity.",
+      "effective_dates_note": "No bad intent/knowledge of illegality required for a violation under case law; the statute and its exceptions (§§ 1091, 1091.5, listing non-interests and remote interests) should be checked as codified on the date the contract was made.",
+      "elements_relevant_to_hypotheses": [
+        "Did a CA public official 'make' (participate in negotiating, advising on, or voting to approve) a specific contract or grant?",
+        "Did that official have a financial interest in the contract, directly or through a related person/entity?",
+        "Does an exception under § 1091 (noninterest) or § 1091.5 (remote interest, with disclosure/abstention) apply?",
+        "Is the interest that of the official personally, or of a family member/business associate, and does § 1090's imputation case law reach that relationship?"
+      ],
+      "source": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1090.&lawCode=GOV (verify directly before citing; this entry was drafted from secondary summaries — see note below) — secondary summaries reviewed 2026-09-24: https://legalclarity.org/understanding-california-government-code-1090-scope-penalties/ and an Oakland City Attorney public legal opinion applying §1090 alongside the Political Reform Act: https://oaklandcityattorney.org/wp-content/oca-reports/public-legal-opinions-and-public-reports/2022-07-04-Public-Legal-Opinion---Conflicts-of-Interest-Under-the-Political-Reform-Act-and-California-Government-Code-Section-1090.pdf"
+    },
+    {
+      "id": "rule-federal-grants-uniform-guidance",
+      "jurisdiction": "US-Federal",
+      "title": "Uniform Guidance for Federal Awards — procurement standards and conflict-of-interest requirements for grant/subgrant recipients",
+      "citation": "2 C.F.R. Part 200; conflict-of-interest standard at 2 C.F.R. § 200.112; procurement standards at 2 C.F.R. §§ 200.317–200.327",
+      "issuing_authority": "Office of Management and Budget (OMB); enforced by the specific federal awarding agency (e.g. HUD, HHS) and pass-through entities (state/local governments distributing federal funds)",
+      "applies_to": "Insight Housing or BRIDGE Housing Corporation as a direct federal grant recipient or as a subrecipient of federal funds passed through a state or local agency (e.g. HUD Continuum of Care, CDBG, or similar homelessness/housing funding), and any official/employee/board member of the recipient organization involved in selecting subrecipients, vendors, or contracts funded by the award.",
+      "effective_dates_note": "2 CFR Part 200 has been revised multiple times (most recently effective dates vary by subpart); confirm the version in force on the date of the specific award/procurement action via eCFR's dated view, not the current version by default.",
+      "elements_relevant_to_hypotheses": [
+        "Did the entity receive a federal award or subaward, from which agency, in what amount, and under what award/grant number (source: USAspending.gov, or the pass-through agency's award records)?",
+        "Did an employee, officer, agent, or board member with a real or apparent conflict of interest participate in selecting a subrecipient, vendor, or contract funded by that award, in violation of § 200.112?",
+        "For procurements above the micro-purchase threshold, was the required level of competition (price quotations, or sealed bids/proposals) documented?",
+        "Does the recipient's own written conflict-of-interest policy (required to be disclosed to the awarding agency under § 200.112) cover the relationship at issue?"
+      ],
+      "source": "https://www.ecfr.gov/current/title-2/subtitle-A/chapter-II/part-200 (accessed 2026-09-24)"
+    },
+    {
+      "id": "rule-ca-nonprofit-integrity-act",
+      "jurisdiction": "US-CA",
+      "title": "California Nonprofit Integrity Act of 2004 — charitable-trust registration, reporting, and governance",
+      "citation": "Cal. Gov. Code §§ 12580–12599.7 (Supervision of Trustees and Fundraisers for Charitable Purposes Act, as amended by the Nonprofit Integrity Act of 2004)",
+      "issuing_authority": "California Attorney General, Registry of Charitable Trusts",
+      "applies_to": "Insight Housing and BRIDGE Housing Corporation as California-operating charitable nonprofit corporations — governs registration status, annual reporting (Form RRF-1), audited-financial-statement requirements for orgs with $2M+ gross revenue (both orgs' revenue figures in identity_resolution.json/nodes.json exceed this threshold per their ProPublica filings), and board/executive-compensation governance standards.",
+      "effective_dates_note": "Confirm each org's registration status and most recent RRF-1 filing directly via the AG's Registry of Charitable Trusts search tool rather than assuming good standing from the org's tax-exempt status alone (EIN/501(c)(3) status is an IRS matter, separate from CA charitable-trust registration).",
+      "elements_relevant_to_hypotheses": [
+        "Is the org currently registered and in good standing with the CA Registry of Charitable Trusts (distinct from, and in addition to, its IRS 501(c)(3) status)?",
+        "Has it filed its required annual RRF-1 and, given revenue over $2M, an audited financial statement?",
+        "Does its board governance (e.g. compensation-setting process for executives) meet the Act's requirements (Gov. Code § 12586(g)-(h))?"
+      ],
+      "source": "https://oag.ca.gov/charities/laws (accessed 2026-09-24); https://oag.ca.gov/sites/all/files/agweb/pdfs/charities/publications/nonprofit_integrity_act_nov04.pdf"
     }
   ],
   "fact_to_element_matrix": [],
