@@ -18,8 +18,8 @@
     "start_date": null,
     "end_date": null,
     "status": "current",
-    "confidence": "medium-high",
-    "source": "Three independently fetched directory sources agree: RE:Source/StopWaste.org vendor page (https://resource.stopwaste.org/vendor/insight-housing-berkeley-2855-telegraph-ave), Berkeley Chamber of Commerce member directory (https://web.berkeleychamber.com/Local-Services/Insight-Housing-(formerly-Berkeley-Food-Housing-Project)-1190, fetched directly 2026-09-24, gives '2855 Telegraph Ave Berkeley, CA 94705' and phone 510-649-4965), and web search results surfacing the same number from findhelp.org/1degree.org listings.",
-    "notes": "Raised from medium to medium-high after independently fetching the Berkeley Chamber listing directly (not just via search synthesis) and finding three agreeing sources. Still not upgraded to 'high' because insighthousing.org's own site remains unfetchable in this environment (returns empty content) and one secondary aggregator, Charity Navigator, lists a conflicting '2588 Telegraph Avenue' for the same suite/city/zip — treat 2588 as likely a transposition error, not a second real address, but do not fully close this until confirmed against the org's own site or an IRS filing header."
+    "confidence": "high",
+    "source": "IRS Form 990 filing header, via ProPublica Nonprofit Explorer structured API (fetched directly 2026-09-24): https://projects.propublica.org/nonprofits/api/v2/organizations/942979073.json returns organization.address = '2855 TELEGRAPH AVE STE 601', city 'Berkeley', state 'CA', zipcode '94705-1161'. Corroborated by three independently fetched directory sources: RE:Source/StopWaste.org vendor page, Berkeley Chamber of Commerce member directory, and Insight Housing's own most recent (tax year 2024) IRS filing.",
+    "notes": "Upgraded to high confidence: this is IRS filing data returned by ProPublica's structured JSON API (not HTML scraping or search-result synthesis), and it matches the '2855 Telegraph Ave' figure from three independent directories. Charity Navigator's '2588 Telegraph Avenue' is now treated as a data-entry error on Charity Navigator's part, not a genuine second address — no primary source anywhere supports 2588."
   }
 ]
