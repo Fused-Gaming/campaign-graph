@@ -1,0 +1,19 @@
+[
+  {
+    "id": "lead-simon-insight-housing-geography",
+    "node_ids": ["person-lateefah-simon", "org-insight-housing"],
+    "description": "Insight Housing (Berkeley, EIN 94-2979073) operates in the Bay Area, overlapping Rep. Lateefah Simon's CA-12 district. No documented grant, contract, endorsement, meeting, or vote record connecting the two entities was found via initial web search (2026-09-24). This lead exists to record the checked-and-not-found state so it isn't re-litigated from scratch, and so it can be promoted to a real edge if a primary source surfaces.",
+    "checked_sources": [
+      "FEC.gov candidate profile (H4CA12154)",
+      "OpenSecrets.org member summary",
+      "GuideStar/Candid profile (EIN 94-2979073)",
+      "General web search for Insight Housing + Simon + HUD/earmark funding"
+    ],
+    "next_steps": [
+      "Search USAspending.gov for federal awards to EIN 94-2979073",
+      "Check congressional appropriations/community-project-funding request lists for CA-12",
+      "Check City of Berkeley Housing Trust Fund and CDBG award records for Insight Housing"
+    ],
+    "status": "UNRESOLVED"
+  }
+]

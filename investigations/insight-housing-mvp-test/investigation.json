@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "slug": "insight-housing-mvp-test",
+  "title": "Insight Housing / Lateefah Simon — MVP Pipeline Test",
+  "description": "Engineering test package for the campaign-graph MVP pipeline. Uses two real, independently identifiable entities that share a Bay Area / CA-12 geography (Insight Housing, a Berkeley nonprofit, and Rep. Lateefah Simon) to exercise entity resolution, evidence-status handling, and the unresolved-lead lifecycle end to end. This package is a pipeline/schema validation exercise, not a finished or asserted investigation: no documented transactional or decisional relationship between the two entities has been established as of package creation.",
+  "status": "active",
+  "jurisdictions": ["US-CA"],
+  "date_range": {
+    "start": null,
+    "end": null
+  },
+  "hypotheses": [
+    {
+      "id": "h1-shared-geography-no-documented-link",
+      "statement": "Insight Housing and Rep. Lateefah Simon operate in overlapping Bay Area / CA-12 geography, but no documented transactional, contractual, or decisional relationship (grant, contract, endorsement, vote) between them has been found.",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "required_elements": [
+        "A specific named relationship type (grant, contract, endorsement, vote, meeting) between the two entities",
+        "A primary-source record documenting that specific relationship (award record, FEC filing, vote record, official statement)"
+      ],
+      "supporting_edge_ids": [],
+      "contradicting_edge_ids": [],
+      "alternative_explanations": [
+        "Shared geography alone is expected for any Bay Area housing nonprofit and its congressional representative and does not imply any relationship.",
+        "A relationship may exist in records not yet checked (e.g. USAspending.gov award data, local Berkeley grant records, congressional appropriations requests) and this package should be updated if primary sources are located."
+      ],
+      "missing_records": [
+        "USAspending.gov federal award search for Insight Housing (EIN 94-2979073)",
+        "Congressional appropriations/earmark request records for CA-12",
+        "City of Berkeley grant and contract records naming Insight Housing"
+      ]
+    }
+  ],
+  "entry_nodes": ["person-lateefah-simon", "org-insight-housing"],
+  "tags": ["mvp-test", "pipeline-validation", "housing", "ca-12"],
+  "maintainers": []
+}
