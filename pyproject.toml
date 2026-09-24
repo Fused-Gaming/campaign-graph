@@ -8,8 +8,8 @@ version = "0.1.0"
 description = "Evidence-first political finance and influence network analysis"
 readme = "README.md"
 requires-python = ">=3.11"
-license = {text = "MIT"}
-authors = [{name = "Campaign Graph contributors"}]
+license = {text = "PolyForm-Noncommercial-1.0.0"}
+authors = [{name = "Fused Gaming, LLC"}]
 dependencies = [
   "fastapi>=0.115",
   "uvicorn>=0.30",
