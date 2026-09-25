@@ -7,12 +7,19 @@
       "FEC.gov candidate profile (H4CA12154)",
       "OpenSecrets.org member summary",
       "GuideStar/Candid profile (EIN 94-2979073)",
-      "General web search for Insight Housing + Simon + HUD/earmark funding"
+      "General web search for Insight Housing + Simon + HUD/earmark funding",
+      "USAspending.gov API (api.usaspending.gov/api/v2/search/spending_by_award/), fetched directly 2026-09-25 for grant/cooperative-agreement awards to INSIGHT HOUSING -- 14 federal awards found (VA, DOL, HUD; see grants.json), none showing any congressional decision-maker or CA-12 earmark/appropriations connection. One award (grant-insight-housing-hud-ca2234l9t022300, start 2025-10-01) postdates Rep. Simon taking office but HUD Continuum of Care awards are agency-scored, not individual-member decisions -- this is noted, not treated as a relationship."
+    ],
+    "resolved_items": [
+      {
+        "date": "2026-09-25",
+        "description": "USAspending.gov federal award search for Insight Housing completed. Found substantial federal funding (~$50M across 14 awards, VA/DOL/HUD) but all through standard competitive/formula grant channels with no documented congressional decision-maker or Simon-specific involvement. This resolves the USAspending.gov next-step item without establishing the hypothesized relationship -- see grants.json."
+      }
     ],
     "next_steps": [
-      "Search USAspending.gov for federal awards to EIN 94-2979073",
       "Check congressional appropriations/community-project-funding request lists for CA-12",
-      "Check City of Berkeley Housing Trust Fund and CDBG award records for Insight Housing"
+      "Check City of Berkeley Housing Trust Fund and CDBG award records for Insight Housing",
+      "Pull award-detail (not just summary) records for the one award postdating Simon's tenure (CA2234L9T022300) to confirm the HUD CoC scoring process and rule out any member-specific role"
     ],
     "status": "UNRESOLVED"
   },

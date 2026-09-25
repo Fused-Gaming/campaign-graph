@@ -1,0 +1,178 @@
+[
+  {
+    "id": "grant-insight-housing-va-23-ca-437-24",
+    "recipient_node_id": "org-insight-housing",
+    "awarding_agency": "Department of Veterans Affairs",
+    "award_id": "23-CA-437-24",
+    "award_amount_usd": 17485443.0,
+    "start_date": null,
+    "end_date": "2025-09-30",
+    "source": "USAspending.gov API (api.usaspending.gov/api/v2/search/spending_by_award/), fetched directly 2026-09-25, recipient_search_text=INSIGHT HOUSING, award_type_codes=02/03/04/05 (grants/cooperative agreements)",
+    "notes": "Likely a VA Grant and Per Diem (GPD) or Supportive Services for Veteran Families (SSVF) program award given the awarding agency and Insight Housing's veteran-services programs, but the specific VA program has not been confirmed from award-detail data (only summary fields were pulled). No decision-maker, congressional office, or CA-12 connection is asserted or implied by this record -- it documents only that a federal award exists between VA and this recipient."
+  },
+  {
+    "id": "grant-insight-housing-va-20-ca-437-21",
+    "recipient_node_id": "org-insight-housing",
+    "awarding_agency": "Department of Veterans Affairs",
+    "award_id": "20-CA-437-21",
+    "award_amount_usd": 8351725.27,
+    "start_date": "2020-10-01",
+    "end_date": null,
+    "source": "USAspending.gov API, fetched directly 2026-09-25 (same query as above)"
+  },
+  {
+    "id": "grant-insight-housing-va-23-ca-437-23",
+    "recipient_node_id": "org-insight-housing",
+    "awarding_agency": "Department of Veterans Affairs",
+    "award_id": "23-CA-437-23",
+    "award_amount_usd": 7620649.0,
+    "start_date": null,
+    "end_date": null,
+    "source": "USAspending.gov API, fetched directly 2026-09-25 (same query as above)"
+  },
+  {
+    "id": "grant-insight-housing-va-20-ca-437-c3",
+    "recipient_node_id": "org-insight-housing",
+    "awarding_agency": "Department of Veterans Affairs",
+    "award_id": "20-CA-437-C3",
+    "award_amount_usd": 5016717.22,
+    "start_date": "2020-04-01",
+    "end_date": null,
+    "source": "USAspending.gov API, fetched directly 2026-09-25 (same query as above)"
+  },
+  {
+    "id": "grant-insight-housing-va-20-ca-437-22",
+    "recipient_node_id": "org-insight-housing",
+    "awarding_agency": "Department of Veterans Affairs",
+    "award_id": "20-CA-437-22",
+    "award_amount_usd": 3397536.0,
+    "start_date": null,
+    "end_date": null,
+    "source": "USAspending.gov API, fetched directly 2026-09-25 (same query as above)"
+  },
+  {
+    "id": "grant-insight-housing-va-2023-ca-437-lt",
+    "recipient_node_id": "org-insight-housing",
+    "awarding_agency": "Department of Veterans Affairs",
+    "award_id": "2023-CA-437-LT",
+    "award_amount_usd": 3310324.5,
+    "start_date": null,
+    "end_date": null,
+    "source": "USAspending.gov API, fetched directly 2026-09-25 (same query as above)"
+  },
+  {
+    "id": "grant-insight-housing-dol-23560hv000020",
+    "recipient_node_id": "org-insight-housing",
+    "awarding_agency": "Department of Labor",
+    "award_id": "23560HV000020",
+    "award_amount_usd": 1500000.0,
+    "start_date": "2023-07-01",
+    "end_date": "2026-06-30",
+    "source": "USAspending.gov API, fetched directly 2026-09-25 (same query as above)",
+    "notes": "Award ID prefix 'HV' and DOL as awarding agency strongly suggest this is a Homeless Veterans' Reintegration Program (HVRP) grant, but the specific program name is not confirmed from summary fields alone."
+  },
+  {
+    "id": "grant-insight-housing-dol-hv35278206056",
+    "recipient_node_id": "org-insight-housing",
+    "awarding_agency": "Department of Labor",
+    "award_id": "HV35278206056",
+    "award_amount_usd": 1416159.4,
+    "start_date": "2020-07-01",
+    "end_date": "2023-06-30",
+    "source": "USAspending.gov API, fetched directly 2026-09-25 (same query as above)"
+  },
+  {
+    "id": "grant-insight-housing-va-bfhp073-1525",
+    "recipient_node_id": "org-insight-housing",
+    "awarding_agency": "Department of Veterans Affairs",
+    "award_id": "BFHP073-1525-612-PD-21",
+    "award_amount_usd": 1065827.88,
+    "start_date": null,
+    "end_date": null,
+    "source": "USAspending.gov API, fetched directly 2026-09-25 (same query as above)",
+    "notes": "Award ID prefix 'BFHP' matches Insight Housing's former legal name, Berkeley Food and Housing Project, and 'PD' suggests a VA Per Diem grant."
+  },
+  {
+    "id": "grant-insight-housing-hud-ca2234l9t022401",
+    "recipient_node_id": "org-insight-housing",
+    "awarding_agency": "Department of Housing and Urban Development",
+    "award_id": "CA2234L9T022401",
+    "award_amount_usd": 792251.0,
+    "start_date": null,
+    "end_date": null,
+    "source": "USAspending.gov API, fetched directly 2026-09-25 (same query as above)",
+    "notes": "Award ID format matches a HUD Continuum of Care (CoC) program grant for California."
+  },
+  {
+    "id": "grant-insight-housing-hud-ca2234l9t022300",
+    "recipient_node_id": "org-insight-housing",
+    "awarding_agency": "Department of Housing and Urban Development",
+    "award_id": "CA2234L9T022300",
+    "award_amount_usd": 735304.0,
+    "start_date": "2025-10-01",
+    "end_date": "2026-09-30",
+    "source": "USAspending.gov API, fetched directly 2026-09-25 (same query as above)",
+    "notes": "Start date 2025-10-01 is AFTER Rep. Simon took office (2025-01-03) -- this is the one award in this list where a timing overlap with her tenure exists. This does NOT establish any decisional involvement by her; HUD CoC awards are competitively scored by HUD staff via the CoC Program NOFO process, not by individual House members. Flagged here only so it is not missed, not as evidence of a relationship."
+  },
+  {
+    "id": "grant-insight-housing-va-bfhp073-3918",
+    "recipient_node_id": "org-insight-housing",
+    "awarding_agency": "Department of Veterans Affairs",
+    "award_id": "BFHP073-3918-662-PD-24",
+    "award_amount_usd": 682710.04,
+    "start_date": null,
+    "end_date": "2025-09-30",
+    "source": "USAspending.gov API, fetched directly 2026-09-25 (same query as above)"
+  },
+  {
+    "id": "grant-insight-housing-va-20-ca-437-hl",
+    "recipient_node_id": "org-insight-housing",
+    "awarding_agency": "Department of Veterans Affairs",
+    "award_id": "20-CA-437-HL",
+    "award_amount_usd": 456867.0,
+    "start_date": null,
+    "end_date": null,
+    "source": "USAspending.gov API, fetched directly 2026-09-25 (same query as above)"
+  },
+  {
+    "id": "grant-insight-housing-dol-hv32064186056",
+    "recipient_node_id": "org-insight-housing",
+    "awarding_agency": "Department of Labor",
+    "award_id": "HV32064186056",
+    "award_amount_usd": 214996.85,
+    "start_date": "2018-07-01",
+    "end_date": "2019-06-30",
+    "source": "USAspending.gov API, fetched directly 2026-09-25 (same query as above)"
+  },
+  {
+    "id": "grant-insight-housing-dol-hv30869176056",
+    "recipient_node_id": "org-insight-housing",
+    "awarding_agency": "Department of Labor",
+    "award_id": "HV30869176056",
+    "award_amount_usd": 191650.2,
+    "start_date": "2017-07-01",
+    "end_date": "2018-06-30",
+    "source": "USAspending.gov API, fetched directly 2026-09-25 (same query as above)"
+  },
+  {
+    "id": "grant-bridge-housing-treasury-211cm058776",
+    "recipient_node_id": "org-bridge-housing-corporation",
+    "awarding_agency": "Department of the Treasury",
+    "award_id": "211CM058776-G",
+    "award_amount_usd": 6500000.0,
+    "start_date": "2022-06-22",
+    "end_date": "2025-12-31",
+    "source": "USAspending.gov API, fetched directly 2026-09-25, recipient_search_text=BRIDGE HOUSING CORPORATION, award_type_codes=02/03/04/05",
+    "notes": "Award ID pattern (CM0... prefix, Treasury awarding agency) is consistent with a CDFI Fund Capital Magnet Fund award, but the specific Treasury program has not been confirmed from summary fields alone."
+  },
+  {
+    "id": "grant-bridge-housing-treasury-181cm050421",
+    "recipient_node_id": "org-bridge-housing-corporation",
+    "awarding_agency": "Department of the Treasury",
+    "award_id": "181CM050421-G",
+    "award_amount_usd": 6226168.0,
+    "start_date": "2019-02-13",
+    "end_date": null,
+    "source": "USAspending.gov API, fetched directly 2026-09-25 (same query as above)"
+  }
+]

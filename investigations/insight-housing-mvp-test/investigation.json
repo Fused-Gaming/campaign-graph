@@ -25,10 +25,25 @@
         "A relationship may exist in records not yet checked (e.g. USAspending.gov award data, local Berkeley grant records, congressional appropriations requests) and this package should be updated if primary sources are located."
       ],
       "missing_records": [
-        "USAspending.gov federal award search for Insight Housing (EIN 94-2979073)",
         "Congressional appropriations/earmark request records for CA-12",
-        "City of Berkeley grant and contract records naming Insight Housing"
+        "City of Berkeley grant and contract records naming Insight Housing",
+        "Award-detail records (not just summary fields) for the one federal award to Insight Housing postdating Rep. Simon's tenure, to confirm no member-specific role in the award decision"
       ]
+    },
+    {
+      "id": "h3-insight-bridge-federal-funding-no-congressional-link",
+      "statement": "Both Insight Housing and BRIDGE Housing Corporation receive substantial federal grant funding (VA, DOL, HUD, and Treasury respectively), but no documented congressional decision, earmark, or member-specific involvement by Rep. Simon (or any other official) in any of these awards has been found.",
+      "status": "NOT_SUPPORTED",
+      "required_elements": [
+        "A specific documented congressional action (appropriations request, earmark, letter of support with material effect) tied to one of these awards",
+        "A primary-source record showing that action, dated and attributable to a specific official"
+      ],
+      "supporting_edge_ids": [],
+      "contradicting_edge_ids": [],
+      "alternative_explanations": [
+        "These are standard competitive/formula federal grant programs (VA Grant and Per Diem, VA Supportive Services for Veteran Families, DOL Homeless Veterans' Reintegration Program, HUD Continuum of Care, Treasury CDFI Fund) scored by agency staff, not by individual members of Congress -- receiving such funding is the ordinary, expected result of a housing/homeless-services nonprofit applying to well-established programs, not evidence of any relationship with a specific official."
+      ],
+      "missing_records": []
     },
     {
       "id": "h2-no-documented-bridge-insight-campaign-contributions",
