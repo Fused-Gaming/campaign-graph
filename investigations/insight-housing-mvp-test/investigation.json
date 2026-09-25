@@ -29,6 +29,27 @@
         "Congressional appropriations/earmark request records for CA-12",
         "City of Berkeley grant and contract records naming Insight Housing"
       ]
+    },
+    {
+      "id": "h2-no-documented-bridge-insight-campaign-contributions",
+      "statement": "No campaign contribution to Rep. Lateefah Simon's principal campaign committee (LATEEFAH FOR CONGRESS, FEC committee ID C00834291) from Insight Housing, BRIDGE Housing Corporation, their known officers, or an affiliated PAC has been found in FEC itemized filing data.",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "required_elements": [
+        "An itemized FEC Schedule A contribution record naming the contributor and employer/occupation as one of these entities or their officers",
+        "OR a state/local campaign-finance disclosure record if the relevant recipient is a CA state or local official rather than Rep. Simon"
+      ],
+      "supporting_edge_ids": [],
+      "contradicting_edge_ids": [],
+      "alternative_explanations": [
+        "No contribution may exist at all -- absence of a relationship is a legitimate finding, not a gap to be explained away.",
+        "A contribution may exist under a different employer-name spelling, an unlisted officer/board member, or an adjacent committee (leadership PAC, joint fundraising committee) not yet queried.",
+        "FEC itemized data lags actual contributions, so a recent contribution to an active, ongoing campaign committee might not yet be indexed."
+      ],
+      "missing_records": [
+        "Contributor-name queries for BRIDGE Housing/Insight Housing board members and officers beyond the two BRIDGE Housing officers currently sourced in roles.json",
+        "Adjacent committee search (leadership PAC, joint fundraising committee) beyond the principal campaign committee",
+        "CA state/local campaign-finance disclosure search (Cal-Access or successor system) for any CA state or local official connected to these entities"
+      ]
     }
   ],
   "entry_nodes": ["person-lateefah-simon", "org-insight-housing"],

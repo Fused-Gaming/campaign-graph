@@ -15,5 +15,27 @@
       "Check City of Berkeley Housing Trust Fund and CDBG award records for Insight Housing"
     ],
     "status": "UNRESOLVED"
+  },
+  {
+    "id": "lead-simon-committee-no-bridge-insight-contributions",
+    "node_ids": ["person-lateefah-simon", "org-insight-housing", "org-bridge-housing-corporation"],
+    "description": "Queried the FEC's official public API (api.open.fec.gov, not a secondary aggregator) directly for itemized Schedule A contributions to Rep. Simon's principal campaign committee (LATEEFAH FOR CONGRESS, committee ID C00834291, confirmed via /v1/candidate/H4CA12154/committees/) matching Insight Housing, BRIDGE Housing Corporation, or their known officers as contributor/employer. Zero matching records found on every query run 2026-09-25. This is a contribution-side complement to the existing lead-simon-insight-housing-geography lead (which covers grants/contracts/general web search) -- recorded as checked-and-not-found so it isn't re-run from scratch, and so it can be promoted to a real edge if a primary-source contribution record surfaces later (e.g. under a different employer-name spelling, or a contribution the FEC hasn't yet indexed).",
+    "checked_sources": [
+      "api.open.fec.gov/v1/candidate/H4CA12154/committees/ -- confirms committee_id C00834291 (LATEEFAH FOR CONGRESS, principal campaign committee, treasurer Maddie Franklin, Oakland CA)",
+      "api.open.fec.gov/v1/schedules/schedule_a/?committee_id=C00834291&contributor_employer=BRIDGE+Housing -- 0 results",
+      "api.open.fec.gov/v1/schedules/schedule_a/?committee_id=C00834291&contributor_employer=Insight+Housing -- 0 results",
+      "api.open.fec.gov/v1/schedules/schedule_a/?committee_id=C00834291&contributor_employer=Berkeley+Food+and+Housing -- 0 results (former legal name of Insight Housing)",
+      "api.open.fec.gov/v1/schedules/schedule_a/?committee_id=C00834291&contributor_name=Lombard -- 0 results (BRIDGE Housing President/CEO Ken Lombard)",
+      "api.open.fec.gov/v1/schedules/schedule_a/?committee_id=C00834291&contributor_name=Svensk -- 0 results (BRIDGE Housing General Counsel Hallock Svensk)",
+      "api.open.fec.gov/v1/committees/?q=BRIDGE+Housing -- 0 results (no affiliated PAC/committee)",
+      "api.open.fec.gov/v1/committees/?q=Insight+Housing -- 0 results (no affiliated PAC/committee)"
+    ],
+    "next_steps": [
+      "Re-run the same employer/name queries periodically -- FEC itemized data lags actual contributions and this is a live, ongoing campaign committee, not a closed historical record",
+      "Check contributor_name for other BRIDGE Housing/Insight Housing officers and board members once roles.json is more complete (only two BRIDGE Housing officers currently sourced; Insight Housing officers are entirely unsourced per identity_resolution.json)",
+      "Search adjacent committees (any leadership PAC, joint fundraising committee, or party committee affiliated with Simon) rather than only her principal campaign committee, if #4's full scope is picked up again",
+      "Check California state/local campaign-finance disclosures (Cal-Access or its successor) in case a state or local official, rather than Rep. Simon, is the relevant recipient for a documented BRIDGE/Insight-connected contribution"
+    ],
+    "status": "UNRESOLVED"
   }
 ]
