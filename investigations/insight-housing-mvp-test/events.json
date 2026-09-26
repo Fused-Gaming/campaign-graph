@@ -1,0 +1,94 @@
+[
+  {
+    "id": "event-bridge-housing-tax-exempt-ruling",
+    "event_type": "entity_status_change",
+    "node_ids": ["org-bridge-housing-corporation"],
+    "date": "1983-01-01",
+    "date_precision": "month",
+    "description": "BRIDGE Housing Corporation's IRS 501(c)(3) tax-exempt ruling date.",
+    "source": "ProPublica Nonprofit Explorer, accessed 2026-09-24: https://projects.propublica.org/nonprofits/organizations/942827909"
+  },
+  {
+    "id": "event-insight-housing-tax-exempt-ruling",
+    "event_type": "entity_status_change",
+    "node_ids": ["org-insight-housing"],
+    "date": "1986-02-01",
+    "date_precision": "month",
+    "description": "Insight Housing (then Berkeley Food and Housing Project)'s IRS 501(c)(3) tax-exempt ruling date.",
+    "source": "GuideStar/Candid profile, accessed 2026-09-24: https://www.guidestar.org/profile/94-2979073"
+  },
+  {
+    "id": "event-simon-took-office",
+    "event_type": "role_change",
+    "node_ids": ["person-lateefah-simon"],
+    "date": "2025-01-03",
+    "date_precision": "day",
+    "description": "Rep. Lateefah Simon took office as U.S. Representative for California's 12th Congressional District.",
+    "source": "FEC.gov candidate profile, accessed 2026-09-24: https://www.fec.gov/data/candidate/H4CA12154/"
+  },
+  {
+    "id": "event-bridge-housing-treasury-award-181cm050421",
+    "event_type": "grant_award",
+    "node_ids": ["org-bridge-housing-corporation"],
+    "date": "2019-02-13",
+    "date_precision": "day",
+    "description": "Treasury award 181CM050421-G to BRIDGE Housing Corporation, $6,226,168.",
+    "source": "USAspending.gov API, fetched 2026-09-25. See grants.json:grant-bridge-housing-treasury-181cm050421."
+  },
+  {
+    "id": "event-insight-housing-dol-award-hv30869176056",
+    "event_type": "grant_award",
+    "node_ids": ["org-insight-housing"],
+    "date": "2017-07-01",
+    "date_precision": "day",
+    "description": "DOL award HV30869176056 to Insight Housing (then Berkeley Food and Housing Project), $191,650.20, period 2017-07-01 to 2018-06-30.",
+    "source": "USAspending.gov API, fetched 2026-09-25. See grants.json:grant-insight-housing-dol-hv30869176056."
+  },
+  {
+    "id": "event-insight-housing-dol-award-hv32064186056",
+    "event_type": "grant_award",
+    "node_ids": ["org-insight-housing"],
+    "date": "2018-07-01",
+    "date_precision": "day",
+    "description": "DOL award HV32064186056 to Insight Housing, $214,996.85, period 2018-07-01 to 2019-06-30.",
+    "source": "USAspending.gov API, fetched 2026-09-25. See grants.json:grant-insight-housing-dol-hv32064186056."
+  },
+  {
+    "id": "event-bridge-housing-treasury-award-211cm058776",
+    "event_type": "grant_award",
+    "node_ids": ["org-bridge-housing-corporation"],
+    "date": "2022-06-22",
+    "date_precision": "day",
+    "description": "Treasury award 211CM058776-G to BRIDGE Housing Corporation, $6,500,000, period 2022-06-22 to 2025-12-31.",
+    "source": "USAspending.gov API, fetched 2026-09-25. See grants.json:grant-bridge-housing-treasury-211cm058776."
+  },
+  {
+    "id": "event-insight-housing-dol-award-23560hv000020",
+    "event_type": "grant_award",
+    "node_ids": ["org-insight-housing"],
+    "date": "2023-07-01",
+    "date_precision": "day",
+    "description": "DOL award 23560HV000020 to Insight Housing, $1,500,000, period 2023-07-01 to 2026-06-30.",
+    "source": "USAspending.gov API, fetched 2026-09-25. See grants.json:grant-insight-housing-dol-23560hv000020."
+  },
+  {
+    "id": "event-insight-housing-hud-award-ca2234l9t022401",
+    "event_type": "grant_award",
+    "node_ids": ["org-insight-housing"],
+    "date": null,
+    "date_precision": "unknown",
+    "description": "HUD award CA2234L9T022401 to Insight Housing, $792,251. Start date not returned by the summary API fields used.",
+    "source": "USAspending.gov API, fetched 2026-09-25. See grants.json:grant-insight-housing-hud-ca2234l9t022401."
+  },
+  {
+    "id": "event-insight-housing-hud-award-ca2234l9t022300",
+    "event_type": "grant_award",
+    "node_ids": ["org-insight-housing"],
+    "date": "2025-10-01",
+    "date_precision": "day",
+    "description": "HUD Continuum of Care award CA2234L9T022300 to Insight Housing, $735,304, period 2025-10-01 to 2026-09-30.",
+    "source": "USAspending.gov API, fetched 2026-09-25. See grants.json:grant-insight-housing-hud-ca2234l9t022300.",
+    "correlation_only": true,
+    "correlation_note": "This award's start date (2025-10-01) falls after event-simon-took-office (2025-01-03), roughly 9 months later. This proximity is NOT evidence of any relationship: HUD Continuum of Care awards are made annually through a competitive Notice of Funding Opportunity scored by HUD staff against published criteria, not by individual House members, and Insight Housing has received CoC-pattern HUD awards in this recurring annual cycle independent of who holds the CA-12 seat (see baseline context below). Flagged per issue #8's requirement to surface temporal proximity explicitly and mark it correlation_only rather than silently noting or silently ignoring it."
+  }
+]

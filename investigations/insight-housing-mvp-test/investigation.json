@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0",
+  "slug": "insight-housing-mvp-test",
+  "title": "Insight Housing / Lateefah Simon — MVP Pipeline Test",
+  "description": "Engineering test package for the campaign-graph MVP pipeline. Uses two real, independently identifiable entities that share a Bay Area / CA-12 geography (Insight Housing, a Berkeley nonprofit, and Rep. Lateefah Simon) to exercise entity resolution, evidence-status handling, and the unresolved-lead lifecycle end to end. This package is a pipeline/schema validation exercise, not a finished or asserted investigation: no documented transactional or decisional relationship between the two entities has been established as of package creation.",
+  "status": "active",
+  "jurisdictions": ["US-CA"],
+  "date_range": {
+    "start": null,
+    "end": null
+  },
+  "hypotheses": [
+    {
+      "id": "h1-shared-geography-no-documented-link",
+      "statement": "Insight Housing and Rep. Lateefah Simon operate in overlapping Bay Area / CA-12 geography, but no documented transactional, contractual, or decisional relationship (grant, contract, endorsement, vote) between them has been found.",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "required_elements": [
+        "A specific named relationship type (grant, contract, endorsement, vote, meeting) between the two entities",
+        "A primary-source record documenting that specific relationship (award record, FEC filing, vote record, official statement)"
+      ],
+      "supporting_edge_ids": [],
+      "contradicting_edge_ids": [],
+      "alternative_explanations": [
+        "Shared geography alone is expected for any Bay Area housing nonprofit and its congressional representative and does not imply any relationship.",
+        "A relationship may exist in records not yet checked (e.g. USAspending.gov award data, local Berkeley grant records, congressional appropriations requests) and this package should be updated if primary sources are located."
+      ],
+      "missing_records": [
+        "Congressional appropriations/earmark request records for CA-12",
+        "City of Berkeley grant and contract records naming Insight Housing",
+        "Award-detail records (not just summary fields) for the one federal award to Insight Housing postdating Rep. Simon's tenure, to confirm no member-specific role in the award decision"
+      ]
+    },
+    {
+      "id": "h3-insight-bridge-federal-funding-no-congressional-link",
+      "statement": "Both Insight Housing and BRIDGE Housing Corporation receive substantial federal grant funding (VA, DOL, HUD, and Treasury respectively), but no documented congressional decision, earmark, or member-specific involvement by Rep. Simon (or any other official) in any of these awards has been found.",
+      "status": "NOT_SUPPORTED",
+      "required_elements": [
+        "A specific documented congressional action (appropriations request, earmark, letter of support with material effect) tied to one of these awards",
+        "A primary-source record showing that action, dated and attributable to a specific official"
+      ],
+      "supporting_edge_ids": [],
+      "contradicting_edge_ids": [],
+      "alternative_explanations": [
+        "These are standard competitive/formula federal grant programs (VA Grant and Per Diem, VA Supportive Services for Veteran Families, DOL Homeless Veterans' Reintegration Program, HUD Continuum of Care, Treasury CDFI Fund) scored by agency staff, not by individual members of Congress -- receiving such funding is the ordinary, expected result of a housing/homeless-services nonprofit applying to well-established programs, not evidence of any relationship with a specific official."
+      ],
+      "missing_records": []
+    },
+    {
+      "id": "h2-no-documented-bridge-insight-campaign-contributions",
+      "statement": "No campaign contribution to Rep. Lateefah Simon's principal campaign committee (LATEEFAH FOR CONGRESS, FEC committee ID C00834291) from Insight Housing, BRIDGE Housing Corporation, their known officers, or an affiliated PAC has been found in FEC itemized filing data.",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "required_elements": [
+        "An itemized FEC Schedule A contribution record naming the contributor and employer/occupation as one of these entities or their officers",
+        "OR a state/local campaign-finance disclosure record if the relevant recipient is a CA state or local official rather than Rep. Simon"
+      ],
+      "supporting_edge_ids": [],
+      "contradicting_edge_ids": [],
+      "alternative_explanations": [
+        "No contribution may exist at all -- absence of a relationship is a legitimate finding, not a gap to be explained away.",
+        "A contribution may exist under a different employer-name spelling, an unlisted officer/board member, or an adjacent committee (leadership PAC, joint fundraising committee) not yet queried.",
+        "FEC itemized data lags actual contributions, so a recent contribution to an active, ongoing campaign committee might not yet be indexed."
+      ],
+      "missing_records": [
+        "Contributor-name queries for BRIDGE Housing/Insight Housing board members and officers beyond the two BRIDGE Housing officers currently sourced in roles.json",
+        "Adjacent committee search (leadership PAC, joint fundraising committee) beyond the principal campaign committee",
+        "CA state/local campaign-finance disclosure search (Cal-Access or successor system) for any CA state or local official connected to these entities"
+      ]
+    },
+    {
+      "id": "h4-no-documented-oakland-lobbying-bridge-insight",
+      "statement": "No Oakland lobbying activity (client relationship, contact with a public official, or matter) naming Insight Housing or BRIDGE Housing Corporation has been found in Oakland's official Public Ethics Commission lobbyist disclosure data.",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "required_elements": [
+        "A specific Oakland lobbyist activity report (Schedule A contact or client listing) naming one of these entities",
+        "OR a CA state, City of Berkeley, or other jurisdiction's lobbying disclosure record if the relevant activity occurred elsewhere"
+      ],
+      "supporting_edge_ids": [],
+      "contradicting_edge_ids": [],
+      "alternative_explanations": [
+        "No lobbying activity may exist at all in Oakland -- Insight Housing is Berkeley-headquartered and its documented activity (grants.json) is with federal agencies (VA, DOL, HUD), not Oakland city government, so an absence of Oakland lobbying records is unsurprising rather than suspicious.",
+        "Either org could lobby through an unregistered informal contact that doesn't trigger Oakland's $1,000/month registration threshold, which would not appear in this dataset regardless of whether contact occurred."
+      ],
+      "missing_records": [
+        "Oakland Registered Lobbyist employer dataset (in-house lobbyist check, not yet queried)",
+        "Individual year datasets pre-dating the combined/master dataset queried",
+        "CA state-level (Cal-Access) and City of Berkeley lobbying disclosure records"
+      ]
+    }
+  ],
+  "entry_nodes": ["person-lateefah-simon", "org-insight-housing"],
+  "tags": ["mvp-test", "pipeline-validation", "housing", "ca-12"],
+  "maintainers": []
+}

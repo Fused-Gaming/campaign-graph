@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0",
+  "investigation_slug": "insight-housing-mvp-test",
+  "workstream": "issue-3-entity-resolution",
+  "identifiers_confirmed": [
+    {
+      "node_id": "org-insight-housing",
+      "identifier_type": "ein",
+      "value": "94-2979073",
+      "source": "GuideStar/Candid profile, accessed 2026-09-24: https://www.guidestar.org/profile/94-2979073",
+      "confidence": "high"
+    },
+    {
+      "node_id": "org-bridge-housing-corporation",
+      "identifier_type": "ein",
+      "value": "94-2827909",
+      "source": "ProPublica Nonprofit Explorer, accessed 2026-09-24: https://projects.propublica.org/nonprofits/organizations/942827909",
+      "confidence": "high"
+    },
+    {
+      "node_id": "person-lateefah-simon",
+      "identifier_type": "fec_candidate_id",
+      "value": "H4CA12154",
+      "source": "FEC.gov candidate profile, accessed 2026-09-24: https://www.fec.gov/data/candidate/H4CA12154/",
+      "confidence": "high"
+    },
+    {
+      "node_id": "org-insight-housing",
+      "identifier_type": "address",
+      "value": "2855 Telegraph Ave Ste 601, Berkeley, CA 94705-1161",
+      "source": "IRS Form 990 filing header via ProPublica Nonprofit Explorer structured API, accessed 2026-09-24: https://projects.propublica.org/nonprofits/api/v2/organizations/942979073.json",
+      "confidence": "high"
+    },
+    {
+      "node_id": "org-bridge-housing-corporation",
+      "identifier_type": "address",
+      "value": "350 California St Ste 1600, San Francisco, CA 94104-1429",
+      "source": "IRS Form 990 filing header via ProPublica Nonprofit Explorer structured API, accessed 2026-09-24: https://projects.propublica.org/nonprofits/api/v2/organizations/942827909.json",
+      "confidence": "high"
+    }
+  ],
+  "unresolved_identity_items": [
+    {
+      "id": "collision-bridge-housing-ca-sos-entity-number",
+      "node_ids": ["org-bridge-housing-corporation"],
+      "description": "A generic web search returned a candidate California Secretary of State bizfileonline.sos.ca.gov document link alongside BRIDGE Housing Corporation search results, but the link could not be confirmed as belonging to this specific entity (the search results also surfaced several unrelated 'Bridge'-named California nonprofits: The Bridge Fellowship Socal, BRIDGE MISSION USA, Legacy Bridge Foundation). Per repo rule 'never merge on name alone,' no CA SoS entity number is recorded for BRIDGE Housing Corporation until confirmed directly against https://bizfileonline.sos.ca.gov business search.",
+      "status": "UNRESOLVED",
+      "next_steps": [
+        "Query bizfileonline.sos.ca.gov business search directly for 'BRIDGE Housing Corporation' and confirm entity number, registered agent, and filing status",
+        "Cross-check against BRIDGE Housing Corporation's IRS Form 990 Schedule (Part VI) for its principal officer / state of incorporation details",
+        "Do not conflate with same-name entities: The Bridge Fellowship Socal, BRIDGE MISSION USA, Legacy Bridge Foundation",
+        "OpenCorporates attempted 2026-09-24 as an alternative registry lookup: opencorporates.com returns HTTP 403 'Forbidden' (bot-mitigation challenge, confirmed via both WebFetch and a raw curl request with a browser user-agent) to this environment for every page, including company detail pages and the v0.4 API (401 Unauthorized without an API key). A WebSearch result surfaced a candidate URL, https://opencorporates.com/companies/us_ca/C3014935, whose title suggested it might be BRIDGE Housing Corporation, but its content was NEVER actually retrieved/verified — do not record C3014935 as BRIDGE Housing Corporation's CA entity number without independently confirming that page's contents through a working access path (a human with a browser, or an OpenCorporates API key)."
+      ]
+    },
+    {
+      "id": "collision-insight-housing-ca-sos-entity-number",
+      "node_ids": ["org-insight-housing"],
+      "description": "A web search result asserted a CA Secretary of State entity number (202463514869) and characterized it as an LLC registration for Insight Housing at 2855 Telegraph Avenue, Suite 601, Berkeley, CA. This does not match Insight Housing's known status as a 501(c)(3) nonprofit corporation (EIN 94-2979073, exempt since 1986) and was not independently verified against the live SOS business search or an official Insight Housing filing. Treated as unverified and not recorded as fact.",
+      "status": "UNRESOLVED",
+      "next_steps": [
+        "Query bizfileonline.sos.ca.gov business search directly for 'Insight Housing' and 'Berkeley Food and Housing Project' (former legal name) to confirm the correct nonprofit-corporation entity number",
+        "insighthousing.org pages (contact, who-we-are, homepage, finances) returned empty content on WebFetch as of 2026-09-24 (likely JS-rendered/bot-blocked) — leadership and address for Insight Housing remain unverified from the org's own site; retry with a different fetch method or use the IRS Form 990 Part VII / GuideStar full filing instead",
+        "Officer/director/key-employee names (Part VII Section A) still not obtained after three attempts, all logged 2026-09-24: (1) both orgs' actual 990 PDF documents return HTTP 403 from projects.propublica.org/nonprofits/download-filing even though the JSON metadata API works; (2) ProPublica's filings_with_data JSON gives only aggregate 'compnsatncurrofcr' (total current-officer compensation) and 'othrsalwages' figures per tax year, not individual names/titles; (3) the public AWS Open Data 990 e-file bucket (s3.amazonaws.com/irs-form-990) is reachable (no bot-block, unlike OpenCorporates) but returned zero keys under both a targeted prefix and an unfiltered listing -- the dataset appears empty or relocated from this bucket name. This is a genuine dead end from this environment; needs a human to download a 990 PDF directly, or a different IRS bulk-data source/bucket name."
+      ],
+      "resolved_items": [
+        {
+          "date": "2026-09-24",
+          "description": "Address discrepancy (2855 vs. 2588 Telegraph Ave) settled via ProPublica's structured API (IRS filing header data) confirming '2855 Telegraph Ave Ste 601, Berkeley, CA 94705-1161'; Charity Navigator's '2588' was a data-entry error on their end, not a genuine second address. See addresses.json (high confidence)."
+        }
+      ]
+    },
+    {
+      "id": "identity-item-bridge-scope-ambiguity",
+      "node_ids": ["org-bridge-housing-corporation"],
+      "description": "Issue #2 refers to 'Bridge' without disambiguating which organization is intended. This package assumes BRIDGE Housing Corporation (San Francisco-based affordable-housing developer, EIN 94-2827909) as the most plausible referent given the housing/Bay Area context shared with Insight Housing, but this assumption itself needs confirmation from whoever opened issue #2 before further edges are built on it.",
+      "status": "UNRESOLVED",
+      "next_steps": [
+        "Confirm with issue #2's author whether 'Bridge' refers to BRIDGE Housing Corporation, or a different Bridge-named entity (e.g. a housing authority program, a different nonprofit, or a for-profit vendor)"
+      ]
+    }
+  ],
+  "roles": [],
+  "addresses": [],
+  "merge_decisions": [
+    {
+      "decision": "no merge",
+      "node_ids": ["org-insight-housing", "org-bridge-housing-corporation"],
+      "rationale": "Distinct EINs, distinct headquarters cities (Berkeley vs. San Francisco), distinct IRS exemption years (1986 vs. 1983). No shared officer, address, or control relationship has been sourced as of this writing. Kept as separate nodes pending further evidence."
+    }
+  ]
+}

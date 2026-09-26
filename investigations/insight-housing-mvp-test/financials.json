@@ -1,0 +1,25 @@
+[
+  {
+    "id": "fin-insight-housing-fy2023",
+    "node_id": "org-insight-housing",
+    "tax_year": 2023,
+    "total_revenue_usd": 23079014,
+    "total_functional_expenses_usd": 22645478,
+    "total_assets_usd": 12442537,
+    "total_liabilities_usd": 6579731,
+    "source": "IRS Form 990 filing data via ProPublica Nonprofit Explorer structured API, fetched directly 2026-09-24: https://projects.propublica.org/nonprofits/api/v2/organizations/942979073.json",
+    "notes": "Cited by rules_ledger.json (rule-ca-nonprofit-integrity-act) as the basis for stating Insight Housing's revenue exceeds the Cal. Gov. Code $2M gross-revenue threshold that triggers the audited-financial-statement requirement."
+  },
+  {
+    "id": "fin-bridge-housing-fy2023",
+    "node_id": "org-bridge-housing-corporation",
+    "tax_year": 2023,
+    "total_revenue_usd": 78595410,
+    "total_functional_expenses_usd": 45358302,
+    "total_assets_end_usd": 244952012,
+    "current_officer_compensation_total_usd": 4494541,
+    "other_salaries_wages_usd": 12251900,
+    "source": "IRS Form 990 filing data (filings_with_data) via ProPublica Nonprofit Explorer structured API, fetched directly 2026-09-24: https://projects.propublica.org/nonprofits/api/v2/organizations/942827909.json",
+    "notes": "current_officer_compensation_total_usd is an aggregate figure ('compnsatncurrofcr') covering all current officers combined, not a per-person amount -- do not attribute this total to any single named officer (e.g. Ken Lombard in roles.json) without a per-person source such as Schedule J. Cited by rules_ledger.json (rule-ca-nonprofit-integrity-act) as the basis for stating BRIDGE Housing's revenue exceeds the Cal. Gov. Code $2M gross-revenue threshold."
+  }
+]

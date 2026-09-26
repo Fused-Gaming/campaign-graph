@@ -1,0 +1,64 @@
+[
+  {
+    "id": "lead-simon-insight-housing-geography",
+    "node_ids": ["person-lateefah-simon", "org-insight-housing"],
+    "description": "Insight Housing (Berkeley, EIN 94-2979073) operates in the Bay Area, overlapping Rep. Lateefah Simon's CA-12 district. No documented grant, contract, endorsement, meeting, or vote record connecting the two entities was found via initial web search (2026-09-24). This lead exists to record the checked-and-not-found state so it isn't re-litigated from scratch, and so it can be promoted to a real edge if a primary source surfaces.",
+    "checked_sources": [
+      "FEC.gov candidate profile (H4CA12154)",
+      "OpenSecrets.org member summary",
+      "GuideStar/Candid profile (EIN 94-2979073)",
+      "General web search for Insight Housing + Simon + HUD/earmark funding",
+      "USAspending.gov API (api.usaspending.gov/api/v2/search/spending_by_award/), fetched directly 2026-09-25 for grant/cooperative-agreement awards to INSIGHT HOUSING -- 14 federal awards found (VA, DOL, HUD; see grants.json), none showing any congressional decision-maker or CA-12 earmark/appropriations connection. One award (grant-insight-housing-hud-ca2234l9t022300, start 2025-10-01) postdates Rep. Simon taking office but HUD Continuum of Care awards are agency-scored, not individual-member decisions -- this is noted, not treated as a relationship."
+    ],
+    "resolved_items": [
+      {
+        "date": "2026-09-25",
+        "description": "USAspending.gov federal award search for Insight Housing completed. Found substantial federal funding (~$50M across 14 awards, VA/DOL/HUD) but all through standard competitive/formula grant channels with no documented congressional decision-maker or Simon-specific involvement. This resolves the USAspending.gov next-step item without establishing the hypothesized relationship -- see grants.json."
+      }
+    ],
+    "next_steps": [
+      "Check congressional appropriations/community-project-funding request lists for CA-12",
+      "Check City of Berkeley Housing Trust Fund and CDBG award records for Insight Housing",
+      "Pull award-detail (not just summary) records for the one award postdating Simon's tenure (CA2234L9T022300) to confirm the HUD CoC scoring process and rule out any member-specific role"
+    ],
+    "status": "UNRESOLVED"
+  },
+  {
+    "id": "lead-simon-committee-no-bridge-insight-contributions",
+    "node_ids": ["person-lateefah-simon", "org-insight-housing", "org-bridge-housing-corporation"],
+    "description": "Queried the FEC's official public API (api.open.fec.gov, not a secondary aggregator) directly for itemized Schedule A contributions to Rep. Simon's principal campaign committee (LATEEFAH FOR CONGRESS, committee ID C00834291, confirmed via /v1/candidate/H4CA12154/committees/) matching Insight Housing, BRIDGE Housing Corporation, or their known officers as contributor/employer. Zero matching records found on every query run 2026-09-25. This is a contribution-side complement to the existing lead-simon-insight-housing-geography lead (which covers grants/contracts/general web search) -- recorded as checked-and-not-found so it isn't re-run from scratch, and so it can be promoted to a real edge if a primary-source contribution record surfaces later (e.g. under a different employer-name spelling, or a contribution the FEC hasn't yet indexed).",
+    "checked_sources": [
+      "api.open.fec.gov/v1/candidate/H4CA12154/committees/ -- confirms committee_id C00834291 (LATEEFAH FOR CONGRESS, principal campaign committee, treasurer Maddie Franklin, Oakland CA)",
+      "api.open.fec.gov/v1/schedules/schedule_a/?committee_id=C00834291&contributor_employer=BRIDGE+Housing -- 0 results",
+      "api.open.fec.gov/v1/schedules/schedule_a/?committee_id=C00834291&contributor_employer=Insight+Housing -- 0 results",
+      "api.open.fec.gov/v1/schedules/schedule_a/?committee_id=C00834291&contributor_employer=Berkeley+Food+and+Housing -- 0 results (former legal name of Insight Housing)",
+      "api.open.fec.gov/v1/schedules/schedule_a/?committee_id=C00834291&contributor_name=Lombard -- 0 results (BRIDGE Housing President/CEO Ken Lombard)",
+      "api.open.fec.gov/v1/schedules/schedule_a/?committee_id=C00834291&contributor_name=Svensk -- 0 results (BRIDGE Housing General Counsel Hallock Svensk)",
+      "api.open.fec.gov/v1/committees/?q=BRIDGE+Housing -- 0 results (no affiliated PAC/committee)",
+      "api.open.fec.gov/v1/committees/?q=Insight+Housing -- 0 results (no affiliated PAC/committee)"
+    ],
+    "next_steps": [
+      "Re-run the same employer/name queries periodically -- FEC itemized data lags actual contributions and this is a live, ongoing campaign committee, not a closed historical record",
+      "Check contributor_name for other BRIDGE Housing/Insight Housing officers and board members once roles.json is more complete (only two BRIDGE Housing officers currently sourced; Insight Housing officers are entirely unsourced per identity_resolution.json)",
+      "Search adjacent committees (any leadership PAC, joint fundraising committee, or party committee affiliated with Simon) rather than only her principal campaign committee, if #4's full scope is picked up again",
+      "Check California state/local campaign-finance disclosures (Cal-Access or its successor) in case a state or local official, rather than Rep. Simon, is the relevant recipient for a documented BRIDGE/Insight-connected contribution"
+    ],
+    "status": "UNRESOLVED"
+  },
+  {
+    "id": "lead-no-oakland-lobbying-activity-bridge-insight",
+    "node_ids": ["org-insight-housing", "org-bridge-housing-corporation"],
+    "description": "Queried Oakland's Open Data Portal (data.oaklandca.gov), which republishes the Public Ethics Commission's official quarterly Lobbyist Activity Reports as structured Socrata datasets, for any lobbying client, contact, or matter naming Insight Housing, BRIDGE Housing Corporation, or Insight Housing's former legal name (Berkeley Food and Housing Project). Zero matching records found across two separate datasets covering different report schedules/years. Recorded as checked-and-not-found per #6's mission (Oakland lobbyist reports as the seed source) so this isn't re-run from scratch.",
+    "checked_sources": [
+      "data.oaklandca.gov/resource/ucs9-a92d.json (Lobbyist Activity - Contacts with Public Officials, Schedule A) queried directly via Socrata SoQL, fetched 2026-09-26: $where=client_name like '%Insight Housing%' OR client_name like '%Bridge Housing%' OR client_name like '%Berkeley Food%' -- 0 results",
+      "data.oaklandca.gov/resource/ss9a-d595.json (Lobbyist Clients master list) queried directly, fetched 2026-09-26: $where=upper(client_name) like '%INSIGHT HOUSING%' OR upper(client_name) like '%BRIDGE HOUSING%' OR upper(client_name) like '%BERKELEY FOOD%' -- 0 results"
+    ],
+    "next_steps": [
+      "Check whether Insight Housing or BRIDGE Housing itself (not a contracted lobbying firm) ever registered as an in-house lobbyist employer, via the Registered Lobbyist dataset/portal (apps.oaklandca.gov/pec/Lobbyist_Registered.aspx) -- not yet queried",
+      "Check year-specific datasets (e.g. Lobbyist Clients 2021, Lobbyist Contacts with Public Officials 2021/2022) individually in case the combined/master dataset queried here has gaps for older years",
+      "Check CA state-level lobbying disclosure (Cal-Access or successor) for either org, separate from the Oakland-local check done here, per rule-ca-state-lobbying-registration in rules_ledger.json",
+      "Check City of Berkeley's own lobbying/ethics disclosure system if one exists, since Insight Housing is Berkeley-headquartered and most of its documented activity (per grants.json/addresses.json) is not Oakland-specific"
+    ],
+    "status": "UNRESOLVED"
+  }
+]
