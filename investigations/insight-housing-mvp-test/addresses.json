@@ -1,0 +1,25 @@
+[
+  {
+    "id": "addr-bridge-housing-hq-350-california",
+    "node_id": "org-bridge-housing-corporation",
+    "address": "350 California St, Suite 1600, San Francisco, CA 94104",
+    "capacity": "headquarters",
+    "start_date": null,
+    "end_date": null,
+    "status": "current",
+    "source": "BRIDGE Housing official contact page, accessed 2026-09-24: https://bridgehousing.com/contact/",
+    "notes": "No start date given on the source page; treat as 'current as of retrieval date' only, not as a historical range."
+  },
+  {
+    "id": "addr-insight-housing-hq-telegraph-ave",
+    "node_id": "org-insight-housing",
+    "address": "2855 Telegraph Ave, Suite 601, Berkeley, CA 94705-1161",
+    "capacity": "headquarters",
+    "start_date": null,
+    "end_date": null,
+    "status": "current",
+    "confidence": "high",
+    "source": "IRS Form 990 filing header, via ProPublica Nonprofit Explorer structured API (fetched directly 2026-09-24): https://projects.propublica.org/nonprofits/api/v2/organizations/942979073.json returns organization.address = '2855 TELEGRAPH AVE STE 601', city 'Berkeley', state 'CA', zipcode '94705-1161'. Corroborated by three independently fetched directory sources: RE:Source/StopWaste.org vendor page, Berkeley Chamber of Commerce member directory, and Insight Housing's own most recent (tax year 2024) IRS filing.",
+    "notes": "Upgraded to high confidence: this is IRS filing data returned by ProPublica's structured JSON API (not HTML scraping or search-result synthesis), and it matches the '2855 Telegraph Ave' figure from three independent directories. Charity Navigator's '2588 Telegraph Avenue' is now treated as a data-entry error on Charity Navigator's part, not a genuine second address — no primary source anywhere supports 2588."
+  }
+]

@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.0",
+  "investigation_slug": "insight-housing-mvp-test",
+  "workstream": "issue-9-legal-framework-mapping",
+  "note": "This ledger identifies the legal/regulatory frameworks potentially applicable IF and WHEN #2's other workstreams document specific transactions or contacts involving Rep. Lateefah Simon (federal officeholder, CA-12), Insight Housing, or BRIDGE Housing Corporation. As of this writing, #2's own hypothesis log shows no documented transactional or decisional relationship between these entities (status: INSUFFICIENT_EVIDENCE) and #3 has not yet resolved which 'Bridge' entity is meant. This ledger does NOT allege that any rule has been violated, or that any of these frameworks currently apply to a specific documented fact -- it is scaffolding so that IF a fact is later documented, the applicable rule, its elements, and its source are already identified rather than asserted after the fact. Per issue #9's own rules: 'Do not declare a legal or ethics violation merely from donations, lobbying, shared addresses, relationships, or timing.'",
+  "rules": [
+    {
+      "id": "rule-fed-campaign-finance-feca",
+      "jurisdiction": "US-Federal",
+      "title": "Federal Election Campaign Act (FECA) contribution limits, coordination, and disclosure",
+      "citation": "52 U.S.C. § 30101 et seq.; implementing regulations at 11 C.F.R. Part 110 (contribution/expenditure limits) and 11 C.F.R. Part 109 (coordinated communications)",
+      "issuing_authority": "Federal Election Commission (FEC)",
+      "applies_to": "Contributions to or coordinated spending on behalf of a federal candidate committee, including Rep. Lateefah Simon's campaign committee (FEC candidate ID H4CA12154) or any authorized/affiliated committee.",
+      "effective_dates_note": "Individual contribution limits are indexed and adjusted every two-year election cycle. The FEC's published 2025-2026 cycle limit is $3,500 per election per candidate; the limit in effect on any given contribution date must be checked against the FEC's cycle-specific limits table (https://www.fec.gov/updates/contribution-limits-for-2025-2026/), not assumed from a single year's figure.",
+      "elements_relevant_to_hypotheses": [
+        "Was a contribution made, by whom, in what amount, and on what date (source: FEC.gov itemized receipts, Schedule A)?",
+        "Did the contribution exceed the per-election limit in effect on that date?",
+        "If spending was made independently 'on behalf of' the candidate rather than as a direct contribution, was it coordinated under the 11 C.F.R. Part 109 conduct/content/agreement standards?",
+        "Was any contribution earmarked through an intermediary/conduit in a way implicating 52 U.S.C. § 30122 (contributions in the name of another) or intermediary/conduit disclosure rules?"
+      ],
+      "source": "https://www.fec.gov/updates/contribution-limits-for-2025-2026/ ; https://www.ecfr.gov/current/title-11/chapter-I/subchapter-A/part-110 (accessed 2026-09-24)"
+    },
+    {
+      "id": "rule-ca-political-reform-act-conflict-of-interest",
+      "jurisdiction": "US-CA",
+      "title": "California Political Reform Act of 1974 — conflict-of-interest and disqualification rules",
+      "citation": "Cal. Gov. Code §§ 81000–91014 generally; disqualification/material-financial-effect standard at §§ 87100 and 87103; Statement of Economic Interests (Form 700) filing requirement",
+      "issuing_authority": "California Fair Political Practices Commission (FPPC)",
+      "applies_to": "Any California state or local public official (not a federal officeholder like Rep. Simon, who is instead subject to federal House ethics/financial-disclosure rules) who participates in a governmental decision with a reasonably foreseeable material financial effect on their own economic interests or those of a source of income/gifts.",
+      "effective_dates_note": "The Act has been amended repeatedly since 1974; the specific FPPC regulation text (2 Cal. Code Regs.) in force on the date of any specific governmental decision must be checked, not assumed current.",
+      "elements_relevant_to_hypotheses": [
+        "Is the person a California state/local official (not applicable to Rep. Simon in her federal capacity)?",
+        "Did the official participate in, or use their position to influence, a specific governmental decision?",
+        "Is it reasonably foreseeable that the decision had a material financial effect on the official's economic interests, including sources of income, gifts, or business positions, distinguishable from its effect on the public generally?",
+        "Was a Form 700 filed, and does it disclose the relevant economic interest?"
+      ],
+      "source": "https://www.fppc.ca.gov/ ; Cal. Gov. Code §§ 81000-91014, 87100, 87103 (accessed 2026-09-24)"
+    },
+    {
+      "id": "rule-ca-state-lobbying-registration",
+      "jurisdiction": "US-CA",
+      "title": "California state lobbyist registration and reporting",
+      "citation": "Cal. Gov. Code §§ 86100–86118 (Political Reform Act, Ch. 6, Art. 1: Registration and Reporting)",
+      "issuing_authority": "California Secretary of State; FPPC (interpretation/enforcement)",
+      "applies_to": "Any lobbying firm, lobbyist employer with an in-house lobbyist, or lobbying coalition lobbying the California Legislature or state administrative agencies on behalf of Insight Housing, BRIDGE Housing Corporation, or related entities.",
+      "effective_dates_note": "Registration is required within 10 days of qualifying as a lobbying firm/employer; check whether the entity or a contracted lobbying firm was registered during the specific period a contact occurred.",
+      "elements_relevant_to_hypotheses": [
+        "Did the entity or a firm acting for it meet the compensation/activity threshold that triggers state (not just Oakland-local) lobbyist registration?",
+        "Is there a matching registration record and quarterly report on file with the CA Secretary of State for the relevant period?",
+        "What specific matters/agencies were disclosed as lobbied?"
+      ],
+      "source": "https://law.justia.com/codes/california/code-gov/title-9/chapter-6/article-1/section-86100/ (accessed 2026-09-24) — note: secondary republication of statute text; cross-check against leginfo.legislature.ca.gov before citing in a finished finding"
+    },
+    {
+      "id": "rule-oakland-lobbyist-registration-act",
+      "jurisdiction": "US-CA-Oakland",
+      "title": "City of Oakland Lobbyist Registration Act (LRA)",
+      "citation": "Oakland Municipal Code, Chapter 3.20",
+      "issuing_authority": "City of Oakland Public Ethics Commission",
+      "applies_to": "Any individual paid $1,000 or more in a month to communicate with City of Oakland officials to influence laws, rules, or governmental decisions, or whose job duties include such communication, on behalf of Insight Housing, BRIDGE Housing Corporation, or a related entity.",
+      "effective_dates_note": "Confirm the LRA's threshold and reporting schedule as codified on the specific contact date; the Oakland Municipal Code is amended periodically and the Public Ethics Commission also issues implementing regulations separate from the ordinance text.",
+      "elements_relevant_to_hypotheses": [
+        "Did a specific individual meet the $1,000/month compensation threshold or job-duty test for 'lobbyist' status under Ch. 3.20?",
+        "Is there a matching registration and quarterly activity report filed with the Oakland Public Ethics Commission covering the contact date?",
+        "What specific City matter, agency, or official was the subject of the contact?"
+      ],
+      "source": "https://www.oaklandca.gov/Government/Boards-Commissions/Public-Ethics-Commission/Lobbyist-Rules (accessed 2026-09-24, official City of Oakland page); Oakland Municipal Code Ch. 3.20 (cite exact codified section once a specific contact/date is documented)"
+    },
+    {
+      "id": "rule-oakland-government-ethics-act",
+      "jurisdiction": "US-CA-Oakland",
+      "title": "City of Oakland Government Ethics Act — conflict of interest, gifts, and public ethics oversight",
+      "citation": "Oakland Municipal Code, Chapter 2.25 (City of Oakland Government Ethics Act); Public Ethics Commission established under Ch. 2.24",
+      "issuing_authority": "City of Oakland Public Ethics Commission",
+      "applies_to": "City of Oakland officials, employees, and their governmental decisions or gift acceptance where Insight Housing, BRIDGE Housing Corporation, or related entities are a source of income, a contractor, or a gift-giver.",
+      "effective_dates_note": "Check the codified Chapter 2.25 text and any Public Ethics Commission implementing regulations in force on the specific decision/gift date.",
+      "elements_relevant_to_hypotheses": [
+        "Is the person a City of Oakland official or employee (this framework does not apply to Rep. Simon as a federal officeholder)?",
+        "Did the official make or participate in a governmental decision, or accept a gift, implicating a financial relationship with the relevant entity?",
+        "Was the relationship or gift disclosed as required?"
+      ],
+      "source": "https://library.municode.com/ca/oakland/codes/code_of_ordinances?nodeId=TIT2ADPE_CH2.25CIOAGOETAC (accessed 2026-09-24)"
+    },
+    {
+      "id": "rule-federal-house-ethics-financial-disclosure",
+      "jurisdiction": "US-Federal",
+      "title": "U.S. House of Representatives ethics rules and financial disclosure (applicable to Rep. Simon, not the CA/Oakland local frameworks above)",
+      "citation": "Ethics in Government Act of 1978, 5 U.S.C. app. (financial disclosure); House Rule XXIII (Code of Official Conduct); House gift rule, House Rule XXV",
+      "issuing_authority": "U.S. House Committee on Ethics; Clerk of the House (financial disclosure filings)",
+      "applies_to": "Rep. Lateefah Simon in her capacity as a Member of the U.S. House of Representatives — this is the correct framework for any conflict-of-interest, gift, or disclosure question involving her, NOT the California FPPC/Political Reform Act, which governs state and local officials only.",
+      "effective_dates_note": "Confirm current House gift-rule thresholds and any waiver/exception categories (e.g., widely-attended-event exception) in force on the relevant date via the House Ethics Committee's published guidance, which is updated periodically.",
+      "elements_relevant_to_hypotheses": [
+        "Was a gift, payment, or thing of value received by Rep. Simon or her office from the relevant entity, and does it fall under a House gift-rule exception?",
+        "Is the relationship or financial interest disclosed on her Financial Disclosure Statement (available via the Clerk of the House)?",
+        "Does any contact or advocacy by the entity toward her office implicate House rules on official act solicitation?"
+      ],
+      "source": "https://ethics.house.gov/ (accessed 2026-09-24) — general framework identification only; specific rule text should be pulled from ethics.house.gov before citing in a finished finding"
+    },
+    {
+      "id": "rule-ca-gov-code-1090-financial-interest-in-contracts",
+      "jurisdiction": "US-CA",
+      "title": "California Government Code § 1090 — public officials' financial interest in contracts they make",
+      "citation": "Cal. Gov. Code §§ 1090–1097",
+      "issuing_authority": "Enforced via California courts (criminal prosecution, civil actions to void contracts) and the CA Attorney General/local district attorneys; distinct from and can overlap with FPPC's Political Reform Act disqualification rules (§§ 87100/87103) covering the same underlying facts.",
+      "applies_to": "Any CA state, county, district, judicial district, or city officer/employee (and certain consultants/independent contractors performing officer-like public-contracting functions) who is financially interested in a contract they make in their official capacity or that is made by a body/board they sit on. Would apply to, e.g., an Oakland or Berkeley official/board member with an undisclosed financial interest in a grant or contract awarded to Insight Housing or BRIDGE Housing Corporation. Does not apply to Rep. Simon in her federal capacity.",
+      "effective_dates_note": "No bad intent/knowledge of illegality required for a violation under case law; the statute and its exceptions (§§ 1091, 1091.5, listing non-interests and remote interests) should be checked as codified on the date the contract was made.",
+      "elements_relevant_to_hypotheses": [
+        "Did a CA public official 'make' (participate in negotiating, advising on, or voting to approve) a specific contract or grant?",
+        "Did that official have a financial interest in the contract, directly or through a related person/entity?",
+        "Does an exception under § 1091 (noninterest) or § 1091.5 (remote interest, with disclosure/abstention) apply?",
+        "Is the interest that of the official personally, or of a family member/business associate, and does § 1090's imputation case law reach that relationship?"
+      ],
+      "source": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1090.&lawCode=GOV (verify directly before citing; this entry was drafted from secondary summaries — see note below) — secondary summaries reviewed 2026-09-24: https://legalclarity.org/understanding-california-government-code-1090-scope-penalties/ and an Oakland City Attorney public legal opinion applying §1090 alongside the Political Reform Act: https://oaklandcityattorney.org/wp-content/oca-reports/public-legal-opinions-and-public-reports/2022-07-04-Public-Legal-Opinion---Conflicts-of-Interest-Under-the-Political-Reform-Act-and-California-Government-Code-Section-1090.pdf"
+    },
+    {
+      "id": "rule-federal-grants-uniform-guidance",
+      "jurisdiction": "US-Federal",
+      "title": "Uniform Guidance for Federal Awards — procurement standards and conflict-of-interest requirements for grant/subgrant recipients",
+      "citation": "2 C.F.R. Part 200; conflict-of-interest standard at 2 C.F.R. § 200.112; procurement standards at 2 C.F.R. §§ 200.317–200.327",
+      "issuing_authority": "Office of Management and Budget (OMB); enforced by the specific federal awarding agency (e.g. HUD, HHS) and pass-through entities (state/local governments distributing federal funds)",
+      "applies_to": "Insight Housing or BRIDGE Housing Corporation as a direct federal grant recipient or as a subrecipient of federal funds passed through a state or local agency (e.g. HUD Continuum of Care, CDBG, or similar homelessness/housing funding), and any official/employee/board member of the recipient organization involved in selecting subrecipients, vendors, or contracts funded by the award.",
+      "effective_dates_note": "2 CFR Part 200 has been revised multiple times (most recently effective dates vary by subpart); confirm the version in force on the date of the specific award/procurement action via eCFR's dated view, not the current version by default.",
+      "elements_relevant_to_hypotheses": [
+        "Did the entity receive a federal award or subaward, from which agency, in what amount, and under what award/grant number (source: USAspending.gov, or the pass-through agency's award records)?",
+        "Did an employee, officer, agent, or board member with a real or apparent conflict of interest participate in selecting a subrecipient, vendor, or contract funded by that award, in violation of § 200.112?",
+        "For procurements above the micro-purchase threshold, was the required level of competition (price quotations, or sealed bids/proposals) documented?",
+        "Does the recipient's own written conflict-of-interest policy (required to be disclosed to the awarding agency under § 200.112) cover the relationship at issue?"
+      ],
+      "source": "https://www.ecfr.gov/current/title-2/subtitle-A/chapter-II/part-200 (accessed 2026-09-24)"
+    },
+    {
+      "id": "rule-ca-nonprofit-integrity-act",
+      "jurisdiction": "US-CA",
+      "title": "California Nonprofit Integrity Act of 2004 — charitable-trust registration, reporting, and governance",
+      "citation": "Cal. Gov. Code §§ 12580–12599.7 (Supervision of Trustees and Fundraisers for Charitable Purposes Act, as amended by the Nonprofit Integrity Act of 2004)",
+      "issuing_authority": "California Attorney General, Registry of Charitable Trusts",
+      "applies_to": "Insight Housing and BRIDGE Housing Corporation as California-operating charitable nonprofit corporations — governs registration status, annual reporting (Form RRF-1), audited-financial-statement requirements for orgs with $2M+ gross revenue, and board/executive-compensation governance standards. Both orgs' FY2023 gross revenue exceeds this $2M threshold: see financials.json (fin-insight-housing-fy2023: $23,079,014; fin-bridge-housing-fy2023: $78,595,410), sourced directly from IRS Form 990 filing data via ProPublica's structured API.",
+      "effective_dates_note": "Confirm each org's registration status and most recent RRF-1 filing directly via the AG's Registry of Charitable Trusts search tool rather than assuming good standing from the org's tax-exempt status alone (EIN/501(c)(3) status is an IRS matter, separate from CA charitable-trust registration).",
+      "elements_relevant_to_hypotheses": [
+        "Is the org currently registered and in good standing with the CA Registry of Charitable Trusts (distinct from, and in addition to, its IRS 501(c)(3) status)?",
+        "Has it filed its required annual RRF-1 and, given revenue over $2M, an audited financial statement?",
+        "Does its board governance (e.g. compensation-setting process for executives) meet the Act's requirements (Gov. Code § 12586(g)-(h))?"
+      ],
+      "source": "https://oag.ca.gov/charities/laws (accessed 2026-09-24); https://oag.ca.gov/sites/all/files/agweb/pdfs/charities/publications/nonprofit_integrity_act_nov04.pdf"
+    }
+  ],
+  "fact_to_element_matrix": [],
+  "insufficient_facts_note": "No fact_to_element_matrix entries exist yet because #2/#3/#4/#6/#7 have not yet documented a specific transaction, contact, or decision involving these entities and any government official or agency. Per issue #9's own 'Done when' criterion, this matrix should be built out once a compliance-relevant hypothesis with documented facts exists -- building it now would mean inventing a fact pattern to test rules against, which is exactly the correlation-to-conclusion error issue #9 exists to prevent.",
+  "jurisdiction_notes": [
+    "Rep. Lateefah Simon is a FEDERAL officeholder (U.S. House, CA-12). California's FPPC/Political Reform Act and Oakland's Public Ethics Commission rules govern CA state and Oakland municipal officials respectively -- they do NOT apply to her in her federal capacity. Do not conflate rule-fed-campaign-finance-feca / rule-federal-house-ethics-financial-disclosure (which do apply to her) with the CA/Oakland entries above (which apply to CA/Oakland officials, not to her).",
+    "If any hypothesis in #2 involves a CA state legislator, Alameda County official, or City of Oakland/Berkeley official (as opposed to Rep. Simon), the CA FPPC and/or Oakland-specific frameworks above would be the correct fit for that person instead."
+  ]
+}

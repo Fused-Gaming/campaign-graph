@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from datetime import date
+import datetime
 from enum import StrEnum
 from typing import Any
 from pydantic import BaseModel, Field
@@ -83,8 +83,8 @@ DECISION_EDGE_TYPES = {EdgeType.VOTED_YES, EdgeType.VOTED_NO, EdgeType.RECUSED, 
 class Evidence(BaseModel):
     source_url: str
     source_title: str
-    source_date: date | None = None
-    accessed_date: date
+    source_date: datetime.date | None = None
+    accessed_date: datetime.date
     source_type: str
     evidence_quote_or_summary: str
     confidence: Confidence
@@ -108,14 +108,14 @@ class Edge(BaseModel):
     evidence: list[Evidence]
     amount: float | None = None
     currency: str | None = None
-    date: date | None = None
+    date: datetime.date | None = None
     metadata: dict[str, Any] = Field(default_factory=dict)
 
 
 class Event(BaseModel):
     id: str
     title: str
-    date: date
+    date: datetime.date
     event_type: str
     node_ids: list[str] = Field(default_factory=list)
     edge_ids: list[str] = Field(default_factory=list)

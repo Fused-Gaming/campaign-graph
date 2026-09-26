@@ -1,0 +1,26 @@
+[
+  {
+    "id": "role-lombard-bridge-ceo",
+    "person_node_id": null,
+    "person_label": "Ken Lombard",
+    "org_node_id": "org-bridge-housing-corporation",
+    "title": "President & Chief Executive Officer",
+    "start_date": null,
+    "end_date": null,
+    "status": "current",
+    "source": "BRIDGE Housing official Senior Leadership Team page, accessed 2026-09-24: https://bridgehousing.com/leadership/senior-leadership-team/",
+    "notes": "person_node_id intentionally null: no independent identifier (e.g. FEC ID, other org affiliation, public filing signature) has been sourced for Ken Lombard yet, so no standalone person node has been created for him. Create one only when a second independent source or a reason to link him to another node arises."
+  },
+  {
+    "id": "role-svensk-bridge-general-counsel",
+    "person_node_id": null,
+    "person_label": "Hallock Svensk",
+    "org_node_id": "org-bridge-housing-corporation",
+    "title": "General Counsel",
+    "start_date": null,
+    "end_date": null,
+    "status": "current",
+    "source": "BRIDGE Housing official Senior Leadership Team page, accessed 2026-09-24: https://bridgehousing.com/leadership/senior-leadership-team/",
+    "notes": "Recorded because General Counsel is a role plausibly relevant to future lobbying/contracting edges. person_node_id left null per same rationale as role-lombard-bridge-ceo."
+  }
+]
