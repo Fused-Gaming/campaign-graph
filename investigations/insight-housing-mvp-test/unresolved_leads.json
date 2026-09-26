@@ -44,5 +44,21 @@
       "Check California state/local campaign-finance disclosures (Cal-Access or its successor) in case a state or local official, rather than Rep. Simon, is the relevant recipient for a documented BRIDGE/Insight-connected contribution"
     ],
     "status": "UNRESOLVED"
+  },
+  {
+    "id": "lead-no-oakland-lobbying-activity-bridge-insight",
+    "node_ids": ["org-insight-housing", "org-bridge-housing-corporation"],
+    "description": "Queried Oakland's Open Data Portal (data.oaklandca.gov), which republishes the Public Ethics Commission's official quarterly Lobbyist Activity Reports as structured Socrata datasets, for any lobbying client, contact, or matter naming Insight Housing, BRIDGE Housing Corporation, or Insight Housing's former legal name (Berkeley Food and Housing Project). Zero matching records found across two separate datasets covering different report schedules/years. Recorded as checked-and-not-found per #6's mission (Oakland lobbyist reports as the seed source) so this isn't re-run from scratch.",
+    "checked_sources": [
+      "data.oaklandca.gov/resource/ucs9-a92d.json (Lobbyist Activity - Contacts with Public Officials, Schedule A) queried directly via Socrata SoQL, fetched 2026-09-26: $where=client_name like '%Insight Housing%' OR client_name like '%Bridge Housing%' OR client_name like '%Berkeley Food%' -- 0 results",
+      "data.oaklandca.gov/resource/ss9a-d595.json (Lobbyist Clients master list) queried directly, fetched 2026-09-26: $where=upper(client_name) like '%INSIGHT HOUSING%' OR upper(client_name) like '%BRIDGE HOUSING%' OR upper(client_name) like '%BERKELEY FOOD%' -- 0 results"
+    ],
+    "next_steps": [
+      "Check whether Insight Housing or BRIDGE Housing itself (not a contracted lobbying firm) ever registered as an in-house lobbyist employer, via the Registered Lobbyist dataset/portal (apps.oaklandca.gov/pec/Lobbyist_Registered.aspx) -- not yet queried",
+      "Check year-specific datasets (e.g. Lobbyist Clients 2021, Lobbyist Contacts with Public Officials 2021/2022) individually in case the combined/master dataset queried here has gaps for older years",
+      "Check CA state-level lobbying disclosure (Cal-Access or successor) for either org, separate from the Oakland-local check done here, per rule-ca-state-lobbying-registration in rules_ledger.json",
+      "Check City of Berkeley's own lobbying/ethics disclosure system if one exists, since Insight Housing is Berkeley-headquartered and most of its documented activity (per grants.json/addresses.json) is not Oakland-specific"
+    ],
+    "status": "UNRESOLVED"
   }
 ]

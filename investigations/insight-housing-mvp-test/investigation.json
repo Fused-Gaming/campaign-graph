@@ -65,6 +65,26 @@
         "Adjacent committee search (leadership PAC, joint fundraising committee) beyond the principal campaign committee",
         "CA state/local campaign-finance disclosure search (Cal-Access or successor system) for any CA state or local official connected to these entities"
       ]
+    },
+    {
+      "id": "h4-no-documented-oakland-lobbying-bridge-insight",
+      "statement": "No Oakland lobbying activity (client relationship, contact with a public official, or matter) naming Insight Housing or BRIDGE Housing Corporation has been found in Oakland's official Public Ethics Commission lobbyist disclosure data.",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "required_elements": [
+        "A specific Oakland lobbyist activity report (Schedule A contact or client listing) naming one of these entities",
+        "OR a CA state, City of Berkeley, or other jurisdiction's lobbying disclosure record if the relevant activity occurred elsewhere"
+      ],
+      "supporting_edge_ids": [],
+      "contradicting_edge_ids": [],
+      "alternative_explanations": [
+        "No lobbying activity may exist at all in Oakland -- Insight Housing is Berkeley-headquartered and its documented activity (grants.json) is with federal agencies (VA, DOL, HUD), not Oakland city government, so an absence of Oakland lobbying records is unsurprising rather than suspicious.",
+        "Either org could lobby through an unregistered informal contact that doesn't trigger Oakland's $1,000/month registration threshold, which would not appear in this dataset regardless of whether contact occurred."
+      ],
+      "missing_records": [
+        "Oakland Registered Lobbyist employer dataset (in-house lobbyist check, not yet queried)",
+        "Individual year datasets pre-dating the combined/master dataset queried",
+        "CA state-level (Cal-Access) and City of Berkeley lobbying disclosure records"
+      ]
     }
   ],
   "entry_nodes": ["person-lateefah-simon", "org-insight-housing"],
