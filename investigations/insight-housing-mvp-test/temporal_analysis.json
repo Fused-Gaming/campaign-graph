@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "investigation_slug": "insight-housing-mvp-test",
+  "workstream": "issue-8-event-timeline",
+  "proximity_windows_days": [7, 30, 90, 180],
+  "note": "Proximity windows are generic parameters, not case-hard-coded -- any two dated events in events.json can be compared against any of these windows (or others) by a downstream tool. The analysis below applies them to the one pair of events in this package's timeline that has any plausible narrative connection (Rep. Simon's officeholding start and a federal award to Insight Housing); all other event pairs in events.json (grant-to-grant, tax-exempt rulings) have no hypothesized relationship to test and are not analyzed for clustering here.",
+  "candidate_clusters": [
+    {
+      "id": "cluster-simon-office-start-vs-hud-award",
+      "event_ids": ["event-simon-took-office", "event-insight-housing-hud-award-ca2234l9t022300"],
+      "gap_days": 271,
+      "gap_description": "271 days (~9 months) between Rep. Simon taking office (2025-01-03) and the start of HUD Continuum of Care award CA2234L9T022300 to Insight Housing (2025-10-01).",
+      "within_proximity_window": false,
+      "within_proximity_window_note": "271 days exceeds even the widest configured window (180 days). Under the proximity windows this package defines, these two events do NOT cluster. This pairing is retained in the record only because it is the sole timing question raised in the earlier lead-simon-insight-housing-geography and lead-no-... leads, not because the data itself flags a cluster.",
+      "correlation_only": true,
+      "baseline_context": "HUD Continuum of Care awards are announced on a recurring annual cycle (typically a fall Notice of Funding Opportunity with awards following months later) tied to HUD's own fiscal-year process, not to any individual House member's calendar. Insight Housing's grants.json record shows a comparable HUD-pattern award cadence and VA/DOL awards spanning 2017-2026 that are entirely independent of any change in the CA-12 seat -- i.e. this organization received federal funding on a similar annual cycle for years before Rep. Simon took office, which is the relevant baseline against which this single data point should be read.",
+      "conclusion": "No temporal cluster supports any hypothesis connecting Rep. Simon's officeholding to this award. Recorded per issue #8's instruction to surface proximity-derived leads explicitly and mark them correlation_only, and to compare against baseline/ordinary-process activity when data permits -- both of which point away from, not toward, any relationship."
+    }
+  ],
+  "explicitly_not_clustered": [
+    "All grant-award events in events.json to either organization span 2017-2026 with gaps of months to years between them and Rep. Simon's 2025-01-03 start date, consistent with ordinary, recurring federal grant cycles rather than any single triggering event.",
+    "BRIDGE Housing's and Insight Housing's IRS tax-exempt ruling dates (1983 and 1986 respectively) predate every other event in this timeline by decades and have no plausible temporal relationship to anything else recorded."
+  ]
+}
