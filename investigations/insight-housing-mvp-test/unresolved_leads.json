@@ -17,11 +17,24 @@
       }
     ],
     "next_steps": [
-      "Check congressional appropriations/community-project-funding request lists for CA-12",
       "Check City of Berkeley Housing Trust Fund and CDBG award records for Insight Housing",
       "Pull award-detail (not just summary) records for the one award postdating Simon's tenure (CA2234L9T022300) to confirm the HUD CoC scoring process and rule out any member-specific role"
     ],
     "status": "UNRESOLVED"
+  },
+  {
+    "id": "lead-simon-fy26-fy27-cpf-no-insight-bridge-match",
+    "node_ids": ["person-lateefah-simon", "org-insight-housing", "org-bridge-housing-corporation"],
+    "description": "Checked Rep. Simon's own official Community Project Funding (congressional earmark) request pages for FY26 and FY27 -- the authoritative primary source for what she personally requested appropriations for -- against Insight Housing, BRIDGE Housing Corporation, and Insight's former legal name. Neither organization appears anywhere on either list. This resolves the 'congressional appropriations/earmark request records for CA-12' next step that has been open since the earliest lead in this package.",
+    "checked_sources": [
+      "simon.house.gov/fy26-community-project-funding, fetched directly 2026-10-03 -- 15 projects listed (Oakland, Berkeley, San Leandro, Alameda, Emeryville public agencies, universities, BART, Peralta CCD); none named Insight Housing, BRIDGE Housing, or Berkeley Food and Housing Project",
+      "simon.house.gov/fy27-community-project-funding, fetched directly 2026-10-03 -- 19-20 projects listed (similar public-agency/university/health-center pattern, including a Native American Health Center and an East Oakland Health Center project); none named Insight Housing, BRIDGE Housing, or Berkeley Food and Housing Project"
+    ],
+    "next_steps": [
+      "Check whether Rep. Simon requested CPF funding in any year prior to FY26 (her first full appropriations cycle, since she took office 2025-01-03) -- not applicable for FY25 given her start date, so FY26/FY27 is likely the complete set to date, but confirm no FY25 supplemental request exists",
+      "If 'Bridge' is later confirmed to mean a different entity, re-check these same two pages against that entity's name"
+    ],
+    "status": "RESOLVED_NOT_FOUND"
   },
   {
     "id": "lead-simon-committee-no-bridge-insight-contributions",
@@ -56,7 +69,7 @@
     "next_steps": [
       "Check whether Insight Housing or BRIDGE Housing itself (not a contracted lobbying firm) ever registered as an in-house lobbyist employer, via the Registered Lobbyist dataset/portal (apps.oaklandca.gov/pec/Lobbyist_Registered.aspx) -- not yet queried",
       "Check year-specific datasets (e.g. Lobbyist Clients 2021, Lobbyist Contacts with Public Officials 2021/2022) individually in case the combined/master dataset queried here has gaps for older years",
-      "Check CA state-level lobbying disclosure (Cal-Access or successor) for either org, separate from the Oakland-local check done here, per rule-ca-state-lobbying-registration in rules_ledger.json",
+      "CA state-level lobbying disclosure (Cal-Access) ATTEMPTED 2026-10-03 and BLOCKED, not yet actually checked: cal-access.sos.ca.gov's lobbying employer/client search returned empty content to WebFetch (JS-driven), powersearch.sos.ca.gov explicitly defers lobbying searches to CAL-ACCESS rather than supporting them itself, and a general web search found no third-party-indexed match for either org (California Civic Data Coalition's calaccess_raw tooling and the SoS's raw tab-delimited bulk-data download exist but require downloading and parsing a full database dump, which hasn't been attempted). This is NOT equivalent-confidence to the Oakland/FEC/USAspending API-backed checks elsewhere in this package -- do not treat the absence of a web-search hit as a checked-and-not-found result for Cal-Access specifically.",
       "Check City of Berkeley's own lobbying/ethics disclosure system if one exists, since Insight Housing is Berkeley-headquartered and most of its documented activity (per grants.json/addresses.json) is not Oakland-specific"
     ],
     "status": "UNRESOLVED"

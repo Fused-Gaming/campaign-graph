@@ -42,5 +42,21 @@
       "irs_exempt_ruling_year": 1983,
       "source_note": "Legal name, EIN, city/state, and exemption year per ProPublica Nonprofit Explorer, accessed 2026-09-24: https://projects.propublica.org/nonprofits/organizations/942827909. CA Secretary of State entity number NOT independently verified as of this writing — a search-engine result purporting to show a CA SoS filing for this org could not be confirmed against the live SOS business search and is deliberately omitted. See identity_resolution.json for the open collision/verification item."
     }
+  },
+  {
+    "id": "org-bridge-housing-corporation-socal",
+    "label": "Bridge Housing Corporation - Southern California",
+    "type": "NONPROFIT",
+    "aliases": [],
+    "identifiers": {
+      "ein": "94-3233154"
+    },
+    "metadata": {
+      "location": "San Francisco, CA",
+      "address": "350 California Street, 16th Floor, San Francisco, CA",
+      "irs_exempt_ruling_year": 1996,
+      "source_note": "Legal name, EIN, address, and exemption year per ProPublica Nonprofit Explorer structured API, fetched directly 2026-09-26: https://projects.propublica.org/nonprofits/api/v2/organizations/943233154.json",
+      "relationship_note": "DISTINCT legal entity and EIN from org-bridge-housing-corporation (94-2827909), despite the near-identical name and the same building (350 California St) -- officed one floor below (16th Floor vs. Ste 1600/16th floor suite). This is almost certainly a related affiliate/regional subsidiary of BRIDGE Housing Corporation given the shared address and near-identical name, but NO shared-officer, shared-board, or parent/subsidiary filing has been sourced yet to confirm the exact relationship. Per the 'never merge on name alone' rule, this is kept as a separate node, not merged with org-bridge-housing-corporation, and not assumed to be the same thing as whatever 'Bridge' issue #2 refers to. See identity_resolution.json for the open item."
+    }
   }
 ]

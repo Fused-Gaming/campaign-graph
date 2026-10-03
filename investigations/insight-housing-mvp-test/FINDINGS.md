@@ -1,6 +1,6 @@
 # Findings memo: Insight Housing / BRIDGE Housing / Lateefah Simon MVP investigation
 
-**Status:** in progress, evidence-first pipeline validation. **This memo reflects the record as of 2026-09-26 and will go stale as the underlying JSON ledgers change — treat it as a snapshot, not the source of truth. The JSON files in this directory are canonical; if this memo and a JSON file disagree, the JSON file is right.**
+**Status:** in progress, evidence-first pipeline validation. **This memo reflects the record as of 2026-10-03 and will go stale as the underlying JSON ledgers change — treat it as a snapshot, not the source of truth. The JSON files in this directory are canonical; if this memo and a JSON file disagree, the JSON file is right.**
 
 ## What this is
 
@@ -21,18 +21,23 @@ Every item below was checked against an official, primary-source system directly
 - **No FEC-registered committee/PAC** affiliated with either organization.
 - **No Oakland lobbying activity** (client relationship, official contact, or matter) naming either organization in the city's official Public Ethics Commission disclosure data.
 - **No congressional decision-maker or CA-12-specific involvement** in any of the 16 federal awards found — all are agency-scored, not member-decided.
+- **Neither organization appears in Rep. Simon's own FY26 or FY27 Community Project Funding (congressional earmark) requests** — checked directly against her official request pages, the authoritative source for what she personally asked Congress to fund.
 
 ## Correlation flagged, and why it doesn't hold up
 
 One HUD award to Insight Housing (CA2234L9T022300) starts 2025-10-01, after Rep. Simon took office. The gap is 271 days — outside every proximity window this package defines (7/30/90/180 days) — and HUD Continuum of Care awards follow an annual, agency-scored cycle that predates her tenure by years for this same organization. `temporal_analysis.json` records this explicitly as `correlation_only` and concludes it does not support any relationship. This is the single timing question the investigation has surfaced, and it resolves toward "ordinary process," not toward a lead.
 
+## New this round: a same-name entity collision, caught before it mattered
+
+A general web search surfaced "Bridge Housing Corporation - Southern California" (EIN 94-3233154, exempt since 1996) — a **distinct legal entity** from the BRIDGE Housing Corporation in this package (EIN 94-2827909, exempt since 1983), sharing the same San Francisco building but a different suite/floor. Confirmed directly via ProPublica's API. Added as a separate node (`org-bridge-housing-corporation-socal`) rather than merged, per "never merge on name alone" — this is exactly the kind of collision #3's mission exists to catch, and it was almost missed because earlier, more targeted searches for "BRIDGE Housing Corporation" alone never surfaced it.
+
 ## Unresolved (genuinely open, not just unresearched)
 
-1. **Which "Bridge" issue #2 means.** This package assumed BRIDGE Housing Corporation as the most plausible referent given the shared Bay Area/housing context, but this has not been confirmed by the person who opened #2. Everything BRIDGE-Housing-specific in this package inherits that assumption's uncertainty.
-2. **CA Secretary of State entity numbers** for both organizations — CA SoS's business search and OpenCorporates are both unreachable from this environment (JS-driven form; hard bot-block respectively). Needs a human with browser access.
+1. **Which "Bridge" issue #2 means.** This package assumed BRIDGE Housing Corporation as the most plausible referent given the shared Bay Area/housing context, but this has not been confirmed by the person who opened #2. Everything BRIDGE-Housing-specific in this package inherits that assumption's uncertainty — and now there's a second, closely related entity (the Southern California affiliate above) that could just as easily be meant.
+2. **CA Secretary of State entity numbers** for all three organizations — CA SoS's business search and OpenCorporates are both unreachable from this environment (JS-driven form; hard bot-block respectively). Needs a human with browser access.
 3. **Individual officer/director names (IRS Form 990 Part VII)** for Insight Housing, and beyond the two already-sourced BRIDGE Housing officers — the actual PDF filings return HTTP 403 from ProPublica's download endpoint even though the JSON metadata API works, and the public IRS bulk-data S3 bucket returned zero keys. Needs a human to download a 990 directly, or a different bulk-data source.
-4. **CA state and City of Berkeley lobbying disclosures** — only Oakland's has been checked.
-5. **Congressional appropriations/earmark records for CA-12**, and **City of Berkeley grant/contract records** for Insight Housing — not yet checked at all.
+4. **CA state (Cal-Access) lobbying disclosures** — attempted and blocked (JS-driven system, no usable API found from here), not equivalent-confidence to the API-backed checks above. **City of Berkeley** lobbying disclosures not yet attempted at all.
+5. **City of Berkeley grant/contract records** for Insight Housing, and the BRIDGE Housing Corporation ↔ Southern California affiliate relationship (Schedule R or similar) — not yet checked.
 
 ## Explicitly not established (and this investigation should not imply otherwise)
 

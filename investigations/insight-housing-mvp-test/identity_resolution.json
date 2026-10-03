@@ -37,9 +37,27 @@
       "value": "350 California St Ste 1600, San Francisco, CA 94104-1429",
       "source": "IRS Form 990 filing header via ProPublica Nonprofit Explorer structured API, accessed 2026-09-24: https://projects.propublica.org/nonprofits/api/v2/organizations/942827909.json",
       "confidence": "high"
+    },
+    {
+      "node_id": "org-bridge-housing-corporation-socal",
+      "identifier_type": "ein",
+      "value": "94-3233154",
+      "source": "ProPublica Nonprofit Explorer structured API, fetched directly 2026-09-26: https://projects.propublica.org/nonprofits/api/v2/organizations/943233154.json",
+      "confidence": "high"
     }
   ],
   "unresolved_identity_items": [
+    {
+      "id": "identity-item-bridge-housing-socal-affiliate-relationship",
+      "node_ids": ["org-bridge-housing-corporation", "org-bridge-housing-corporation-socal"],
+      "description": "Discovered via general web search (GuideStar listing) 2026-09-26 and confirmed directly via ProPublica's API: 'Bridge Housing Corporation - Southern California' (EIN 94-3233154, exempt since 1996) is a DISTINCT legal entity from BRIDGE Housing Corporation (EIN 94-2827909, exempt since 1983), sharing the same building (350 California St, San Francisco) but a different suite/floor. The near-identical name and shared address strongly suggest an affiliate/regional-subsidiary relationship, but no shared-officer, shared-board, or parent/subsidiary filing has been sourced to confirm it. Recorded as two separate nodes per 'never merge on name alone' -- this is exactly the kind of same-name collision #3's mission warns about, surfaced here specifically because it was almost missed (it did not appear in earlier, more targeted searches for 'BRIDGE Housing Corporation' alone).",
+      "status": "UNRESOLVED",
+      "next_steps": [
+        "Pull BRIDGE Housing Corporation's (94-2827909) IRS Form 990 Schedule R (Related Organizations) if obtainable, which would formally document any parent/subsidiary relationship with the Southern California entity",
+        "Check whether any of this package's existing grants.json/roles.json facts (sourced against EIN 94-2827909 specifically) could actually belong to the Southern California affiliate instead -- re-verify each grants.json entry's award-detail recipient EIN if possible",
+        "If the 'Bridge' in issue #2 is confirmed to be a Southern California matter, this affiliate -- not the main BRIDGE Housing Corporation -- may be the more relevant entity"
+      ]
+    },
     {
       "id": "collision-bridge-housing-ca-sos-entity-number",
       "node_ids": ["org-bridge-housing-corporation"],

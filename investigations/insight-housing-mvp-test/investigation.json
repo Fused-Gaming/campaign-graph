@@ -25,7 +25,6 @@
         "A relationship may exist in records not yet checked (e.g. USAspending.gov award data, local Berkeley grant records, congressional appropriations requests) and this package should be updated if primary sources are located."
       ],
       "missing_records": [
-        "Congressional appropriations/earmark request records for CA-12",
         "City of Berkeley grant and contract records naming Insight Housing",
         "Award-detail records (not just summary fields) for the one federal award to Insight Housing postdating Rep. Simon's tenure, to confirm no member-specific role in the award decision"
       ]
