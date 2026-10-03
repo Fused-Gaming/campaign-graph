@@ -23,6 +23,36 @@
     "status": "DOCUMENTED"
   },
   {
+    "id": "lobby-shenoy-bridgeaor-oakland-full-history-2020-2026",
+    "lobbyist_label": "Kiran Shenoy",
+    "lobbyist_identifiers": {
+      "email": "kiran@bridgeaor.org"
+    },
+    "employer_client_org_node_id": "org-bridge-association-of-realtors",
+    "employer_client_label": "Bridge Association of Realtors",
+    "report_id": "multiple -- 110, 124, 250, 1398, 1409, 2490, 2562, 2642, 2721, 2794, 3856, 3918, 3999, 4080, 4231, 5421, 5581, 5739 (18 reports, Q2 2020 through Q2 2026)",
+    "report_period": "Quarter 2 2020 through Quarter 2 2026 (sustained, ongoing)",
+    "filing_date": null,
+    "officials_contacted": [
+      "Fortunato Bas, Nikki", "Gibson McElhaney, Lynette", "Thao, Sheng", "Kalb, Dan",
+      "Kaplan, Rebecca", "Gallo, Noel", "Reid, Larry", "Reid, Treva", "Taylor, Loren",
+      "Schaaf, Libby", "Fife, Carroll", "Jenkins, Kevin", "Ramachandran, Janani",
+      "Brown, Rowena", "Unger, Zac", "Wang, Charlene", "Houston, Ken",
+      "Director of Housing (staff title, not individually named)",
+      "City Administrator (staff title)", "Director of Finance (staff title)",
+      "Chief of Staff / Chief of Staff Council District 2 (staff titles)",
+      "Policy Director, Council Member At-Large (staff title)",
+      "Transportation Planner (staff title)"
+    ],
+    "matters": [
+      "Pivot query per lane-2's instruction to expand outward from report #2562 -- pulled EVERY Oakland Schedule A record for lobbyist_name 'Shenoy' (85 individual contact rows across 18 quarterly reports), not just the one report already recorded above.",
+      "Consistent subject matter throughout: Oakland housing/tenant-policy ordinances -- ADU permitting, Just Cause/Tenant Opportunity to Purchase Act exemptions for new construction ('Oppose expansion of Just Cause Ordinance to new construction. Advocate for certain exemptions to ensure Oakland can continue to develop much needed housing units' -- Q2 2022 narrative, representative of the pattern across reports), and similar housing-development-related city ordinances. No non-housing subject matter appears in any report."
+    ],
+    "source": "Oakland Public Ethics Commission Schedule A dataset, data.oaklandca.gov/resource/ucs9-a92d.json, queried directly 2026-10-03: $where=lobbyist_name like '%25Shenoy%25', all 85 matching rows read and the officials_contacted list deduplicated from $select=distinct public_official_name.",
+    "notes": "This is the full pivot lane-2 asks for on this lobbyist: every official and report she appears in, not just the originally-flagged report. Result: a 6-year, sustained, entirely Oakland-city-level housing-policy advocacy record. Rep. Simon NEVER appears -- she was never an Oakland city official (she was a BART board director and is now a member of Congress), so this is an expected, not surprising, absence. Insight Housing and BRIDGE Housing Corporation ALSO never appear in any of the 85 rows or their narratives. This closes out the Shenoy/Bridge-AOR pivot for Oakland's Schedule A dataset specifically -- it does not establish or suggest any connection to Rep. Simon or to the two housing nonprofits this investigation centers on; it is recorded because lane 2 explicitly asked for the full pivot to be done and documented, not left undone.",
+    "status": "DOCUMENTED"
+  },
+  {
     "id": "advocacy-hunnicutt-nar-fpc-for-simon",
     "lobbyist_label": "Tia Hunnicutt",
     "lobbyist_identifiers": {
