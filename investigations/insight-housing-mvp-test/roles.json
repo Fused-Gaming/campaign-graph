@@ -357,5 +357,69 @@
     "confidence": "medium",
     "source": "Tia Hunnicutt's own published bio, fetched directly 2026-10-03 (same page as above). Full listed history: NAR -- 2026 Chair MLS Issues & Policy, 2025 Vice Chair MLS Issues & Policy, 2024 MLS Issues & Policy Member, 2024 CCRC PAG, 2024 NAR Director, 2023 Leadership Academy, 2023 Fair Housing Policy Committee, 2022 Federal Technology Policy Committee. CAR -- 2025 CREPAC Member, 2024 Chair MLS Policy, 2023 Vice-Chair MLS Policy, 2023 Federal Committee, 2023 Fair Housing Policy Committee, 2023 CABREP Member, 2021 Executive Committee, 2021 Regional Chair.",
     "notes": "org_node_id set to org-nar for this entry since it's the primary org_node_id field, but this single bio also documents real, current (2025) membership on CREPAC specifically -- see realtor_pac_ecosystem.json, which has been updated to record Hunnicutt as a named, real person-level link into the C.A.R./CREPAC/CREIEC family (lane 4). No California Association of REALTORS (C.A.R.) node exists yet as a standalone entity in nodes.json; her CAR-specific roles are recorded here and in realtor_pac_ecosystem.json rather than under a not-yet-created org-car node."
+  },
+  {
+    "id": "role-lombard-bridge-socal-president-ceo",
+    "person_node_id": null,
+    "person_label": "Ken Lombard",
+    "org_node_id": "org-bridge-housing-corporation-socal",
+    "title": "President and Chief Executive Officer",
+    "start_date": null,
+    "end_date": null,
+    "status": "current",
+    "confidence": "medium",
+    "source": "CauseIQ, fetched directly 2026-10-03: https://www.causeiq.com/organizations/bridge-housing-corporation-southern-california,943233154/ -- dated 2024-12-11.",
+    "notes": "Same person as role-lombard-bridge-ceo (main BRIDGE Housing Corporation) -- this overlap helped confirm the parent/subsidiary relationship in identity_resolution.json. See identity-item-lombard-vs-sager-socal-ceo-contradiction for the Nadia Sager CEO-title conflict at this same subordinate entity."
+  },
+  {
+    "id": "role-sager-bridge-socal-ceo",
+    "person_node_id": null,
+    "person_label": "Nadia Sager",
+    "org_node_id": "org-bridge-housing-corporation-socal",
+    "title": "Chief Executive Officer",
+    "start_date": null,
+    "end_date": null,
+    "status": "CONTRADICTED",
+    "confidence": "low",
+    "source": "CauseIQ, fetched directly 2026-10-03 (same page as above), dated 2024-12-06.",
+    "notes": "See identity-item-lombard-vs-sager-socal-ceo-contradiction -- conflicts with Ken Lombard also being listed as President/CEO of the same entity within days. Plausibly an operational/subordinate-specific CEO title under Lombard's org-wide presidency, but not confirmed."
+  },
+  {
+    "id": "role-sherman-bridge-socal-cfo",
+    "person_node_id": null,
+    "person_label": "Delphine Sherman",
+    "org_node_id": "org-bridge-housing-corporation-socal",
+    "title": "Vice President and Chief Financial Officer / Executive Vice President and Chief Financial Officer",
+    "start_date": null,
+    "end_date": null,
+    "status": "current",
+    "confidence": "medium",
+    "source": "CauseIQ, fetched directly 2026-10-03 (same page as above), $0 compensation listed, dated 2024-12-31.",
+    "notes": "Same person as role-sherman-bridge-evp-cfo-2025 (main BRIDGE Housing Corporation) -- further corroborates the parent/subsidiary executive overlap."
+  },
+  {
+    "id": "role-mather-bridge-socal-evp-cio",
+    "person_node_id": null,
+    "person_label": "Jim Mather",
+    "org_node_id": "org-bridge-housing-corporation-socal",
+    "title": "Executive Vice President and Chief Investment Officer",
+    "start_date": null,
+    "end_date": null,
+    "status": "current",
+    "confidence": "medium",
+    "source": "CauseIQ, fetched directly 2026-10-03 (same page as above), $0 compensation listed, dated 2024-12-11."
+  },
+  {
+    "id": "role-lund-bridge-socal-svp-finance",
+    "person_node_id": null,
+    "person_label": "Erik Lund",
+    "org_node_id": "org-bridge-housing-corporation-socal",
+    "title": "Senior Vice President of Finance and Accounting",
+    "start_date": null,
+    "end_date": null,
+    "status": "current",
+    "confidence": "medium",
+    "source": "CauseIQ, fetched directly 2026-10-03 (same page as above), dated 2025-11-11.",
+    "notes": "Likely the same person as role-lund-bridge-cfo-2026 (main BRIDGE Housing Corporation, spelled 'Eric Lund' there vs. 'Erik Lund' here) -- a plausible spelling variant of the same name, not independently confirmed as the same individual. CauseIQ's page notes '5 more key personnel' behind a paywall -- this remains a partial roster."
   }
 ]

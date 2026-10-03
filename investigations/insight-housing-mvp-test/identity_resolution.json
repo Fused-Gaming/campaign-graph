@@ -93,12 +93,21 @@
     {
       "id": "identity-item-bridge-housing-socal-affiliate-relationship",
       "node_ids": ["org-bridge-housing-corporation", "org-bridge-housing-corporation-socal"],
-      "description": "Discovered via general web search (GuideStar listing) 2026-09-26 and confirmed directly via ProPublica's API: 'Bridge Housing Corporation - Southern California' (EIN 94-3233154, exempt since 1996) is a DISTINCT legal entity from BRIDGE Housing Corporation (EIN 94-2827909, exempt since 1983), sharing the same building (350 California St, San Francisco) but a different suite/floor. The near-identical name and shared address strongly suggest an affiliate/regional-subsidiary relationship, but no shared-officer, shared-board, or parent/subsidiary filing has been sourced to confirm it. Recorded as two separate nodes per 'never merge on name alone' -- this is exactly the kind of same-name collision #3's mission warns about, surfaced here specifically because it was almost missed (it did not appear in earlier, more targeted searches for 'BRIDGE Housing Corporation' alone).",
-      "status": "UNRESOLVED",
+      "description": "Discovered via general web search (GuideStar listing) 2026-09-26 and confirmed directly via ProPublica's API: 'Bridge Housing Corporation - Southern California' (EIN 94-3233154, exempt since 1996) is a DISTINCT legal entity from BRIDGE Housing Corporation (EIN 94-2827909, exempt since 1983), sharing the same building (350 California St, San Francisco) but a different suite/floor. RESOLVED 2026-10-03: CauseIQ (causeiq.com/organizations/bridge-housing-corporation-southern-california,943233154/, fetched directly) states explicitly: 'Bridge Housing Corporation - Southern California is a subordinate organization under BRIDGE Housing' -- confirming the parent/subsidiary relationship suspected from the shared address/near-identical name. Also corroborated by overlapping executives: Ken Lombard (President/CEO of the main org) and Delphine Sherman (CFO-family role at the main org) both also appear in the Southern California entity's key-personnel listing.",
+      "status": "RESOLVED_SUBORDINATE_ORGANIZATION",
       "next_steps": [
-        "Pull BRIDGE Housing Corporation's (94-2827909) IRS Form 990 Schedule R (Related Organizations) if obtainable, which would formally document any parent/subsidiary relationship with the Southern California entity",
-        "Check whether any of this package's existing grants.json/roles.json facts (sourced against EIN 94-2827909 specifically) could actually belong to the Southern California affiliate instead -- re-verify each grants.json entry's award-detail recipient EIN if possible",
-        "If the 'Bridge' in issue #2 is confirmed to be a Southern California matter, this affiliate -- not the main BRIDGE Housing Corporation -- may be the more relevant entity"
+        "CauseIQ is a secondary aggregator, not the Schedule R filing itself -- if formal confirmation is needed, still worth pulling BRIDGE Housing Corporation's actual 990 Schedule R",
+        "Check whether any of this package's existing grants.json facts (sourced against EIN 94-2827909 specifically) could actually belong to the Southern California subordinate instead -- re-verify each grants.json entry's award-detail recipient EIN if possible",
+        "If the 'Bridge' in issue #2 is confirmed to be a Southern California matter, this subordinate entity -- now confirmed as part of the same overall organization -- is still relevant to BRIDGE Housing Corporation as a whole, not a wholly separate question"
+      ]
+    },
+    {
+      "id": "identity-item-lombard-vs-sager-socal-ceo-contradiction",
+      "node_ids": ["org-bridge-housing-corporation-socal"],
+      "description": "CauseIQ's key-personnel listing for BRIDGE Housing Corporation - Southern California shows TWO people with CEO-family titles within days of each other: Ken Lombard, 'President and Chief Executive Officer,' dated 2024-12-11; and Nadia Sager, 'Chief Executive Officer,' dated 2024-12-06. Lombard is independently confirmed as the MAIN BRIDGE Housing Corporation's President/CEO (bridgehousing.com). It's plausible Lombard holds the top title across the whole organizational family (parent + subordinate) while Sager holds an operational CEO title specific to the Southern California subordinate -- a common structure for a parent/subsidiary pair -- but this is not confirmed from a primary source.",
+      "status": "CONTRADICTED",
+      "next_steps": [
+        "If this entity's leadership becomes relevant to a specific edge, confirm Sager's exact role/title relationship to Lombard's before treating either as 'the' CEO of the Southern California subordinate"
       ]
     },
     {
