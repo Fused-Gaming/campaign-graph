@@ -73,5 +73,24 @@
       "Check City of Berkeley's own lobbying/ethics disclosure system if one exists, since Insight Housing is Berkeley-headquartered and most of its documented activity (per grants.json/addresses.json) is not Oakland-specific"
     ],
     "status": "UNRESOLVED"
+  },
+  {
+    "id": "lead-bart-north-berkeley-tod-vote-record-needed",
+    "node_ids": ["person-lateefah-simon", "org-bart", "org-bridge-housing-corporation", "org-insight-housing", "org-ebaldc", "org-avalonbay-communities"],
+    "description": "User-directed research (2026-10-03): checked Rep. Simon's prior elected role on the BART Board of Directors (District 7, 2016-2024) for any institutional link to the package's organizations, since her BART tenure is a real CA-local/special-district office separate from her current federal seat. Found BART's board authorized an Exclusive Negotiating Agreement with BRIDGE Housing Corporation for a North Berkeley station Transit-Oriented Development on 2022-12-01, during her tenure, and that Insight Housing is reported (via general web search, not yet a primary source) as a co-member of the same development team ('North Berkeley Housing Partners') alongside BRIDGE Housing, EBALDC, and AvalonBay Communities. This is the first documented institutional link between BRIDGE Housing and Insight Housing found anywhere in this investigation. Recorded in events.json and as hypothesis h5 in investigation.json. The load-bearing gap: Simon's actual participation in the 2022-12-01 vote (presence, vote direction, recusal) has NOT been confirmed -- she is included in the event's node_ids only because she was a sitting board member at the time, not because her personal involvement is established.",
+    "checked_sources": [
+      "bart.gov/news/articles/2022/news20221201 (BART official news release), fetched directly 2026-10-03 -- confirms the ENA authorization, names then-Board-President Rebecca Saltzman, does not name Simon",
+      "Wikipedia (Lateefah_Simon) and KQED (BART reinstatement article), fetched directly 2026-10-03 -- confirms her board tenure dates, district, and that a March 2022 residency-based removal attempt was reversed within two weeks, well before the December vote",
+      "General web search for the North Berkeley Housing Partners development team composition -- names BRIDGE Housing, Insight Housing, EBALDC, and AvalonBay, but this has NOT been confirmed against a primary BART project document or signed team agreement",
+      "bart.legistar.com attempted for the 2022-12-01 roll-call vote record -- the Legistar calendar tool defaults to the current date range and a targeted search for that specific date's minutes did not surface a direct result; the record likely exists but was not located in this pass"
+    ],
+    "next_steps": [
+      "Retrieve the actual 2022-12-01 BART board meeting minutes or roll-call vote from bart.legistar.com (search by meeting date or agenda item, not just general web search) to determine Simon's presence, vote, and any recusal",
+      "Confirm Insight Housing's North Berkeley Housing Partners membership against a primary source (BART's own project page at bart.gov/about/business/tod/north-berkeley, or a signed development/ENA document naming the team)",
+      "Check whether a later, more consequential BART board vote (a final development agreement, not just the ENA) has since occurred, and get its vote record too",
+      "Cross-check EBALDC's and AvalonBay's leadership/officers (once sourced) as additional FEC contributor-name candidates for Simon's committee, per the broader leadership cross-check the user requested",
+      "Check whether Simon's prior BART-era campaign committee (separate from her current congressional committee) received contributions from any North Berkeley Housing Partners member or officer -- this requires Cal-Access or local BART-director campaign filings, not the FEC, since BART director elections are not federal"
+    ],
+    "status": "UNRESOLVED"
   }
 ]

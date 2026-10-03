@@ -90,5 +90,52 @@
     "source": "USAspending.gov API, fetched 2026-09-25. See grants.json:grant-insight-housing-hud-ca2234l9t022300.",
     "correlation_only": true,
     "correlation_note": "This award's start date (2025-10-01) falls after event-simon-took-office (2025-01-03), roughly 9 months later. This proximity is NOT evidence of any relationship: HUD Continuum of Care awards are made annually through a competitive Notice of Funding Opportunity scored by HUD staff against published criteria, not by individual House members, and Insight Housing has received CoC-pattern HUD awards in this recurring annual cycle independent of who holds the CA-12 seat (see baseline context below). Flagged per issue #8's requirement to surface temporal proximity explicitly and mark it correlation_only rather than silently noting or silently ignoring it."
+  },
+  {
+    "id": "event-simon-bart-elected",
+    "event_type": "role_change",
+    "node_ids": ["person-lateefah-simon", "org-bart"],
+    "date": "2016-11-08",
+    "date_precision": "approximate",
+    "description": "Rep. Simon elected to the BART Board of Directors, District 7. Exact election date approximated as the 2016 general election date; not independently confirmed against an official certified-results record.",
+    "source": "Wikipedia and general web search corroboration, accessed 2026-10-03: https://en.wikipedia.org/wiki/Lateefah_Simon. Not yet verified against Alameda/Contra Costa/San Francisco County certified election results."
+  },
+  {
+    "id": "event-simon-bart-removal-announced",
+    "event_type": "role_change",
+    "node_ids": ["person-lateefah-simon", "org-bart"],
+    "date": "2022-03-10",
+    "date_precision": "day",
+    "description": "BART staff announced Simon's removal from the board over a residency dispute (her Oakland address was determined to be ~300 feet outside the District 7 boundary).",
+    "source": "KQED, accessed 2026-10-03: https://www.kqed.org/news/11909035/bart-reverses-course-says-lateefah-simon-remains-on-board-of-directors"
+  },
+  {
+    "id": "event-simon-bart-reinstated",
+    "event_type": "role_change",
+    "node_ids": ["person-lateefah-simon", "org-bart"],
+    "date": "2022-03-23",
+    "date_precision": "day",
+    "description": "BART reversed the removal after outside counsel found staff lacked authority to remove an elected director; BART concluded Simon retained her seat without interruption throughout the dispute. Recorded as context: this confirms she was a sitting, undisputed director well before the 2022-12-01 North Berkeley TOD board action below, so that later vote is not clouded by this earlier, resolved dispute.",
+    "source": "KQED, accessed 2026-10-03: https://www.kqed.org/news/11909035/bart-reverses-course-says-lateefah-simon-remains-on-board-of-directors"
+  },
+  {
+    "id": "event-bart-board-north-berkeley-ena-bridge-housing",
+    "event_type": "public_meeting_decision",
+    "node_ids": ["org-bart", "org-bridge-housing-corporation", "person-lateefah-simon"],
+    "date": "2022-12-01",
+    "date_precision": "day",
+    "description": "BART Board of Directors authorized the General Manager to enter a two-year Exclusive Negotiating Agreement (ENA) with BRIDGE Housing Corporation to plan a Transit-Oriented Development at the North Berkeley BART station (and, contingently, with Republic Metropolitan). BART's news release names then-Board-President Rebecca Saltzman and does NOT name Rep. Simon. Simon was a sitting District 7 director at this date (elected 2016, continuously per event-simon-bart-reinstated above), but whether she was present, voted, how she voted, or recused has NOT been confirmed -- no roll-call vote record has been located yet. node_ids includes her because she was a board member at the time this board-level decision was made, NOT because her participation is confirmed; this is deliberately the most load-bearing, least-confirmed fact in this entire package and must not be read as more than that.",
+    "source": "BART official news release, accessed 2026-10-03: https://www.bart.gov/news/articles/2022/news20221201",
+    "correlation_only": true,
+    "correlation_note": "This is the single most significant documented institutional fact linking BRIDGE Housing Corporation to an agency Rep. Simon sat on. It is NOT evidence of her personal involvement, vote, or any impropriety -- it is a board-level action by a multi-member elected body, during a period she was one of nine directors, on a routine real-estate planning authorization (an ENA is a negotiating framework, not a final contract award or public funds disbursement). See unresolved_leads.json for the specific roll-call-vote next step needed before this can be characterized any further."
+  },
+  {
+    "id": "event-north-berkeley-tod-team-includes-insight-housing",
+    "event_type": "role_change",
+    "node_ids": ["org-bridge-housing-corporation", "org-insight-housing", "org-ebaldc", "org-avalonbay-communities"],
+    "date": null,
+    "date_precision": "unknown",
+    "description": "Insight Housing, BRIDGE Housing Corporation, East Bay Asian Local Development Corporation (EBALDC), and AvalonBay Communities are reported as the development team ('North Berkeley Housing Partners') for the North Berkeley BART Transit-Oriented Development. This is the first and only documented institutional link between Insight Housing and BRIDGE Housing Corporation found in this investigation to date -- everything else in this package treated them as unrelated entities with only incidental Bay Area geographic overlap.",
+    "source": "General web search corroboration of multiple outlets describing the North Berkeley TOD development team, accessed 2026-10-03. NOT yet independently verified against a primary BART project-page document or a signed partnership/JV filing naming all four entities together -- this is the single highest-priority item to verify with a primary source next."
   }
 ]

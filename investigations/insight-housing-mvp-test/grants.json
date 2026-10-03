@@ -111,8 +111,15 @@
     "award_amount_usd": 735304.0,
     "start_date": "2025-10-01",
     "end_date": "2026-09-30",
-    "source": "USAspending.gov API, fetched directly 2026-09-25 (same query as above)",
-    "notes": "Start date 2025-10-01 is AFTER Rep. Simon took office (2025-01-03) -- this is the one award in this list where a timing overlap with her tenure exists. This does NOT establish any decisional involvement by her; HUD CoC awards are competitively scored by HUD staff via the CoC Program NOFO process, not by individual House members. Flagged here only so it is not missed, not as evidence of a relationship."
+    "date_signed": "2025-08-13",
+    "cfda_number": "14.267",
+    "cfda_title": "Continuum of Care Program",
+    "funding_opportunity_number": "NOT APPLICABLE",
+    "recipient_uei": "C98KZ72UPE68",
+    "parent_recipient_name": "BERKELEY FOOD AND HOUSING PROJECT",
+    "parent_recipient_uei": "NZV3CTRDV9N5",
+    "source": "USAspending.gov API award-detail endpoint, fetched directly 2026-10-03: https://api.usaspending.gov/api/v2/awards/ASST_NON_CA2234L9T022300_086/",
+    "notes": "RESOLVED 2026-10-03: pulled the full award-detail record (not just summary fields) per the earlier flagged next step. Confirms this is CFDA 14.267 (HUD Continuum of Care Program), a standard competitive formula/NOFO grant program -- the award description explicitly directs applicants to a published NOFO and HUD's own CoC award-announcement process, with no congressional, earmark, or member-directed funding mechanism involved at any stage. 'funding_opportunity_number' is 'NOT APPLICABLE' (not an earmark/CPF-style award). Start date 2025-10-01 is AFTER Rep. Simon took office (2025-01-03), but the award-detail record confirms no decisional role for her or any House member -- this closes the question raised when the award was first found, rather than leaving it as a flagged-but-unverified coincidence."
   },
   {
     "id": "grant-insight-housing-va-bfhp073-3918",

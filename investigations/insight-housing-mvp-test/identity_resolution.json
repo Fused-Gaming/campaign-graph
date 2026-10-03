@@ -48,6 +48,16 @@
   ],
   "unresolved_identity_items": [
     {
+      "id": "identity-item-insight-housing-sam-gov-parent-uei",
+      "node_ids": ["org-insight-housing"],
+      "description": "USAspending.gov's award-detail record for grant-insight-housing-hud-ca2234l9t022300 (fetched 2026-10-03) shows recipient_name 'INSIGHT HOUSING' with UEI C98KZ72UPE68, and a SEPARATE parent_recipient_name 'BERKELEY FOOD AND HOUSING PROJECT' with a different UEI (NZV3CTRDV9N5). This package's nodes.json currently treats 'Berkeley Food and Housing Project' merely as Insight Housing's former legal/trade name under the SAME EIN (94-2979073), not as a separate registered entity. SAM.gov's UEI system may be tracking these as a parent/subsidiary registration pair rather than a simple rename -- this has not been reconciled.",
+      "status": "UNRESOLVED",
+      "next_steps": [
+        "Check SAM.gov entity registration directly for both UEIs (C98KZ72UPE68 and NZV3CTRDV9N5) to determine whether this is a parent-subsidiary SAM registration structure, a stale/unretired former registration, or a genuine distinct-but-related entity",
+        "Do not assume the 'former name' framing in nodes.json is wrong, but do not treat it as fully confirmed either -- flag any grants.json entry attributed via either UEI accordingly"
+      ]
+    },
+    {
       "id": "identity-item-bridge-housing-socal-affiliate-relationship",
       "node_ids": ["org-bridge-housing-corporation", "org-bridge-housing-corporation-socal"],
       "description": "Discovered via general web search (GuideStar listing) 2026-09-26 and confirmed directly via ProPublica's API: 'Bridge Housing Corporation - Southern California' (EIN 94-3233154, exempt since 1996) is a DISTINCT legal entity from BRIDGE Housing Corporation (EIN 94-2827909, exempt since 1983), sharing the same building (350 California St, San Francisco) but a different suite/floor. The near-identical name and shared address strongly suggest an affiliate/regional-subsidiary relationship, but no shared-officer, shared-board, or parent/subsidiary filing has been sourced to confirm it. Recorded as two separate nodes per 'never merge on name alone' -- this is exactly the kind of same-name collision #3's mission warns about, surfaced here specifically because it was almost missed (it did not appear in earlier, more targeted searches for 'BRIDGE Housing Corporation' alone).",

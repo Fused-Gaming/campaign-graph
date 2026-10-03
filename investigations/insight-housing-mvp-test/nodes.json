@@ -11,7 +11,9 @@
       "office": "U.S. Representative, California's 12th Congressional District",
       "took_office": "2025-01-03",
       "party": "Democratic",
-      "source_note": "FEC candidate ID and office per FEC.gov candidate profile, accessed 2026-09-24: https://www.fec.gov/data/candidate/H4CA12154/"
+      "source_note": "FEC candidate ID and office per FEC.gov candidate profile, accessed 2026-09-24: https://www.fec.gov/data/candidate/H4CA12154/",
+      "prior_office": "BART (Bay Area Rapid Transit District) Board of Directors, District 7, elected 2016; board president beginning 2020; term ended 2024 (succeeded by Victor Flores). A March 2022 BART staff attempt to remove her over a residency-boundary dispute was reversed within two weeks (announced 2022-03-10, reversed 2022-03-23) after outside counsel found staff lacked authority to remove an elected director; BART concluded she retained her seat throughout the dispute without interruption.",
+      "prior_office_source": "Wikipedia, accessed 2026-10-03: https://en.wikipedia.org/wiki/Lateefah_Simon (elected 2016, board president 2020, term details); KQED, accessed 2026-10-03: https://www.kqed.org/news/11909035/bart-reverses-course-says-lateefah-simon-remains-on-board-of-directors (residency dispute exact dates and resolution); general web search corroborates District 7 and 2016-2024 tenure dates, not yet independently re-verified against BART's own official board-history page (fetch of bart.gov/about/bod/simon returned 404 as of 2026-10-03)."
     }
   },
   {
@@ -57,6 +59,43 @@
       "irs_exempt_ruling_year": 1996,
       "source_note": "Legal name, EIN, address, and exemption year per ProPublica Nonprofit Explorer structured API, fetched directly 2026-09-26: https://projects.propublica.org/nonprofits/api/v2/organizations/943233154.json",
       "relationship_note": "DISTINCT legal entity and EIN from org-bridge-housing-corporation (94-2827909), despite the near-identical name and the same building (350 California St) -- officed one floor below (16th Floor vs. Ste 1600/16th floor suite). This is almost certainly a related affiliate/regional subsidiary of BRIDGE Housing Corporation given the shared address and near-identical name, but NO shared-officer, shared-board, or parent/subsidiary filing has been sourced yet to confirm the exact relationship. Per the 'never merge on name alone' rule, this is kept as a separate node, not merged with org-bridge-housing-corporation, and not assumed to be the same thing as whatever 'Bridge' issue #2 refers to. See identity_resolution.json for the open item."
+    }
+  },
+  {
+    "id": "org-bart",
+    "label": "San Francisco Bay Area Rapid Transit District (BART)",
+    "type": "GOVERNMENT_AGENCY",
+    "aliases": ["BART", "Bay Area Rapid Transit District"],
+    "identifiers": {},
+    "metadata": {
+      "jurisdiction": "US-CA",
+      "entity_description": "California special transit district governed by an elected Board of Directors. Rep. Simon served as an elected director (District 7) on this board 2016-2024, before her current federal office; see person-lateefah-simon.prior_office.",
+      "source_note": "General, uncontested public-agency facts; no single source citation needed beyond the BART board history already sourced on person-lateefah-simon."
+    }
+  },
+  {
+    "id": "org-ebaldc",
+    "label": "East Bay Asian Local Development Corporation",
+    "type": "NONPROFIT",
+    "aliases": ["EBALDC"],
+    "identifiers": {
+      "ein": "51-0171851"
+    },
+    "metadata": {
+      "location": "Oakland, CA",
+      "address": "1825 San Pablo Avenue Ste 200, Oakland, CA 94612-1517",
+      "source_note": "Legal name, EIN, and address per ProPublica Nonprofit Explorer structured API, fetched directly 2026-10-03: https://projects.propublica.org/nonprofits/api/v2/organizations/510171851.json. Added as a node because it is a named co-member, alongside org-bridge-housing-corporation and org-insight-housing, of the North Berkeley Housing Partners development team -- see unresolved_leads.json for the sourced context. Not otherwise investigated; no addresses/roles/identity-collision pass has been done on this entity."
+    }
+  },
+  {
+    "id": "org-avalonbay-communities",
+    "label": "AvalonBay Communities",
+    "type": "DEVELOPER",
+    "aliases": [],
+    "identifiers": {},
+    "metadata": {
+      "entity_description": "Publicly traded real estate investment trust (NYSE: AVB). Named market-rate development partner in the North Berkeley Housing Partners team alongside org-bridge-housing-corporation, org-insight-housing, and org-ebaldc.",
+      "source_note": "Named in general web search results describing the North Berkeley BART TOD development team, not yet independently verified against a primary filing or BART's own project page. type is DEVELOPER (per src/campaign_graph/models.py NodeType), not NONPROFIT -- do not apply nonprofit-specific rules (e.g. rule-ca-nonprofit-integrity-act) to this entity."
     }
   }
 ]
