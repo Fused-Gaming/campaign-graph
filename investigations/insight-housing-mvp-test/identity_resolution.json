@@ -70,6 +70,17 @@
       ]
     },
     {
+      "id": "identity-item-svensk-vs-laffer-bridge-general-counsel",
+      "node_ids": ["org-bridge-housing-corporation"],
+      "description": "BRIDGE Housing Corporation's General Counsel is contradicted between two sources: the org's own official leadership page (bridgehousing.com, fetched 2026-09-24) names Hallock Svensk; CauseIQ's dated 990-derived key-personnel listing (fetched directly 2026-10-03) names Lisa Laffer as 'Chief Operating Officer and General Counsel' as of 2026-01-30. The CauseIQ data postdates the original leadership-page fetch, so a genuine title change/departure between late Sept and early Oct 2026 is plausible, but not confirmed -- could also be that bridgehousing.com's page is simply stale, or that Svensk holds a more specific GC-adjacent title not reflected as a distinct line in either source.",
+      "status": "CONTRADICTED",
+      "next_steps": [
+        "Re-fetch bridgehousing.com's leadership page to check for a since-updated title/roster before concluding either source is wrong",
+        "Read a primary BRIDGE Housing 990 Part VII directly if it becomes accessible (same blocker as Insight Housing's)",
+        "Do not use either Svensk or Laffer as 'the' General Counsel in any new edge or finding until resolved"
+      ]
+    },
+    {
       "id": "identity-item-insight-housing-sam-gov-parent-uei",
       "node_ids": ["org-insight-housing"],
       "description": "USAspending.gov's award-detail record for grant-insight-housing-hud-ca2234l9t022300 (fetched 2026-10-03) shows recipient_name 'INSIGHT HOUSING' with UEI C98KZ72UPE68, and a SEPARATE parent_recipient_name 'BERKELEY FOOD AND HOUSING PROJECT' with a different UEI (NZV3CTRDV9N5). This package's nodes.json currently treats 'Berkeley Food and Housing Project' merely as Insight Housing's former legal/trade name under the SAME EIN (94-2979073), not as a separate registered entity. SAM.gov's UEI system may be tracking these as a parent/subsidiary registration pair rather than a simple rename -- this has not been reconciled.",

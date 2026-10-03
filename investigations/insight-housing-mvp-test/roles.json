@@ -19,9 +19,61 @@
     "title": "General Counsel",
     "start_date": null,
     "end_date": null,
-    "status": "current",
+    "status": "CONTRADICTED",
+    "confidence": "low",
     "source": "BRIDGE Housing official Senior Leadership Team page, accessed 2026-09-24: https://bridgehousing.com/leadership/senior-leadership-team/",
-    "notes": "Recorded because General Counsel is a role plausibly relevant to future lobbying/contracting edges. person_node_id left null per same rationale as role-lombard-bridge-ceo."
+    "notes": "DOWNGRADED 2026-10-03: CauseIQ (causeiq.com/organizations/bridge-housing-corporation,942827909/, fetched directly 2026-10-03, 990-derived key-personnel data dated 2026-01-30) lists Lisa Laffer as 'Chief Operating Officer and General Counsel,' not Svensk -- see role-laffer-bridge-coo-gc below. Possible explanations not yet confirmed: a title change/departure since the bridgehousing.com page was captured, Svensk holding a different specific GC-adjacent title the site rounded up to 'General Counsel,' or one source being stale. Recorded because General Counsel is plausibly relevant to future lobbying/contracting edges, but treat this specific title as unresolved pending a primary document."
+  },
+  {
+    "id": "role-laffer-bridge-coo-gc",
+    "person_node_id": null,
+    "person_label": "Lisa Laffer",
+    "org_node_id": "org-bridge-housing-corporation",
+    "title": "Chief Operating Officer and General Counsel",
+    "start_date": null,
+    "end_date": null,
+    "status": "current",
+    "confidence": "medium",
+    "source": "CauseIQ, fetched directly 2026-10-03: https://www.causeiq.com/organizations/bridge-housing-corporation,942827909/ -- 990-derived key-personnel listing, dated 2026-01-30.",
+    "notes": "Contradicts role-svensk-bridge-general-counsel's title for the GC role -- see that entry's notes. Not merged/resolved; both recorded so the conflict is visible."
+  },
+  {
+    "id": "role-sherman-bridge-evp-cfo-2025",
+    "person_node_id": null,
+    "person_label": "Delphine Sherman",
+    "org_node_id": "org-bridge-housing-corporation",
+    "title": "Executive Vice President and Chief Financial Officer",
+    "start_date": null,
+    "end_date": null,
+    "status": "former (per listing date order)",
+    "confidence": "medium",
+    "source": "CauseIQ, fetched directly 2026-10-03 (same page as above), compensation $429,032, dated 2025-11-15.",
+    "notes": "Likely predecessor to Eric Lund (role-lund-bridge-cfo-2026 below) given the earlier 'as of' date -- a CFO transition, not two simultaneous CFOs. Not confirmed from a primary source."
+  },
+  {
+    "id": "role-lund-bridge-cfo-2026",
+    "person_node_id": null,
+    "person_label": "Eric Lund",
+    "org_node_id": "org-bridge-housing-corporation",
+    "title": "Chief Financial Officer",
+    "start_date": null,
+    "end_date": null,
+    "status": "current (most recent listing date)",
+    "confidence": "medium",
+    "source": "CauseIQ, fetched directly 2026-10-03 (same page as above), compensation $290,900, dated 2026-05-29."
+  },
+  {
+    "id": "role-vanbenschoten-bridge-cio",
+    "person_node_id": null,
+    "person_label": "Elizabeth van Benschoten",
+    "org_node_id": "org-bridge-housing-corporation",
+    "title": "Chief Investment Officer and Senior Vice President, Capital Markets",
+    "start_date": null,
+    "end_date": null,
+    "status": "current",
+    "confidence": "medium",
+    "source": "CauseIQ, fetched directly 2026-10-03 (same page as above), compensation $209,797, dated 2026-01-30.",
+    "notes": "CauseIQ's page notes '15 more key personnel' behind a paywall -- this remains a partial roster, not a complete Part VII list."
   },
   {
     "id": "role-chan-ebaldc-ceo",
