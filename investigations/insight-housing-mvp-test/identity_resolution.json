@@ -102,6 +102,16 @@
       ]
     },
     {
+      "id": "identity-item-hunnicutt-bridgeaor-historical-link",
+      "node_ids": ["org-bridge-association-of-realtors"],
+      "description": "RESOLVES a previously-open item: Tia Hunnicutt's connection to Bridge Association of Realtors was left unconfirmed (her email domain is proximarealtygroup.com, not bridgeaor.org). Her own published bio (proximarealtygroup.com/agents/tia-hunnicutt, fetched directly 2026-10-03) confirms a real, dated history: 'Board Member' 2010-2023, 'Chair' 2019, 'President' 2014. This substantiates the Alameda County REALTOR delegation context the user originally raised as resting on a real leadership relationship, not a coincidence of geography.",
+      "status": "RESOLVED_HISTORICAL_NOT_CURRENT",
+      "next_steps": [
+        "Her bio is self-published (first-person primary source, but not independently corroborated by a Bridge AOR-published record of past officers) -- if higher confidence is needed, check whether Bridge AOR publishes any historical leadership archive",
+        "She does NOT appear in Bridge AOR's current CauseIQ-sourced officer roster (dated 2026-04-19) -- treat her Bridge AOR relationship as ended in 2023, not ongoing, in any further edge built on this"
+      ]
+    },
+    {
       "id": "collision-bridge-housing-ca-sos-entity-number",
       "node_ids": ["org-bridge-housing-corporation"],
       "description": "A generic web search returned a candidate California Secretary of State bizfileonline.sos.ca.gov document link alongside BRIDGE Housing Corporation search results, but the link could not be confirmed as belonging to this specific entity (the search results also surfaced several unrelated 'Bridge'-named California nonprofits: The Bridge Fellowship Socal, BRIDGE MISSION USA, Legacy Bridge Foundation). Per repo rule 'never merge on name alone,' no CA SoS entity number is recorded for BRIDGE Housing Corporation until confirmed directly against https://bizfileonline.sos.ca.gov business search.",

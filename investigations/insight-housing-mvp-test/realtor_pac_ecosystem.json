@@ -34,6 +34,15 @@
       "jurisdiction_note": "CREIEC's own site doesn't state whether it operates at CA-state level only or also makes federal independent expenditures. This needs to be resolved before any FEC Schedule E search (lane 14) can target it correctly -- do not assume it is the right committee to search for a federal IE concerning Rep. Simon without confirming its FEC registration status first."
     }
   ],
+  "named_members_found": [
+    {
+      "person_label": "Tia Hunnicutt",
+      "committee": "CREPAC",
+      "role": "2025 CREPAC Member",
+      "source": "Tia Hunnicutt's own published bio, fetched directly 2026-10-03: https://proximarealtygroup.com/agents/tia-hunnicutt",
+      "notes": "This is the first real, named person-level link found between this investigation's REALTOR-advocacy thread (lane 5, Hunnicutt as NAR's FPC for Rep. Simon and a historical Bridge AOR president/chair) and the C.A.R. PAC family (lane 4). Being a CREPAC member does not by itself establish any contribution to or from Rep. Simon's committee -- CREPAC-State's own stated purpose is CA state candidates, not federal ones (see the CREPAC entity entry above). Recorded as a real, dated fact connecting two previously-separate lanes, not as evidence of any transaction."
+    }
+  ],
   "contributions_to_c00834291_found": [],
   "independent_expenditures_concerning_simon_found": [],
   "next_steps": [
