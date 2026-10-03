@@ -269,5 +269,67 @@
     "confidence": "medium",
     "source": "Same general web search synthesis as role-egan-insight-housing-ceo, same sourcing caveats apply. As of search date 2026-09-09 per the synthesis (date embedded in the search result itself, not independently confirmed).",
     "notes": "Recorded as ONE combined entry (not 15 separate role records) because these names have NOT been individually verified and the package does not want to imply 15 independently-confirmed identities. If any of these names needs to be cross-checked individually (e.g. against FEC contributor names), split it into its own role entry with its own confidence/source at that time rather than treating this bulk entry as 15 equally-confirmed facts."
+  },
+  {
+    "id": "role-lara-bridgeaor-ceo",
+    "person_node_id": null,
+    "person_label": "DaVina Lara",
+    "org_node_id": "org-bridge-association-of-realtors",
+    "title": "Chief Executive Officer",
+    "start_date": null,
+    "end_date": null,
+    "status": "current",
+    "confidence": "medium",
+    "source": "CauseIQ, fetched directly 2026-10-03: https://www.causeiq.com/organizations/bridge-association-of-realtors,940727300/ -- 990-derived key-personnel listing, dated 2026-04-19. $0 compensation listed (plausible for a trade-association executive role depending on how compensation is structured/reported; not independently explained).",
+    "notes": "First officer-level data recorded for org-bridge-association-of-realtors. Note: Kiran Shenoy (the lobbyist recorded in lobbying.json, kiran@bridgeaor.org) does NOT appear in this visible top-5 -- she is plausibly among the '5 more key personnel' the page notes are paywalled, e.g. a Government Affairs Director role, not necessarily a conflict with her being a registered lobbyist for this org."
+  },
+  {
+    "id": "role-rodriguez-bridgeaor-coo",
+    "person_node_id": null,
+    "person_label": "Gustavo Rodriguez",
+    "org_node_id": "org-bridge-association-of-realtors",
+    "title": "Chief Operating Officer",
+    "start_date": null,
+    "end_date": null,
+    "status": "current",
+    "confidence": "medium",
+    "source": "CauseIQ, fetched directly 2026-10-03 (same page as above), compensation $51,849, dated 2026-04-19."
+  },
+  {
+    "id": "role-vivo-bridgeaor-cto",
+    "person_node_id": null,
+    "person_label": "John Vivo",
+    "org_node_id": "org-bridge-association-of-realtors",
+    "title": "Chief Technology Officer",
+    "start_date": null,
+    "end_date": null,
+    "status": "current",
+    "confidence": "medium",
+    "source": "CauseIQ, fetched directly 2026-10-03 (same page as above), dated 2026-04-19."
+  },
+  {
+    "id": "role-castillo-bridgeaor-member-services",
+    "person_node_id": null,
+    "person_label": "Charisse Castillo",
+    "org_node_id": "org-bridge-association-of-realtors",
+    "title": "Director of Member Services",
+    "start_date": null,
+    "end_date": null,
+    "status": "current",
+    "confidence": "medium",
+    "source": "CauseIQ, fetched directly 2026-10-03 (same page as above), dated 2026-04-19."
+  },
+  {
+    "id": "role-coleman-bridgeaor-member-engagement",
+    "person_node_id": null,
+    "person_label": "Lyniqua Coleman",
+    "org_node_id": "org-bridge-association-of-realtors",
+    "title": "Director of Member Engagement and Education",
+    "start_date": null,
+    "end_date": null,
+    "status": "current",
+    "confidence": "medium",
+    "source": "CauseIQ, fetched directly 2026-10-03 (same page as above), dated 2026-04-19.",
+    "notes": "CauseIQ's page notes '5 more key personnel' behind a paywall -- this remains a partial roster, not a complete Part VII list. Kiran Shenoy's own title/role at this org is still not confirmed beyond her lobbyist registration (lobbying.json)."
   }
 ]
