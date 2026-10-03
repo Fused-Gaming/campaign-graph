@@ -1,0 +1,49 @@
+[
+  {
+    "id": "totals-c00834291-cycle-2026",
+    "committee_id": "C00834291",
+    "committee_name": "LATEEFAH FOR CONGRESS",
+    "cycle": 2026,
+    "coverage_start_date": "2025-01-01",
+    "coverage_end_date": "2026-06-30",
+    "receipts_usd": 1449191.49,
+    "individual_contributions_usd": 1127684.29,
+    "individual_itemized_contributions_usd": 1042462.97,
+    "individual_unitemized_contributions_usd": 85221.32,
+    "other_political_committee_contributions_usd": 261420.93,
+    "disbursements_usd": 957256.32,
+    "operating_expenditures_usd": 840533.32,
+    "contribution_refunds_usd": 3398.0,
+    "cash_on_hand_end_period_usd": 777589.88,
+    "treasurer_name": "FRANKLIN, MADDIE",
+    "last_report_type": "JULY QUARTERLY",
+    "last_report_year": 2026,
+    "source": "FEC API, fetched directly 2026-10-03: https://api.open.fec.gov/v1/committee/C00834291/totals/"
+  },
+  {
+    "id": "totals-c00834291-cycle-2024",
+    "committee_id": "C00834291",
+    "committee_name": "LATEEFAH FOR CONGRESS",
+    "cycle": 2024,
+    "coverage_start_date": "2023-02-28",
+    "coverage_end_date": "2024-12-31",
+    "receipts_usd": 2231456.15,
+    "individual_contributions_usd": 1913404.94,
+    "individual_itemized_contributions_usd": 1688676.94,
+    "individual_unitemized_contributions_usd": 224728.0,
+    "other_political_committee_contributions_usd": 270574.01,
+    "disbursements_usd": 1945801.44,
+    "operating_expenditures_usd": 1905606.65,
+    "contribution_refunds_usd": 22915.51,
+    "cash_on_hand_end_period_usd": 285654.71,
+    "treasurer_name": "FRANKLIN, MADDIE",
+    "last_report_type": "YEAR-END",
+    "last_report_year": 2024,
+    "source": "FEC API, fetched directly 2026-10-03: https://api.open.fec.gov/v1/committee/C00834291/totals/"
+  },
+  {
+    "id": "schedule-a-scale-note",
+    "note": "Schedule A (itemized individual receipts) for C00834291 has 9,667 records across 97 pages (per_page=100) as of this fetch (2026-10-03). Full pagination is NOT tractable under the shared DEMO_KEY rate limit (40 calls/hour, exhausted within ~4 calls this session due to proxy-wide sharing) -- it would take many hours across many rate-limit windows, or a personal API key (1000 calls/hour). This is also not the most useful use of limited budget: the investigation's actual question is whether specific named entities/officers from this package appear as contributors, not a full transaction export. Going forward, FEC budget should be spent on targeted contributor_name/contributor_employer queries (see unresolved_leads.json and issue #10's checklist) rather than attempting full Schedule A/B pagination.",
+    "source": "FEC API pagination metadata, fetched directly 2026-10-03: https://api.open.fec.gov/v1/schedules/schedule_a/?committee_id=C00834291&per_page=100"
+  }
+]
