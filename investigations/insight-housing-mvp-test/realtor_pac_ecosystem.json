@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "investigation_slug": "insight-housing-mvp-test",
+  "workstream": "lane-4-car-crepac-creiec-pac-family",
+  "note": "Per the user's lane-4 instruction: resolve exact legal names/IDs/treasurers for this committee family and test whether any of them contributed to C00834291 (Rep. Simon's committee) or made independent expenditures concerning her -- but do NOT merge CREPAC, CREIEC, or C.A.R. into one entity merely because they are affiliated; preserve their separate legal identities. This file is a first identification pass only. The FEC-side resolution (exact committee IDs, contribution/IE search against C00834291) is BLOCKED pending the DEMO_KEY rate-limit reset tracked in issue #10 -- do not treat anything below as a completed contribution check.",
+  "entities": [
+    {
+      "label": "California Association of REALTORS (C.A.R.)",
+      "entity_type": "state trade association (parent organization)",
+      "identifiers": {},
+      "description": "State-level real estate trade association; parent/funding source for CREPAC and CREIEC below. Distinct from the National Association of REALTORS (org-nar, already in nodes.json) and from the local Bridge Association of Realtors (org-bridge-association-of-realtors) -- three separate levels of the REALTOR trade-association structure (national/state/local), not to be conflated.",
+      "source": "General web search corroboration (C.A.R.'s own published PAC materials), accessed 2026-10-03. Not yet independently fetched from a primary C.A.R. page or EIN-confirmed via ProPublica -- C.A.R. itself has not been added as a full node pending that confirmation.",
+      "fec_or_fppc_id": null,
+      "status": "IDENTIFIED_NOT_RESOLVED"
+    },
+    {
+      "label": "California Real Estate Political Action Committee (CREPAC)",
+      "entity_type": "state candidate-contribution PAC",
+      "identifiers": {},
+      "description": "C.A.R.'s state-level PAC for direct contributions to CA STATE candidates (per C.A.R.'s own materials: 'CREPAC funds are used to support campaigns for candidates running for state-level elected offices'). This is a CA FPPC matter, NOT an FEC matter -- CREPAC-State would not be the vehicle for any contribution to Rep. Simon's federal committee (C00834291). If a CREPAC entity contributes to federal candidates, it would need to be a legally distinct 'CREPAC-Federal' or similar FEC-registered committee, not yet identified separately.",
+      "source": "General web search corroboration of C.A.R.'s own published PAC/dues materials, accessed 2026-10-03.",
+      "fec_or_fppc_id": null,
+      "status": "IDENTIFIED_NOT_RESOLVED",
+      "jurisdiction_note": "CA state (FPPC), not federal (FEC) -- per C.A.R.'s own description. A separate federal-level REALTOR PAC vehicle, if contributions to Rep. Simon are to be tested, would need to be identified and confirmed as a distinct FEC-registered committee, not assumed to be this same CREPAC entity."
+    },
+    {
+      "label": "California Real Estate Independent Expenditure Committee (CREIEC)",
+      "entity_type": "independent expenditure committee",
+      "identifiers": {},
+      "description": "C.A.R.'s independent-expenditure vehicle. Per CREIEC's own site (creiec.com, fetched directly 2026-10-03): legal name 'California Association of REALTORS Independent Expenditure Committee,' 'Not authorized by a candidate or a committee controlled by a candidate,' 'Committee's Top Funder: California Association of REALTORS.' Revenue structure per C.A.R.'s materials: C.A.R. political revenue is split 20% to CREPAC-State, 40% to CREIEC (remainder unconfirmed).",
+      "source": "https://www.creiec.com/ fetched directly 2026-10-03; revenue-split figures from general web search corroboration of C.A.R.'s own published materials, not yet independently fetched from a primary C.A.R. document.",
+      "fec_or_fppc_id": null,
+      "status": "IDENTIFIED_NOT_RESOLVED",
+      "jurisdiction_note": "CREIEC's own site doesn't state whether it operates at CA-state level only or also makes federal independent expenditures. This needs to be resolved before any FEC Schedule E search (lane 14) can target it correctly -- do not assume it is the right committee to search for a federal IE concerning Rep. Simon without confirming its FEC registration status first."
+    }
+  ],
+  "contributions_to_c00834291_found": [],
+  "independent_expenditures_concerning_simon_found": [],
+  "next_steps": [
+    "Once FEC rate-limit budget is available (tracked in issue #10): GET /v1/committees/?q=CREPAC, /v1/committees/?q=CREIEC, /v1/committees/?q=California Association of Realtors to find any FEC-registered committees in this family distinct from the CA-state-only CREPAC described above",
+    "For any FEC committee found: pull its totals and check for contributions to C00834291 (schedule_a) and independent expenditures concerning candidate_id=H4CA12154 (schedule_e)",
+    "Resolve exact treasurers for CREPAC and CREIEC -- not found in this pass",
+    "Check Cal-Access (still blocked per the Oakland-lobbying lead's notes on Cal-Access access) for CREPAC-State's FPPC filer ID and any contributions to CA state/local candidates connected to this investigation's entities"
+  ]
+}
