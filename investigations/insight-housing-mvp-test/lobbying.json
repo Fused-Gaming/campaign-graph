@@ -1,1 +1,44 @@
-[]
+[
+  {
+    "id": "lobby-shenoy-bridgeaor-oakland-q4-2021",
+    "lobbyist_label": "Kiran Shenoy",
+    "lobbyist_identifiers": {
+      "email": "kiran@bridgeaor.org"
+    },
+    "employer_client_org_node_id": null,
+    "employer_client_label": "Bridge Association of Realtors",
+    "report_id": "2562",
+    "report_period": "Quarter 4 2021",
+    "filing_date": "2022-02-02",
+    "officials_contacted": [
+      "Nikki Fortunato Bas", "Noel Gallo", "Dan Kalb", "Rebecca Kaplan",
+      "Loren Taylor", "Sheng Thao", "Treva Reid", "Carroll Fife"
+    ],
+    "matters": [
+      "Compliance with state ADU laws, streamlined permitting, liberalized building standards, equitable regulations, and increased permitting capacity for accessory dwelling units (all 8 officials)",
+      "Opposition to the Tenant Opportunity to Purchase Act (contact with Rebecca Kaplan specifically)"
+    ],
+    "source": "Oakland Public Ethics Commission lobbyist report, fetched directly 2026-10-03: https://apps.oaklandca.gov/pec/Lobbyist_Report.aspx?ReportId=2562",
+    "notes": "Resolves lane-6 (Kiran Shenoy) identity with a real identifier (bridgeaor.org email) rather than a name-only search. This report does NOT mention Rep. Simon, Insight Housing, or BRIDGE Housing Corporation -- it is purely Oakland city-level ADU/tenant-policy advocacy by the Bridge Association of REALTORS (the trade association already distinguished from BRIDGE Housing Corporation in identity_resolution.json). Recorded as a real, dated, sourced advocacy relationship, not as evidence of anything improper -- registered lobbying on housing policy matters is exactly the lawful, disclosed activity this registration system exists to track.",
+    "status": "DOCUMENTED"
+  },
+  {
+    "id": "advocacy-hunnicutt-nar-fpc-for-simon",
+    "lobbyist_label": "Tia Hunnicutt",
+    "lobbyist_identifiers": {
+      "email": "tia@proximarealtygroup.com"
+    },
+    "employer_client_org_node_id": "org-nar",
+    "employer_client_label": "National Association of REALTORS (NAR) -- Federal Political Coordinator (FPC) program",
+    "report_id": null,
+    "report_period": "2025 roster (program year)",
+    "filing_date": null,
+    "officials_contacted": ["Lateefah Simon"],
+    "matters": [
+      "NAR's Federal Political Coordinator (FPC) program assigns one volunteer REALTOR-member liaison per member of Congress as the designated RPAC/NAR advocacy contact for that legislator's office. Hunnicutt is listed as the FPC for Rep. Simon (CA-12)."
+    ],
+    "source": "National Association of REALTORS official 2025 FPC roster, fetched and read directly as a PDF 2026-10-03: https://realtorparty.realtor/wp-content/uploads/2025/01/2025Roster.pdf -- row 'Lateefah Simon | CA | 12 | House | Tia Hunnicutt | tia@proximarealtygroup.com', confirmed by direct document read (not a lossy text-extraction summary).",
+    "notes": "This is a standard, publicly disclosed NAR program structure -- every single member of Congress and Senator in the roster has exactly one assigned FPC; this is not something unique or targeted to Simon. The role is advocacy/liaison, not a financial relationship by itself. Hunnicutt's email domain (proximarealtygroup.com) does NOT match Bridge AOR's domain (bridgeaor.org) -- do not assume she is Bridge AOR staff without an independent source; the user's cited LinkedIn post describes an 'Alameda County team' meeting with Simon, consistent with Alameda County REALTOR advocacy generally (which Bridge AOR, as the Oakland-Berkeley local association, would plausibly be part of), but this has not been independently confirmed to be a Bridge-AOR-organized meeting specifically.",
+    "status": "DOCUMENTED"
+  }
+]

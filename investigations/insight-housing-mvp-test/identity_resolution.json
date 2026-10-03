@@ -49,7 +49,7 @@
   "unresolved_identity_items": [
     {
       "id": "identity-item-bridge-association-of-realtors-not-bridge-housing",
-      "node_ids": ["org-insight-housing"],
+      "node_ids": ["org-insight-housing", "org-bridge-association-of-realtors", "org-bridge-housing-corporation"],
       "description": "User-reported finding (2026-10-03): user searched leadership tied to Insight Housing's address (2855 Telegraph Ave, Berkeley) and found a 'Bridge' entity there, which the user flagged as possibly involving improper campaign contributions and contract awards. Independently verified: the 'Bridge' at this address is the Bridge Association of REALTORS (also 'Oakland Berkeley Association of Realtors' / OBAR / 'bridgeMLS'), EIN 94-0727300, Suite 600 -- a 501(c)(6) real estate trade association formed 1940 with 1,800+ member agents, located one suite over from Insight Housing's Suite 601 in the same multi-tenant office building. This is a DISTINCT, UNRELATED entity from org-bridge-housing-corporation (BRIDGE Housing Corporation, the SF affordable-housing nonprofit this investigation tracks as 'Bridge', confirmed at 350 California St, San Francisco -- a different building, city, EIN, and organization type). This is a textbook same-name/shared-building collision: the only thing connecting it to this investigation is that both names contain the word 'Bridge' and it happens to be a few feet from Insight Housing's suite. No ownership, control, officer, or financial relationship between this trade association and Insight Housing or BRIDGE Housing Corporation has been found or suggested by anything sourced here.",
       "status": "RESOLVED_NOT_THE_SAME_ENTITY",
       "next_steps": [

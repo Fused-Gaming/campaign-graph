@@ -97,5 +97,32 @@
       "entity_description": "Publicly traded real estate investment trust (NYSE: AVB). Named market-rate development partner in the North Berkeley Housing Partners team alongside org-bridge-housing-corporation, org-insight-housing, and org-ebaldc.",
       "source_note": "Named in general web search results describing the North Berkeley BART TOD development team, not yet independently verified against a primary filing or BART's own project page. type is DEVELOPER (per src/campaign_graph/models.py NodeType), not NONPROFIT -- do not apply nonprofit-specific rules (e.g. rule-ca-nonprofit-integrity-act) to this entity."
     }
+  },
+  {
+    "id": "org-bridge-association-of-realtors",
+    "label": "Bridge Association of REALTORS",
+    "type": "TRADE_ASSOCIATION",
+    "aliases": ["Oakland Berkeley Association of Realtors", "OBAR", "bridgeMLS", "Bridge AOR"],
+    "identifiers": {
+      "ein": "94-0727300"
+    },
+    "metadata": {
+      "location": "Berkeley, CA",
+      "address": "2855 Telegraph Ave Ste 600, Berkeley, CA 94705",
+      "entity_description": "501(c)(6) real estate trade association formed 1940, representing 1,800+ REALTOR and affiliate members in the Oakland/Berkeley area. Located one suite over from org-insight-housing in the same multi-tenant office building.",
+      "source_note": "Legal name, EIN, and address per CauseIQ (citing underlying IRS/filing data), accessed directly 2026-10-03: https://www.causeiq.com/organizations/bridge-association-of-realtors,940727300/. Not yet independently cross-checked against ProPublica's structured API the way other orgs in this package have been.",
+      "relationship_note": "DISTINCT entity from org-bridge-housing-corporation and org-bridge-housing-corporation-socal -- different EIN, different industry (real estate trade association, not an affordable-housing developer), different city. See identity_resolution.json (identity-item-bridge-association-of-realtors-not-bridge-housing) for the full collision-resolution writeup. The only connection to this investigation is physical proximity to org-insight-housing's suite."
+    }
+  },
+  {
+    "id": "org-nar",
+    "label": "National Association of REALTORS (NAR)",
+    "type": "TRADE_ASSOCIATION",
+    "aliases": ["NAR"],
+    "identifiers": {},
+    "metadata": {
+      "entity_description": "National real estate trade association; operates RPAC (REALTORS Political Action Committee) and the Federal Political Coordinator (FPC) program, which assigns one volunteer member-liaison per member of Congress.",
+      "source_note": "General, uncontested public facts about NAR's structure; FPC roster itself fetched and cited directly in lobbying.json (advocacy-hunnicutt-nar-fpc-for-simon)."
+    }
   }
 ]
