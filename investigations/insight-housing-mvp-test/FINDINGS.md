@@ -4,47 +4,57 @@
 
 ## What this is
 
-This package tests the campaign-graph pipeline end to end against two real, independently identifiable entities — Insight Housing (a Berkeley nonprofit) and Rep. Lateefah Simon (U.S. House, CA-12) — and a working assumption that "Bridge" in the parent investigation (fused-gaming/campaign-graph#2) refers to BRIDGE Housing Corporation, a San Francisco-based affordable-housing developer. **That assumption is unconfirmed** — see Unresolved Questions.
+This package tests the campaign-graph pipeline end to end against real, independently identifiable entities — Insight Housing (a Berkeley nonprofit), Rep. Lateefah Simon (U.S. House, CA-12, formerly a BART director), and a working assumption that "Bridge" in the parent investigation (fused-gaming/campaign-graph#2) refers to BRIDGE Housing Corporation, a San Francisco-based affordable-housing developer. **That assumption is still unconfirmed by #2's author** — see Unresolved Questions — and it now has a second plausible candidate (BRIDGE Housing Corporation - Southern California, confirmed as a subordinate organization of the same entity) and a confirmed false lead (the Bridge Association of REALTORS, a same-name but entirely unrelated trade association).
 
 ## Facts (source-backed, not in dispute)
 
-- **Insight Housing**: 501(c)(3) nonprofit, EIN 94-2979073, exempt since Feb. 1986, headquartered at 2855 Telegraph Ave Ste 601, Berkeley, CA 94705-1161. Formerly named Berkeley Food and Housing Project. FY2023 revenue $23,079,014. (`nodes.json`, `identity_resolution.json`, `financials.json`)
-- **BRIDGE Housing Corporation**: 501(c)(3) nonprofit, EIN 94-2827909, exempt since 1983, headquartered at 350 California St Ste 1600, San Francisco, CA 94104-1429. FY2023 revenue $78,595,410. Current President & CEO: Ken Lombard. Current General Counsel: Hallock Svensk. (`nodes.json`, `addresses.json`, `roles.json`, `financials.json`)
-- **Rep. Lateefah Simon**: U.S. Representative for CA-12, took office 2025-01-03. FEC candidate ID H4CA12154. Principal campaign committee: LATEEFAH FOR CONGRESS, FEC ID C00834291. (`nodes.json`, `events.json`)
-- **Federal funding**: Insight Housing has received 14 federal grant/cooperative-agreement awards (~$50M total, 2017–2026) from the VA, DOL, and HUD. BRIDGE Housing Corporation has received 2 Treasury awards ($12.7M total, 2019 and 2022), consistent with CDFI Fund Capital Magnet Fund grants. All are standard competitive/formula programs scored by agency staff. (`grants.json`)
+- **Insight Housing**: 501(c)(3) nonprofit, EIN 94-2979073, exempt since Feb. 1986, headquartered at 2855 Telegraph Ave Ste 601, Berkeley, CA 94705-1161. Formerly named Berkeley Food and Housing Project. FY2023 revenue $23,079,014.
+- **BRIDGE Housing Corporation**: 501(c)(3) nonprofit, EIN 94-2827909, exempt since 1983, headquartered at 350 California St Ste 1600, San Francisco. FY2023 revenue $78,595,410. President & CEO Ken Lombard.
+- **BRIDGE Housing Corporation - Southern California**: EIN 94-3233154, confirmed as a subordinate organization of the above (CauseIQ, corroborated by overlapping executives).
+- **Rep. Lateefah Simon**: U.S. Representative for CA-12, took office 2025-01-03. Previously an elected BART (Bay Area Rapid Transit) Board of Directors member, District 7, 2016-2024 (board president from 2020). A March 2022 residency-boundary removal attempt by BART staff was reversed within two weeks after outside counsel found staff lacked the authority; she retained her seat throughout.
+- **Federal funding**: Insight Housing has received 16 federal grant/cooperative-agreement awards (~$50M total, 2017-2026) from the VA, DOL, and HUD, all standard competitive/formula programs. BRIDGE Housing Corporation has received 2 Treasury awards ($12.7M, 2019/2022), consistent with CDFI Fund Capital Magnet Fund grants.
+- **Bridge Association of REALTORS**: EIN 94-0727300, a 501(c)(6) real estate trade association in Suite 600 at Insight Housing's building — a **distinct, unrelated entity**, not BRIDGE Housing Corporation. Its registered lobbyist, Kiran Shenoy, has a documented 6-year (2020-2026) Oakland lobbying history entirely on local housing-ordinance matters, never mentioning Simon, Insight Housing, or BRIDGE Housing Corporation.
 
-## Checked and not found
+## The one documented institutional link found: BART / North Berkeley TOD
 
-Every item below was checked against an official, primary-source system directly (not a secondary aggregator), with the exact query preserved in `unresolved_leads.json` for reproducibility:
+BART's Board of Directors — on which Rep. Simon sat as an elected director from 2016-2024 — authorized an Exclusive Negotiating Agreement with BRIDGE Housing Corporation for a Transit-Oriented Development at the North Berkeley station on 2022-12-01. Insight Housing is reported (not yet confirmed against a primary document) as a co-member of the same development team, "North Berkeley Housing Partners," alongside BRIDGE Housing, EBALDC, and AvalonBay Communities. **This is the first and only documented institutional link between Insight Housing and BRIDGE Housing Corporation found anywhere in this investigation** — everything else treats them as unrelated organizations with only incidental Bay Area geography in common.
 
-- **No FEC-itemized campaign contribution** to Rep. Simon's committee from either organization, their known officers, or an affiliated PAC.
-- **No FEC-registered committee/PAC** affiliated with either organization.
-- **No Oakland lobbying activity** (client relationship, official contact, or matter) naming either organization in the city's official Public Ethics Commission disclosure data.
-- **No congressional decision-maker or CA-12-specific involvement** in any of the 16 federal awards found — all are agency-scored, not member-decided.
-- **Neither organization appears in Rep. Simon's own FY26 or FY27 Community Project Funding (congressional earmark) requests** — checked directly against her official request pages, the authoritative source for what she personally asked Congress to fund.
+This is recorded carefully and should not be over-read: Rep. Simon is included in the event record only because she was one of nine sitting BART directors at the time of a routine, multi-member board vote on a real-estate negotiating framework (not a funding award or final contract). **Her actual presence, vote, or recusal on that specific 2022-12-01 action has not been confirmed** — no roll-call record has been located. This is explicitly the single most load-bearing unconfirmed fact in the entire package.
 
-## Correlation flagged, and why it doesn't hold up
+## REALTOR advocacy lane (Bridge AOR, NAR, CREPAC) — real relationships, none touching Simon or the two nonprofits
 
-One HUD award to Insight Housing (CA2234L9T022300) starts 2025-10-01, after Rep. Simon took office. The gap is 271 days — outside every proximity window this package defines (7/30/90/180 days) — and HUD Continuum of Care awards follow an annual, agency-scored cycle that predates her tenure by years for this same organization. `temporal_analysis.json` records this explicitly as `correlation_only` and concludes it does not support any relationship. This is the single timing question the investigation has surfaced, and it resolves toward "ordinary process," not toward a lead.
+- Tia Hunnicutt is NAR's assigned Federal Political Coordinator (advocacy liaison) for CA-12/Rep. Simon — a standard structure every member of Congress has one of. Her own published bio confirms she was Bridge Association of REALTORS' President (2014) and Chair (2019), board member 2010-2023 — substantiating the "Alameda County REALTOR delegation" context raised earlier, but as **history, not a current role** (her current professional home is her own brokerage). She's also a current (2025) member of CREPAC, the California Association of REALTORS' state PAC.
+- CREPAC's own stated purpose, per C.A.R.'s materials, is funding **CA state candidates specifically** — not federal ones. A contribution to Rep. Simon's federal committee couldn't come from this exact vehicle; a separate FEC-registered entity would need to exist and be identified. CREIEC (C.A.R.'s independent-expenditure arm) is also not yet confirmed as a federal-level actor. None of this has been checked against actual FEC contribution/IE data yet — blocked on the rate limit below.
+- Checked Oakland's Schedule D (contribution solicitations disclosed by lobbyists) directly for any link between Bridge AOR/Shenoy and Simon/Insight Housing/BRIDGE Housing Corporation, in either direction — zero results.
 
-## New this round: a same-name entity collision, caught before it mattered
+## Checked and not found (unchanged from earlier passes, still holding)
 
-A general web search surfaced "Bridge Housing Corporation - Southern California" (EIN 94-3233154, exempt since 1996) — a **distinct legal entity** from the BRIDGE Housing Corporation in this package (EIN 94-2827909, exempt since 1983), sharing the same San Francisco building but a different suite/floor. Confirmed directly via ProPublica's API. Added as a separate node (`org-bridge-housing-corporation-socal`) rather than merged, per "never merge on name alone" — this is exactly the kind of collision #3's mission exists to catch, and it was almost missed because earlier, more targeted searches for "BRIDGE Housing Corporation" alone never surfaced it.
+- No FEC-itemized campaign contribution to Rep. Simon's committee (C00834291) from either nonprofit, their known officers, or an affiliated PAC — *though "known officers" has grown substantially since this was first checked; see Unresolved below.*
+- No Oakland lobbying activity naming either nonprofit.
+- No congressional decision-maker involvement in any of the 16 federal awards found; neither nonprofit appears in Rep. Simon's own FY26/FY27 Community Project Funding (earmark) request pages.
+- Neither Berkeley's nor Alameda County's open-data portals have any grant/contract/vendor dataset at all — confirmed by getting real results for broader queries on the same endpoints, not a tooling failure.
 
-## Unresolved (genuinely open, not just unresearched)
+## Leadership data: real names found, with honest contradictions preserved
 
-1. **Which "Bridge" issue #2 means.** This package assumed BRIDGE Housing Corporation as the most plausible referent given the shared Bay Area/housing context, but this has not been confirmed by the person who opened #2. Everything BRIDGE-Housing-specific in this package inherits that assumption's uncertainty — and now there's a second, closely related entity (the Southern California affiliate above) that could just as easily be meant.
-2. **CA Secretary of State entity numbers** for all three organizations — CA SoS's business search and OpenCorporates are both unreachable from this environment (JS-driven form; hard bot-block respectively). Needs a human with browser access.
-3. **Individual officer/director names (IRS Form 990 Part VII)** for Insight Housing, and beyond the two already-sourced BRIDGE Housing officers — the actual PDF filings return HTTP 403 from ProPublica's download endpoint even though the JSON metadata API works, and the public IRS bulk-data S3 bucket returned zero keys. Needs a human to download a 990 directly, or a different bulk-data source.
-4. **CA state (Cal-Access) lobbying disclosures** — attempted and blocked (JS-driven system, no usable API found from here), not equivalent-confidence to the API-backed checks above. **City of Berkeley** lobbying disclosures not yet attempted at all.
-5. **City of Berkeley grant/contract records** for Insight Housing, and the BRIDGE Housing Corporation ↔ Southern California affiliate relationship (Schedule R or similar) — not yet checked.
+A reliable third-party aggregator (CauseIQ, which republishes dated IRS Form 990 Part VII key-personnel data) substantially deepened officer rosters for Insight Housing, BRIDGE Housing Corporation (and its Southern California subordinate), EBALDC, and the Bridge Association of REALTORS. Two genuine contradictions surfaced and were preserved rather than silently resolved:
+
+1. **Calleene Egan** is CEO per earlier web-search synthesis, but CFO per CauseIQ's dated 990 data.
+2. **BRIDGE Housing Corporation's General Counsel**: Hallock Svensk per the org's own site (Sept. 24), Lisa Laffer per CauseIQ (Jan. 2026).
+3. (Minor, not a hard contradiction) **BRIDGE Housing - Southern California's CEO**: Ken Lombard and Nadia Sager both listed within days of each other — plausibly an org-wide-president-vs-subsidiary-operational-CEO structure, not confirmed.
+
+None of these new names have yet been cross-checked against FEC contributor data (blocked, see below) — that cross-check is the natural next step once the rate limit clears, and the plan explicitly asked for every discovered name to feed back into that check.
+
+## FEC data lane: blocked, not abandoned
+
+`api.open.fec.gov`'s DEMO_KEY (40 calls/hour) is shared across this environment's proxy and has been exhausted for most of this session. Issue #10 tracks the exact batched call plan (committee totals, full Schedule A/B/E pagination, every newly-discovered officer name as a `contributor_name` check, CREPAC/CREIEC committee resolution). An hourly Routine checks remaining budget and executes whatever batch fits automatically. **Nothing about Rep. Simon's actual campaign finances — receipts, disbursements, independent expenditures — has been directly examined yet.** This is the largest remaining gap in the investigation, not a minor one.
 
 ## Explicitly not established (and this investigation should not imply otherwise)
 
-- No improper relationship, coordination, or influence between any of these entities and Rep. Simon.
-- No violation of any framework in `rules_ledger.json` — that ledger identifies frameworks that *would* apply *if* a fact triggering them is documented; none has been.
-- No conclusion about "Bridge" at all, pending item 1 above.
+- No improper relationship, coordination, or influence between any of these entities and Rep. Simon. The BART/North Berkeley link is a documented institutional fact about an agency she sat on, not a transaction involving her personally.
+- No violation of any framework in `rules_ledger.json`.
+- No conclusion about which "Bridge" issue #2 means — now with two plausible BRIDGE Housing Corporation-family candidates (main org, Southern California subordinate) plus one confirmed false lead (Bridge Association of REALTORS).
+- No characterization of CREPAC membership, NAR committee roles, or REALTOR advocacy generally as improper — trade-association political activity and advocacy are lawful, routine, and disclosed by design.
 
 ## What would change this memo
 
-Per `investigation.json`'s hypotheses, any of the following would warrant re-opening a hypothesis: a primary-source contribution record under a different employer-name spelling or from an unlisted officer/board member; a CA state or local disclosure naming either organization; a congressional appropriations record naming Insight Housing or BRIDGE Housing for CA-12; or confirmation (or correction) of the "Bridge" identity assumption itself.
+Per `investigation.json`'s hypotheses (h1-h5): a primary-source contribution record from any of the newly-discovered officer names or the CREPAC/CREIEC family; the BART board's actual 2022-12-01 roll-call vote; confirmation of Insight Housing's North Berkeley Housing Partners membership against a primary document; or confirmation/correction of the "Bridge" identity assumption itself.
