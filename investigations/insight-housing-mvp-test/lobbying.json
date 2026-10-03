@@ -53,6 +53,23 @@
     "status": "DOCUMENTED"
   },
   {
+    "id": "lead-no-schedule-d-solicitations-found",
+    "lobbyist_label": null,
+    "lobbyist_identifiers": {},
+    "employer_client_org_node_id": null,
+    "employer_client_label": null,
+    "report_id": null,
+    "report_period": null,
+    "filing_date": null,
+    "officials_contacted": [],
+    "matters": [
+      "Lane 15: Oakland's Schedule D dataset discloses persons/organizations solicited by lobbyists for contributions to City officeholders/candidates. Queried directly for (a) Kiran Shenoy or any Bridge-named lobbyist employer as the SOLICITING lobbyist, and (b) Rep. Simon or Insight/BRIDGE Housing as the solicited committee or fund source, in either direction. Zero results both ways."
+    ],
+    "source": "Oakland Public Ethics Commission Schedule D dataset, data.oaklandca.gov/resource/xvc7-ctj7.json, queried directly 2026-10-03: $where=lobbyist_name like '%25Shenoy%25' OR lobbyist_employer like '%25Bridge%25' -- 0 results; $where=committee like '%25Simon%25' OR fund_source like '%25Simon%25' OR committee like '%25Insight%25' OR fund_source like '%25Insight%25' -- 0 results.",
+    "notes": "Checked-and-not-found per lane 15. Note the dataset's actual column names are lobbyist_employer and fund_source/committee, not client_name as initially guessed -- corrected before concluding zero results (an empty query against the wrong column would have been a false negative, not a real finding; this was caught and fixed before relying on it).",
+    "status": "CHECKED_NOT_FOUND"
+  },
+  {
     "id": "advocacy-hunnicutt-nar-fpc-for-simon",
     "lobbyist_label": "Tia Hunnicutt",
     "lobbyist_identifiers": {

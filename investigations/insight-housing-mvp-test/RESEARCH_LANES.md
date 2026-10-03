@@ -24,7 +24,7 @@ Tracking document for the 18-lane evidence-first plan the user laid out for expa
 | 12 | Decision-timeline agent (chronology only, no causal framing) | `events.json`, `temporal_analysis.json` | PARTIAL (exists for the federal-grant and BART threads; not yet extended to lobbying/contribution events once lanes 1-2 produce them) |
 | 13 | Campaign vendor/disbursement graph for C00834291 | new `disbursements.json` | NOT STARTED |
 | 14 | Outside-spending / independent-expenditure lane, kept separate from receipts | new `independent_expenditures.json` | NOT STARTED |
-| 15 | Contribution-solicitation lane (Oakland Schedule D) | `lobbying.json` | NOT STARTED |
+| 15 | Contribution-solicitation lane (Oakland Schedule D) | `lobbying.json` | DONE for entities currently in scope — queried Oakland's Schedule D dataset directly for Shenoy/Bridge AOR as solicitor and Simon/Insight/BRIDGE Housing as solicited party, either direction. Zero results both ways. |
 | 16 | Identity-resolution / normalization pass across all of the above | `identity_resolution.json` | ONGOING BY CONSTRUCTION — every entity added to this package so far has gone through this; continues to apply as new lanes produce names |
 | 17 | Negative-control / disproval pass on every "interesting" edge | all files | ONGOING BY CONSTRUCTION — this has been the default posture of every entry added this session (see `merge_decisions`, `correlation_only` flags, explicit alternative_explanations on every hypothesis) |
 | 18 | Adjacent-network discovery (nodes appearing in ≥2 independent datasets) | depends on lanes 1-15 existing first | BLOCKED on upstream lanes |
