@@ -14,11 +14,18 @@
       {
         "date": "2026-09-25",
         "description": "USAspending.gov federal award search for Insight Housing completed. Found substantial federal funding (~$50M across 14 awards, VA/DOL/HUD) but all through standard competitive/formula grant channels with no documented congressional decision-maker or Simon-specific involvement. This resolves the USAspending.gov next-step item without establishing the hypothesized relationship -- see grants.json."
+      },
+      {
+        "date": "2026-10-03",
+        "description": "Pulled the full award-detail record (not just summary fields) for the one award postdating Simon's tenure (CA2234L9T022300). Confirms standard CFDA 14.267 HUD Continuum of Care NOFO grant, agency-scored, no congressional/earmark mechanism. See grants.json."
+      },
+      {
+        "date": "2026-10-03",
+        "description": "Checked Alameda County's open data portal (data.acgov.org, ArcGIS Hub) for grant/contract/vendor datasets naming Insight Housing, scoped to the county's own org (filter[origin]=own) -- zero results for 'Insight Housing', 'grant', and 'contract' queries. The portal genuinely has no such dataset (same situation as City of Berkeley's portal, checked earlier), not a tooling failure -- confirmed by getting real results for broader unscoped queries on the same endpoint."
       }
     ],
     "next_steps": [
-      "Check City of Berkeley Housing Trust Fund and CDBG award records for Insight Housing",
-      "Pull award-detail (not just summary) records for the one award postdating Simon's tenure (CA2234L9T022300) to confirm the HUD CoC scoring process and rule out any member-specific role"
+      "Check City of Berkeley Housing Trust Fund and CDBG award records for Insight Housing directly (not via an open-data portal, since neither Berkeley's nor Alameda County's has a usable grant/contract dataset) -- likely requires a direct city/county records request or a different document source"
     ],
     "status": "UNRESOLVED"
   },
