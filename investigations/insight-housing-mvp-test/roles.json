@@ -22,5 +22,112 @@
     "status": "current",
     "source": "BRIDGE Housing official Senior Leadership Team page, accessed 2026-09-24: https://bridgehousing.com/leadership/senior-leadership-team/",
     "notes": "Recorded because General Counsel is a role plausibly relevant to future lobbying/contracting edges. person_node_id left null per same rationale as role-lombard-bridge-ceo."
+  },
+  {
+    "id": "role-chan-ebaldc-ceo",
+    "person_node_id": null,
+    "person_label": "Janelle Chan",
+    "org_node_id": "org-ebaldc",
+    "title": "Chief Executive Officer",
+    "start_date": "2024-05-15",
+    "end_date": null,
+    "status": "current",
+    "source": "EBALDC official leadership page, accessed directly 2026-10-03: https://ebaldc.org/about-us/our-leadership/; start date per EBALDC press release found via general web search, 'EBALDC Names Janelle Chan as New CEO,' not independently fetched.",
+    "notes": "person_node_id null per the same never-merge-on-name-alone rationale used for all other roles in this file."
+  },
+  {
+    "id": "role-carney-ebaldc-cfo",
+    "person_node_id": null,
+    "person_label": "Paul Carney",
+    "org_node_id": "org-ebaldc",
+    "title": "Chief Financial Officer",
+    "start_date": null,
+    "end_date": null,
+    "status": "current",
+    "source": "EBALDC official leadership page, accessed directly 2026-10-03: https://ebaldc.org/about-us/our-leadership/"
+  },
+  {
+    "id": "role-lai-ebaldc-cso",
+    "person_node_id": null,
+    "person_label": "Sharon Lai",
+    "org_node_id": "org-ebaldc",
+    "title": "Chief Strategy Officer",
+    "start_date": null,
+    "end_date": null,
+    "status": "current",
+    "source": "EBALDC official leadership page, accessed directly 2026-10-03: https://ebaldc.org/about-us/our-leadership/"
+  },
+  {
+    "id": "role-scruggs-ebaldc-evp-cre",
+    "person_node_id": null,
+    "person_label": "Felicia Scruggs",
+    "org_node_id": "org-ebaldc",
+    "title": "Executive Vice President, Commercial Real Estate",
+    "start_date": null,
+    "end_date": null,
+    "status": "current",
+    "source": "EBALDC official leadership page, accessed directly 2026-10-03: https://ebaldc.org/about-us/our-leadership/"
+  },
+  {
+    "id": "role-higginbotham-ebaldc-evp-hr",
+    "person_node_id": null,
+    "person_label": "Kathleen Higginbotham",
+    "org_node_id": "org-ebaldc",
+    "title": "Executive Vice President, Human Resources",
+    "start_date": null,
+    "end_date": null,
+    "status": "current",
+    "source": "EBALDC official leadership page, accessed directly 2026-10-03: https://ebaldc.org/about-us/our-leadership/"
+  },
+  {
+    "id": "role-francis-ebaldc-board-chair",
+    "person_node_id": null,
+    "person_label": "Leslie Francis",
+    "org_node_id": "org-ebaldc",
+    "title": "Board Chair",
+    "start_date": null,
+    "end_date": null,
+    "status": "current",
+    "source": "EBALDC official leadership page, accessed directly 2026-10-03: https://ebaldc.org/about-us/our-leadership/",
+    "notes": "Full EBALDC board roster (15 members total) is in the official source above but not fully transcribed here to keep this ledger focused on officers/chair; see the source URL directly for the complete list (Richard Quach Vice Chair, David Peters Treasurer, Agnes Ubalde Secretary, and 11 additional board members) if a full board cross-check against FEC contributor names is needed."
+  },
+  {
+    "id": "role-schall-avalonbay-ceo",
+    "person_node_id": null,
+    "person_label": "Benjamin W. Schall",
+    "org_node_id": "org-avalonbay-communities",
+    "title": "President & Chief Executive Officer",
+    "start_date": "2022-01-03",
+    "end_date": null,
+    "status": "current",
+    "confidence": "medium",
+    "source": "General web search synthesis citing AvalonBay's own SEC Form 8-K (FY2020) and investor-relations press release for the CEO transition; AvalonBay's own IR executive-team page (investors.avalonbay.com/company-information/executive-team) was fetched directly but returned a JS-rendered shell with no actual names -- confidence downgraded to medium for the same reason as the Insight Housing entries above.",
+    "notes": "AvalonBay is a large, publicly traded REIT (NYSE: AVB) with its own SEC filings as the real primary source for officer identity, should this entity need higher-confidence treatment later. Not pursued further here given AvalonBay's role in this investigation is currently limited to 'named market-rate partner on one development team,' not an independent subject."
+  },
+  {
+    "id": "role-egan-insight-housing-ceo",
+    "person_node_id": null,
+    "person_label": "Calleene Egan",
+    "org_node_id": "org-insight-housing",
+    "title": "Chief Executive Officer",
+    "start_date": null,
+    "end_date": null,
+    "status": "current",
+    "confidence": "medium",
+    "source": "General web search synthesis, corroborated across two independent query results (2026-09-24 and 2026-10-03), both naming Calleene Egan as Insight Housing's CEO/Director. NOT independently fetched from a primary page: insighthousing.org returns empty content to WebFetch on every page and path attempted across this entire investigation (contact, who-we-are, homepage, finances, leadership-team, ceo-announcement -- six distinct URLs, all empty), and GuideStar's profile page for this EIN returns HTTP 403. This is the first Insight Housing officer name recorded in this package.",
+    "notes": "Recorded at medium confidence specifically because it rests on search-engine synthesis rather than a directly fetched primary document, unlike every BRIDGE Housing/EBALDC role above. Treat accordingly: sufficient to use as an FEC contributor-name search candidate (a false lead there costs nothing), but do not treat as fully verified identity for any higher-stakes purpose without an independent primary-source confirmation (e.g. the Insight Housing 990 Part VII, once that becomes accessible)."
+  },
+  {
+    "id": "role-insight-housing-board-partial-roster",
+    "person_node_id": null,
+    "person_label": "Alex Rogin (Treasurer), Alexandra Vondeling (Vice President), Don Falk, Harrison Alter, Stephen Kirnon, Iman Novin, Jessica Anderson, Kimi Omi, Ligala Manns, Mark Stutzman, Sam Ernst, Scott Barshay, Tamar Antin, Theresa Cheng, Will Rogan",
+    "org_node_id": "org-insight-housing",
+    "title": "Board member (titles as individually noted in person_label where known; most are undifferentiated 'Director')",
+    "start_date": null,
+    "end_date": null,
+    "status": "current",
+    "confidence": "medium",
+    "source": "Same general web search synthesis as role-egan-insight-housing-ceo, same sourcing caveats apply. As of search date 2026-09-09 per the synthesis (date embedded in the search result itself, not independently confirmed).",
+    "notes": "Recorded as ONE combined entry (not 15 separate role records) because these names have NOT been individually verified and the package does not want to imply 15 independently-confirmed identities. If any of these names needs to be cross-checked individually (e.g. against FEC contributor names), split it into its own role entry with its own confidence/source at that time rather than treating this bulk entry as 15 equally-confirmed facts."
   }
 ]
