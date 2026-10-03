@@ -59,6 +59,17 @@
       ]
     },
     {
+      "id": "identity-item-egan-cfo-vs-ceo-contradiction",
+      "node_ids": ["org-insight-housing"],
+      "description": "Calleene Egan's title at Insight Housing is directly contradicted between two sources: general web-search synthesis (used since 2026-09-24) says Chief Executive Officer; CauseIQ's dated 990-derived key-personnel listing (fetched directly 2026-10-03) says Chief Financial Officer, 'as of 2025-05-15,' $323,112. CauseIQ also lists TWO OTHER people with CFO-family titles at different dates (Kani Lin, 'as of 2025-03-17'; Kathryn Watson-Feiner, 'as of 2026-05-08') -- read together this looks like CFO turnover across roughly a year, which would make a CEO claim for Egan plausible if she was promoted, or the original CEO search result could simply be wrong/stale. Neither possibility is confirmed.",
+      "status": "CONTRADICTED",
+      "next_steps": [
+        "Read an actual Insight Housing IRS Form 990 Part VII directly (still blocked per the officer-names dead-end logged elsewhere in this file) to get dated, primary-source title history rather than relying on two disagreeing secondary aggregators",
+        "If insighthousing.org ever becomes fetchable from this environment, check its leadership/team page directly",
+        "Do not use 'CEO' or 'CFO' for Egan in any new edge or finding until this is resolved -- both roles.json entries for her are flagged accordingly"
+      ]
+    },
+    {
       "id": "identity-item-insight-housing-sam-gov-parent-uei",
       "node_ids": ["org-insight-housing"],
       "description": "USAspending.gov's award-detail record for grant-insight-housing-hud-ca2234l9t022300 (fetched 2026-10-03) shows recipient_name 'INSIGHT HOUSING' with UEI C98KZ72UPE68, and a SEPARATE parent_recipient_name 'BERKELEY FOOD AND HOUSING PROJECT' with a different UEI (NZV3CTRDV9N5). This package's nodes.json currently treats 'Berkeley Food and Housing Project' merely as Insight Housing's former legal/trade name under the SAME EIN (94-2979073), not as a separate registered entity. SAM.gov's UEI system may be tracking these as a parent/subsidiary registration pair rather than a simple rename -- this has not been reconciled.",
