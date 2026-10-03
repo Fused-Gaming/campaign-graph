@@ -4,6 +4,10 @@ Tracking document for the 18-lane evidence-first plan the user laid out for expa
 
 **Ground rule carried from every lane in the user's plan, and from this package's existing guardrails: a documented relationship (advocacy, a meeting, a contribution, a shared building) is a graph edge with a date and a source, not a claim of misconduct. Lanes 17 (negative control) and 16 (identity resolution) apply to every other lane's output, not just their own.**
 
+## Rate-limited lanes 1, 13, 14: automated hourly execution
+
+`api.open.fec.gov`'s DEMO_KEY (40 calls/hour, shared across this environment's proxy, not session-scoped) blocks lanes 1/13/14 from running in one pass. Tracking issue: fused-gaming/campaign-graph#10 holds the exact batched call list. An hourly Routine (`FEC batch pull for C00834291`, created 2026-10-03, fires at :42 past each hour into this session) checks remaining budget, runs whatever batch fits, writes real results into this package, and updates the issue checklist -- it stops and reports back once issue #10 is fully worked or the plan needs a judgment call. A personal FEC API key (free at https://api.data.gov/signup/) would collapse this to one pass instead of running over hours.
+
 | # | Lane | Output file(s) | Status |
 |---|------|-----------------|--------|
 | 1 | FEC money graph for C00834291 (receipts, disbursements, refunds) | `contributions.json`, new `disbursements.json` | IN PROGRESS |
