@@ -84,8 +84,33 @@
     "start_date": "2024-05-15",
     "end_date": null,
     "status": "current",
-    "source": "EBALDC official leadership page, accessed directly 2026-10-03: https://ebaldc.org/about-us/our-leadership/; start date per EBALDC press release found via general web search, 'EBALDC Names Janelle Chan as New CEO,' not independently fetched.",
-    "notes": "person_node_id null per the same never-merge-on-name-alone rationale used for all other roles in this file."
+    "source": "EBALDC official leadership page, accessed directly 2026-10-03: https://ebaldc.org/about-us/our-leadership/; start date per EBALDC press release found via general web search, 'EBALDC Names Janelle Chan as New CEO,' not independently fetched. CORROBORATED by a third independent source, CauseIQ (causeiq.com/organizations/east-bay-asian-local-development-corp,510171851/, fetched directly 2026-10-03, 990-derived), which also lists Chan as CEO, $208,731, dated 2026-05-13 -- confidence raised rather than conflicted, unlike the Egan/Svensk cases.",
+    "notes": "person_node_id null per the same never-merge-on-name-alone rationale used for all other roles in this file. Minor date wrinkle, not a contradiction: CauseIQ separately lists Lina Sheth as 'Interim Chief Executive Officer' dated 2024-12-31 (see role-sheth-ebaldc-interim-ceo), which is AFTER Chan's reported 2024-05-15 start date per the press release -- sequencing not fully reconciled, but does not conflict with Chan currently holding the CEO title, which three sources now agree on."
+  },
+  {
+    "id": "role-sheth-ebaldc-interim-ceo",
+    "person_node_id": null,
+    "person_label": "Lina Sheth",
+    "org_node_id": "org-ebaldc",
+    "title": "Interim Chief Executive Officer",
+    "start_date": null,
+    "end_date": null,
+    "status": "former",
+    "confidence": "medium",
+    "source": "CauseIQ, fetched directly 2026-10-03 (same page as above), compensation $181,500, dated 2024-12-31.",
+    "notes": "Date (2024-12-31) is after Chan's reported CEO start date (2024-05-15) per the press release cited in role-chan-ebaldc-ceo -- possibly a brief overlap/transition period, a 990 fiscal-year-end filing-date artifact rather than an effective date, or a predecessor-interim role before Chan's start that the press-release date is itself imprecise about. Not reconciled; recorded as-is rather than guessed at."
+  },
+  {
+    "id": "role-sultan-ebaldc-coo",
+    "person_node_id": null,
+    "person_label": "Karim Sultan",
+    "org_node_id": "org-ebaldc",
+    "title": "Chief Operating Officer",
+    "start_date": null,
+    "end_date": null,
+    "status": "former (earliest listing date of EBALDC's CauseIQ entries)",
+    "confidence": "medium",
+    "source": "CauseIQ, fetched directly 2026-10-03 (same page as above), compensation $30,883 (partial-year figure, consistent with a partial-year role), dated 2023-12-31."
   },
   {
     "id": "role-carney-ebaldc-cfo",
