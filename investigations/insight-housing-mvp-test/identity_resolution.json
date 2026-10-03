@@ -48,6 +48,17 @@
   ],
   "unresolved_identity_items": [
     {
+      "id": "identity-item-bridge-association-of-realtors-not-bridge-housing",
+      "node_ids": ["org-insight-housing"],
+      "description": "User-reported finding (2026-10-03): user searched leadership tied to Insight Housing's address (2855 Telegraph Ave, Berkeley) and found a 'Bridge' entity there, which the user flagged as possibly involving improper campaign contributions and contract awards. Independently verified: the 'Bridge' at this address is the Bridge Association of REALTORS (also 'Oakland Berkeley Association of Realtors' / OBAR / 'bridgeMLS'), EIN 94-0727300, Suite 600 -- a 501(c)(6) real estate trade association formed 1940 with 1,800+ member agents, located one suite over from Insight Housing's Suite 601 in the same multi-tenant office building. This is a DISTINCT, UNRELATED entity from org-bridge-housing-corporation (BRIDGE Housing Corporation, the SF affordable-housing nonprofit this investigation tracks as 'Bridge', confirmed at 350 California St, San Francisco -- a different building, city, EIN, and organization type). This is a textbook same-name/shared-building collision: the only thing connecting it to this investigation is that both names contain the word 'Bridge' and it happens to be a few feet from Insight Housing's suite. No ownership, control, officer, or financial relationship between this trade association and Insight Housing or BRIDGE Housing Corporation has been found or suggested by anything sourced here.",
+      "status": "RESOLVED_NOT_THE_SAME_ENTITY",
+      "next_steps": [
+        "Awaiting specifics from the user on the exact 'improper campaign contributions' and 'contract awards' records they located, to independently verify against FEC/USAspending primary sources before any such characterization is recorded as a finding",
+        "If the user's contribution finding is from the Bridge Association of REALTORS or a REALTOR PAC (RPAC, CAR-affiliated, or a local REALTOR Action Fund), note that trade-association PAC contributions to candidates are routine, legal, and publicly disclosed under FECA/CA law -- the mere existence of such a contribution is not itself evidence of impropriety; it would need a specific documented irregularity (over-limit amount, undisclosed in-kind, quid pro quo record) to be characterized as improper, per rule-fed-campaign-finance-feca and this package's own guardrail against unsupported labels",
+        "This item does NOT reopen or weaken h2 (no documented BRIDGE Housing Corporation/Insight Housing contribution to Simon's committee) -- a Bridge Association of REALTORS contribution, if one exists, is unrelated to that hypothesis's subject entities"
+      ]
+    },
+    {
       "id": "identity-item-insight-housing-sam-gov-parent-uei",
       "node_ids": ["org-insight-housing"],
       "description": "USAspending.gov's award-detail record for grant-insight-housing-hud-ca2234l9t022300 (fetched 2026-10-03) shows recipient_name 'INSIGHT HOUSING' with UEI C98KZ72UPE68, and a SEPARATE parent_recipient_name 'BERKELEY FOOD AND HOUSING PROJECT' with a different UEI (NZV3CTRDV9N5). This package's nodes.json currently treats 'Berkeley Food and Housing Project' merely as Insight Housing's former legal/trade name under the SAME EIN (94-2979073), not as a separate registered entity. SAM.gov's UEI system may be tracking these as a parent/subsidiary registration pair rather than a simple rename -- this has not been reconciled.",
