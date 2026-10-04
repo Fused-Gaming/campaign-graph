@@ -41,5 +41,45 @@
       "Laffer (BRIDGE Housing COO/GC, disputed)"
     ],
     "note": "All results checked for contributor_employer/occupation/city alignment with the actual officer being searched, not name alone -- per this package's identity-resolution rule, a surname match is not treated as the same person without a corroborating identifier (employer, city, or occupation). Zero contributions found linking any of these named officers to C00834291 so far. Batch stopped on HTTP 429 (OVER_RATE_LIMIT) partway through; remaining names tracked in issue #10."
+  },
+  {
+    "id": "fec-check-c00834291-officer-names-batch2-2026-10-04",
+    "committee_id": "C00834291",
+    "committee_name": "LATEEFAH FOR CONGRESS",
+    "query_type": "contributor_name",
+    "date_checked": "2026-10-04",
+    "source": "FEC API, https://api.open.fec.gov/v1/schedules/schedule_a/?committee_id=C00834291&contributor_name=<name>",
+    "names_checked_zero_or_no_relevant_match": [
+      "van Benschoten (BRIDGE Housing CIO) - 0 results",
+      "Hunnicutt (NAR FPC for Simon, former Bridge AOR President/Chair, current CREPAC member) - 0 results",
+      "Sheth (EBALDC interim CEO, former) - 0 results"
+    ],
+    "names_checked_with_unrelated_matches": [
+      {
+        "name_queried": "Coleman (Bridge AOR director)",
+        "result": "2 total records: COLEMAN, NOVELLA (State of California, Attorney, Mountain View) and COLLINS COLEMAN, EDDA (Cogent Strategies, Managing Director, Orinda) -- neither employer matches Bridge Association of Realtors. Not the same person; no relevant match.",
+        "status": "NO_RELEVANT_MATCH"
+      },
+      {
+        "name_queried": "Sultan (EBALDC COO, former)",
+        "result": "1 record: SULTAN, RAMI (Apple, Software Engineer, Santa Clara, 2025-09-20, $1000) -- employer does not match EBALDC. Not the same person; no relevant match.",
+        "status": "NO_RELEVANT_MATCH"
+      }
+    ],
+    "names_not_reached_rate_limited": [
+      "Scruggs (EBALDC EVP)",
+      "Lombard (BRIDGE Housing Corp CEO, also SoCal subordinate)",
+      "Laffer (BRIDGE Housing COO/GC, disputed)",
+      "Sager (BRIDGE Housing SoCal CEO, disputed)",
+      "Mather (BRIDGE Housing SoCal EVP/CIO)",
+      "Schall (AvalonBay CEO)",
+      "Shenoy (Bridge AOR registered lobbyist)",
+      "Lara (Bridge AOR CEO)",
+      "Rodriguez (Bridge AOR COO)",
+      "Vivo (Bridge AOR CTO)",
+      "Castillo (Bridge AOR director)",
+      "Stutzman (unverified Insight Housing board-roster name)"
+    ],
+    "note": "Shared DEMO_KEY pool contention: individual queries within this batch were interleaved with other proxy traffic, producing 429s between successful calls rather than one clean cutoff. Zero contributions found linking any reached officer to C00834291. Remaining 12 names, employer-string checks, and CREPAC/CREIEC resolution still pending -- tracked in issue #10."
   }
 ]
