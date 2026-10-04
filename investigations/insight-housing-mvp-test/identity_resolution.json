@@ -37,9 +37,89 @@
       "value": "350 California St Ste 1600, San Francisco, CA 94104-1429",
       "source": "IRS Form 990 filing header via ProPublica Nonprofit Explorer structured API, accessed 2026-09-24: https://projects.propublica.org/nonprofits/api/v2/organizations/942827909.json",
       "confidence": "high"
+    },
+    {
+      "node_id": "org-bridge-housing-corporation-socal",
+      "identifier_type": "ein",
+      "value": "94-3233154",
+      "source": "ProPublica Nonprofit Explorer structured API, fetched directly 2026-09-26: https://projects.propublica.org/nonprofits/api/v2/organizations/943233154.json",
+      "confidence": "high"
     }
   ],
   "unresolved_identity_items": [
+    {
+      "id": "identity-item-bridge-association-of-realtors-not-bridge-housing",
+      "node_ids": ["org-insight-housing", "org-bridge-association-of-realtors", "org-bridge-housing-corporation"],
+      "description": "User-reported finding (2026-10-03): user searched leadership tied to Insight Housing's address (2855 Telegraph Ave, Berkeley) and found a 'Bridge' entity there, which the user flagged as possibly involving improper campaign contributions and contract awards. Independently verified: the 'Bridge' at this address is the Bridge Association of REALTORS (also 'Oakland Berkeley Association of Realtors' / OBAR / 'bridgeMLS'), EIN 94-0727300, Suite 600 -- a 501(c)(6) real estate trade association formed 1940 with 1,800+ member agents, located one suite over from Insight Housing's Suite 601 in the same multi-tenant office building. This is a DISTINCT, UNRELATED entity from org-bridge-housing-corporation (BRIDGE Housing Corporation, the SF affordable-housing nonprofit this investigation tracks as 'Bridge', confirmed at 350 California St, San Francisco -- a different building, city, EIN, and organization type). This is a textbook same-name/shared-building collision: the only thing connecting it to this investigation is that both names contain the word 'Bridge' and it happens to be a few feet from Insight Housing's suite. No ownership, control, officer, or financial relationship between this trade association and Insight Housing or BRIDGE Housing Corporation has been found or suggested by anything sourced here.",
+      "status": "RESOLVED_NOT_THE_SAME_ENTITY",
+      "next_steps": [
+        "Awaiting specifics from the user on the exact 'improper campaign contributions' and 'contract awards' records they located, to independently verify against FEC/USAspending primary sources before any such characterization is recorded as a finding",
+        "If the user's contribution finding is from the Bridge Association of REALTORS or a REALTOR PAC (RPAC, CAR-affiliated, or a local REALTOR Action Fund), note that trade-association PAC contributions to candidates are routine, legal, and publicly disclosed under FECA/CA law -- the mere existence of such a contribution is not itself evidence of impropriety; it would need a specific documented irregularity (over-limit amount, undisclosed in-kind, quid pro quo record) to be characterized as improper, per rule-fed-campaign-finance-feca and this package's own guardrail against unsupported labels",
+        "This item does NOT reopen or weaken h2 (no documented BRIDGE Housing Corporation/Insight Housing contribution to Simon's committee) -- a Bridge Association of REALTORS contribution, if one exists, is unrelated to that hypothesis's subject entities"
+      ]
+    },
+    {
+      "id": "identity-item-egan-cfo-vs-ceo-contradiction",
+      "node_ids": ["org-insight-housing"],
+      "description": "Calleene Egan's title at Insight Housing is directly contradicted between two sources: general web-search synthesis (used since 2026-09-24) says Chief Executive Officer; CauseIQ's dated 990-derived key-personnel listing (fetched directly 2026-10-03) says Chief Financial Officer, 'as of 2025-05-15,' $323,112. CauseIQ also lists TWO OTHER people with CFO-family titles at different dates (Kani Lin, 'as of 2025-03-17'; Kathryn Watson-Feiner, 'as of 2026-05-08') -- read together this looks like CFO turnover across roughly a year, which would make a CEO claim for Egan plausible if she was promoted, or the original CEO search result could simply be wrong/stale. Neither possibility is confirmed.",
+      "status": "CONTRADICTED",
+      "next_steps": [
+        "Read an actual Insight Housing IRS Form 990 Part VII directly (still blocked per the officer-names dead-end logged elsewhere in this file) to get dated, primary-source title history rather than relying on two disagreeing secondary aggregators",
+        "If insighthousing.org ever becomes fetchable from this environment, check its leadership/team page directly",
+        "Do not use 'CEO' or 'CFO' for Egan in any new edge or finding until this is resolved -- both roles.json entries for her are flagged accordingly"
+      ]
+    },
+    {
+      "id": "identity-item-svensk-vs-laffer-bridge-general-counsel",
+      "node_ids": ["org-bridge-housing-corporation"],
+      "description": "BRIDGE Housing Corporation's General Counsel is contradicted between two sources: the org's own official leadership page (bridgehousing.com, fetched 2026-09-24) names Hallock Svensk; CauseIQ's dated 990-derived key-personnel listing (fetched directly 2026-10-03) names Lisa Laffer as 'Chief Operating Officer and General Counsel' as of 2026-01-30. The CauseIQ data postdates the original leadership-page fetch, so a genuine title change/departure between late Sept and early Oct 2026 is plausible, but not confirmed -- could also be that bridgehousing.com's page is simply stale, or that Svensk holds a more specific GC-adjacent title not reflected as a distinct line in either source.",
+      "status": "CONTRADICTED",
+      "next_steps": [
+        "Re-fetch bridgehousing.com's leadership page to check for a since-updated title/roster before concluding either source is wrong",
+        "Read a primary BRIDGE Housing 990 Part VII directly if it becomes accessible (same blocker as Insight Housing's)",
+        "Do not use either Svensk or Laffer as 'the' General Counsel in any new edge or finding until resolved"
+      ]
+    },
+    {
+      "id": "identity-item-insight-housing-sam-gov-parent-uei",
+      "node_ids": ["org-insight-housing"],
+      "description": "USAspending.gov's award-detail record for grant-insight-housing-hud-ca2234l9t022300 (fetched 2026-10-03) shows recipient_name 'INSIGHT HOUSING' with UEI C98KZ72UPE68, and a SEPARATE parent_recipient_name 'BERKELEY FOOD AND HOUSING PROJECT' with a different UEI (NZV3CTRDV9N5). This package's nodes.json currently treats 'Berkeley Food and Housing Project' merely as Insight Housing's former legal/trade name under the SAME EIN (94-2979073), not as a separate registered entity. SAM.gov's UEI system may be tracking these as a parent/subsidiary registration pair rather than a simple rename -- this has not been reconciled.",
+      "status": "UNRESOLVED",
+      "next_steps": [
+        "Check SAM.gov entity registration directly for both UEIs (C98KZ72UPE68 and NZV3CTRDV9N5) to determine whether this is a parent-subsidiary SAM registration structure, a stale/unretired former registration, or a genuine distinct-but-related entity",
+        "Do not assume the 'former name' framing in nodes.json is wrong, but do not treat it as fully confirmed either -- flag any grants.json entry attributed via either UEI accordingly"
+      ]
+    },
+    {
+      "id": "identity-item-bridge-housing-socal-affiliate-relationship",
+      "node_ids": ["org-bridge-housing-corporation", "org-bridge-housing-corporation-socal"],
+      "description": "Discovered via general web search (GuideStar listing) 2026-09-26 and confirmed directly via ProPublica's API: 'Bridge Housing Corporation - Southern California' (EIN 94-3233154, exempt since 1996) is a DISTINCT legal entity from BRIDGE Housing Corporation (EIN 94-2827909, exempt since 1983), sharing the same building (350 California St, San Francisco) but a different suite/floor. RESOLVED 2026-10-03: CauseIQ (causeiq.com/organizations/bridge-housing-corporation-southern-california,943233154/, fetched directly) states explicitly: 'Bridge Housing Corporation - Southern California is a subordinate organization under BRIDGE Housing' -- confirming the parent/subsidiary relationship suspected from the shared address/near-identical name. Also corroborated by overlapping executives: Ken Lombard (President/CEO of the main org) and Delphine Sherman (CFO-family role at the main org) both also appear in the Southern California entity's key-personnel listing.",
+      "status": "RESOLVED_SUBORDINATE_ORGANIZATION",
+      "next_steps": [
+        "CauseIQ is a secondary aggregator, not the Schedule R filing itself -- if formal confirmation is needed, still worth pulling BRIDGE Housing Corporation's actual 990 Schedule R",
+        "Check whether any of this package's existing grants.json facts (sourced against EIN 94-2827909 specifically) could actually belong to the Southern California subordinate instead -- re-verify each grants.json entry's award-detail recipient EIN if possible",
+        "If the 'Bridge' in issue #2 is confirmed to be a Southern California matter, this subordinate entity -- now confirmed as part of the same overall organization -- is still relevant to BRIDGE Housing Corporation as a whole, not a wholly separate question"
+      ]
+    },
+    {
+      "id": "identity-item-lombard-vs-sager-socal-ceo-contradiction",
+      "node_ids": ["org-bridge-housing-corporation-socal"],
+      "description": "CauseIQ's key-personnel listing for BRIDGE Housing Corporation - Southern California shows TWO people with CEO-family titles within days of each other: Ken Lombard, 'President and Chief Executive Officer,' dated 2024-12-11; and Nadia Sager, 'Chief Executive Officer,' dated 2024-12-06. Lombard is independently confirmed as the MAIN BRIDGE Housing Corporation's President/CEO (bridgehousing.com). It's plausible Lombard holds the top title across the whole organizational family (parent + subordinate) while Sager holds an operational CEO title specific to the Southern California subordinate -- a common structure for a parent/subsidiary pair -- but this is not confirmed from a primary source.",
+      "status": "CONTRADICTED",
+      "next_steps": [
+        "If this entity's leadership becomes relevant to a specific edge, confirm Sager's exact role/title relationship to Lombard's before treating either as 'the' CEO of the Southern California subordinate"
+      ]
+    },
+    {
+      "id": "identity-item-hunnicutt-bridgeaor-historical-link",
+      "node_ids": ["org-bridge-association-of-realtors"],
+      "description": "RESOLVES a previously-open item: Tia Hunnicutt's connection to Bridge Association of Realtors was left unconfirmed (her email domain is proximarealtygroup.com, not bridgeaor.org). Her own published bio (proximarealtygroup.com/agents/tia-hunnicutt, fetched directly 2026-10-03) confirms a real, dated history: 'Board Member' 2010-2023, 'Chair' 2019, 'President' 2014. This substantiates the Alameda County REALTOR delegation context the user originally raised as resting on a real leadership relationship, not a coincidence of geography.",
+      "status": "RESOLVED_HISTORICAL_NOT_CURRENT",
+      "next_steps": [
+        "Her bio is self-published (first-person primary source, but not independently corroborated by a Bridge AOR-published record of past officers) -- if higher confidence is needed, check whether Bridge AOR publishes any historical leadership archive",
+        "She does NOT appear in Bridge AOR's current CauseIQ-sourced officer roster (dated 2026-04-19) -- treat her Bridge AOR relationship as ended in 2023, not ongoing, in any further edge built on this"
+      ]
+    },
     {
       "id": "collision-bridge-housing-ca-sos-entity-number",
       "node_ids": ["org-bridge-housing-corporation"],

@@ -1,1 +1,91 @@
-[]
+[
+  {
+    "id": "lobby-shenoy-bridgeaor-oakland-q4-2021",
+    "lobbyist_label": "Kiran Shenoy",
+    "lobbyist_identifiers": {
+      "email": "kiran@bridgeaor.org"
+    },
+    "employer_client_org_node_id": null,
+    "employer_client_label": "Bridge Association of Realtors",
+    "report_id": "2562",
+    "report_period": "Quarter 4 2021",
+    "filing_date": "2022-02-02",
+    "officials_contacted": [
+      "Nikki Fortunato Bas", "Noel Gallo", "Dan Kalb", "Rebecca Kaplan",
+      "Loren Taylor", "Sheng Thao", "Treva Reid", "Carroll Fife"
+    ],
+    "matters": [
+      "Compliance with state ADU laws, streamlined permitting, liberalized building standards, equitable regulations, and increased permitting capacity for accessory dwelling units (all 8 officials)",
+      "Opposition to the Tenant Opportunity to Purchase Act (contact with Rebecca Kaplan specifically)"
+    ],
+    "source": "Oakland Public Ethics Commission lobbyist report, fetched directly 2026-10-03: https://apps.oaklandca.gov/pec/Lobbyist_Report.aspx?ReportId=2562",
+    "notes": "Resolves lane-6 (Kiran Shenoy) identity with a real identifier (bridgeaor.org email) rather than a name-only search. This report does NOT mention Rep. Simon, Insight Housing, or BRIDGE Housing Corporation -- it is purely Oakland city-level ADU/tenant-policy advocacy by the Bridge Association of REALTORS (the trade association already distinguished from BRIDGE Housing Corporation in identity_resolution.json). Recorded as a real, dated, sourced advocacy relationship, not as evidence of anything improper -- registered lobbying on housing policy matters is exactly the lawful, disclosed activity this registration system exists to track.",
+    "status": "DOCUMENTED"
+  },
+  {
+    "id": "lobby-shenoy-bridgeaor-oakland-full-history-2020-2026",
+    "lobbyist_label": "Kiran Shenoy",
+    "lobbyist_identifiers": {
+      "email": "kiran@bridgeaor.org"
+    },
+    "employer_client_org_node_id": "org-bridge-association-of-realtors",
+    "employer_client_label": "Bridge Association of Realtors",
+    "report_id": "multiple -- 110, 124, 250, 1398, 1409, 2490, 2562, 2642, 2721, 2794, 3856, 3918, 3999, 4080, 4231, 5421, 5581, 5739 (18 reports, Q2 2020 through Q2 2026)",
+    "report_period": "Quarter 2 2020 through Quarter 2 2026 (sustained, ongoing)",
+    "filing_date": null,
+    "officials_contacted": [
+      "Fortunato Bas, Nikki", "Gibson McElhaney, Lynette", "Thao, Sheng", "Kalb, Dan",
+      "Kaplan, Rebecca", "Gallo, Noel", "Reid, Larry", "Reid, Treva", "Taylor, Loren",
+      "Schaaf, Libby", "Fife, Carroll", "Jenkins, Kevin", "Ramachandran, Janani",
+      "Brown, Rowena", "Unger, Zac", "Wang, Charlene", "Houston, Ken",
+      "Director of Housing (staff title, not individually named)",
+      "City Administrator (staff title)", "Director of Finance (staff title)",
+      "Chief of Staff / Chief of Staff Council District 2 (staff titles)",
+      "Policy Director, Council Member At-Large (staff title)",
+      "Transportation Planner (staff title)"
+    ],
+    "matters": [
+      "Pivot query per lane-2's instruction to expand outward from report #2562 -- pulled EVERY Oakland Schedule A record for lobbyist_name 'Shenoy' (85 individual contact rows across 18 quarterly reports), not just the one report already recorded above.",
+      "Consistent subject matter throughout: Oakland housing/tenant-policy ordinances -- ADU permitting, Just Cause/Tenant Opportunity to Purchase Act exemptions for new construction ('Oppose expansion of Just Cause Ordinance to new construction. Advocate for certain exemptions to ensure Oakland can continue to develop much needed housing units' -- Q2 2022 narrative, representative of the pattern across reports), and similar housing-development-related city ordinances. No non-housing subject matter appears in any report."
+    ],
+    "source": "Oakland Public Ethics Commission Schedule A dataset, data.oaklandca.gov/resource/ucs9-a92d.json, queried directly 2026-10-03: $where=lobbyist_name like '%25Shenoy%25', all 85 matching rows read and the officials_contacted list deduplicated from $select=distinct public_official_name.",
+    "notes": "This is the full pivot lane-2 asks for on this lobbyist: every official and report she appears in, not just the originally-flagged report. Result: a 6-year, sustained, entirely Oakland-city-level housing-policy advocacy record. Rep. Simon NEVER appears -- she was never an Oakland city official (she was a BART board director and is now a member of Congress), so this is an expected, not surprising, absence. Insight Housing and BRIDGE Housing Corporation ALSO never appear in any of the 85 rows or their narratives. This closes out the Shenoy/Bridge-AOR pivot for Oakland's Schedule A dataset specifically -- it does not establish or suggest any connection to Rep. Simon or to the two housing nonprofits this investigation centers on; it is recorded because lane 2 explicitly asked for the full pivot to be done and documented, not left undone.",
+    "status": "DOCUMENTED"
+  },
+  {
+    "id": "lead-no-schedule-d-solicitations-found",
+    "lobbyist_label": null,
+    "lobbyist_identifiers": {},
+    "employer_client_org_node_id": null,
+    "employer_client_label": null,
+    "report_id": null,
+    "report_period": null,
+    "filing_date": null,
+    "officials_contacted": [],
+    "matters": [
+      "Lane 15: Oakland's Schedule D dataset discloses persons/organizations solicited by lobbyists for contributions to City officeholders/candidates. Queried directly for (a) Kiran Shenoy or any Bridge-named lobbyist employer as the SOLICITING lobbyist, and (b) Rep. Simon or Insight/BRIDGE Housing as the solicited committee or fund source, in either direction. Zero results both ways."
+    ],
+    "source": "Oakland Public Ethics Commission Schedule D dataset, data.oaklandca.gov/resource/xvc7-ctj7.json, queried directly 2026-10-03: $where=lobbyist_name like '%25Shenoy%25' OR lobbyist_employer like '%25Bridge%25' -- 0 results; $where=committee like '%25Simon%25' OR fund_source like '%25Simon%25' OR committee like '%25Insight%25' OR fund_source like '%25Insight%25' -- 0 results.",
+    "notes": "Checked-and-not-found per lane 15. Note the dataset's actual column names are lobbyist_employer and fund_source/committee, not client_name as initially guessed -- corrected before concluding zero results (an empty query against the wrong column would have been a false negative, not a real finding; this was caught and fixed before relying on it).",
+    "status": "CHECKED_NOT_FOUND"
+  },
+  {
+    "id": "advocacy-hunnicutt-nar-fpc-for-simon",
+    "lobbyist_label": "Tia Hunnicutt",
+    "lobbyist_identifiers": {
+      "email": "tia@proximarealtygroup.com"
+    },
+    "employer_client_org_node_id": "org-nar",
+    "employer_client_label": "National Association of REALTORS (NAR) -- Federal Political Coordinator (FPC) program",
+    "report_id": null,
+    "report_period": "2025 roster (program year)",
+    "filing_date": null,
+    "officials_contacted": ["Lateefah Simon"],
+    "matters": [
+      "NAR's Federal Political Coordinator (FPC) program assigns one volunteer REALTOR-member liaison per member of Congress as the designated RPAC/NAR advocacy contact for that legislator's office. Hunnicutt is listed as the FPC for Rep. Simon (CA-12)."
+    ],
+    "source": "National Association of REALTORS official 2025 FPC roster, fetched and read directly as a PDF 2026-10-03: https://realtorparty.realtor/wp-content/uploads/2025/01/2025Roster.pdf -- row 'Lateefah Simon | CA | 12 | House | Tia Hunnicutt | tia@proximarealtygroup.com', confirmed by direct document read (not a lossy text-extraction summary).",
+    "notes": "This is a standard, publicly disclosed NAR program structure -- every single member of Congress and Senator in the roster has exactly one assigned FPC; this is not something unique or targeted to Simon. The role is advocacy/liaison, not a financial relationship by itself. UPDATE 2026-10-03: Hunnicutt's current professional home is her own brokerage, Proxima Realty Group (Broker & Founder), which is why her email domain doesn't match Bridge AOR's -- but her own published bio (proximarealtygroup.com/agents/tia-hunnicutt, fetched directly 2026-10-03) now CONFIRMS a real, if historical, Bridge AOR relationship: '2010-2023 Board Member Bridge MLS,' '2019 Chair Bridge MLS,' '2014 President.' She is not currently Bridge AOR staff or an officer (her listed Bridge AOR roles end in 2023, and she does not appear in Bridge AOR's current CauseIQ-sourced officer roster in roles.json), but the user's original Alameda County REALTOR delegation context is now substantiated by a real, dated leadership history there -- see role-hunnicutt-bridgeaor-history and role-hunnicutt-nar-car-current in roles.json, and identity-item-hunnicutt-bridgeaor-historical-link in identity_resolution.json.",
+    "status": "DOCUMENTED"
+  }
+]

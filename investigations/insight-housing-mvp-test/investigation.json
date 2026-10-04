@@ -25,7 +25,6 @@
         "A relationship may exist in records not yet checked (e.g. USAspending.gov award data, local Berkeley grant records, congressional appropriations requests) and this package should be updated if primary sources are located."
       ],
       "missing_records": [
-        "Congressional appropriations/earmark request records for CA-12",
         "City of Berkeley grant and contract records naming Insight Housing",
         "Award-detail records (not just summary fields) for the one federal award to Insight Housing postdating Rep. Simon's tenure, to confirm no member-specific role in the award decision"
       ]
@@ -84,6 +83,28 @@
         "Oakland Registered Lobbyist employer dataset (in-house lobbyist check, not yet queried)",
         "Individual year datasets pre-dating the combined/master dataset queried",
         "CA state-level (Cal-Access) and City of Berkeley lobbying disclosure records"
+      ]
+    },
+    {
+      "id": "h5-bart-north-berkeley-tod-institutional-link",
+      "statement": "BRIDGE Housing Corporation and Insight Housing are both named members of the 'North Berkeley Housing Partners' development team for a Transit-Oriented Development on BART-owned land at the North Berkeley station, and BART's Board of Directors -- on which Rep. Simon sat as an elected District 7 director from 2016-2024 -- authorized an Exclusive Negotiating Agreement with BRIDGE Housing Corporation for this project on 2022-12-01, while she was a sitting director.",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "required_elements": [
+        "Confirmation (ideally a primary BART project page or signed team agreement, not just general web search) that Insight Housing is actually part of the North Berkeley Housing Partners team alongside BRIDGE Housing",
+        "The actual individual-director vote record for the 2022-12-01 BART board action: was it unanimous, did Simon vote, did she recuse, was she even present -- checked directly against BART's Legistar system 2026-10-04 and found to have NO individually-recorded vote for this item (EventItemRollCallFlag=0, empty votes array), so this element cannot be satisfied from structured records; only an archived meeting video/audio review remains as an avenue, not yet attempted",
+        "Any direct financial relationship (compensation, contract, gift) between Simon and any North Berkeley Housing Partners member, separate from her ordinary board-member role in a routine multi-member vote"
+      ],
+      "supporting_edge_ids": [],
+      "contradicting_edge_ids": [],
+      "alternative_explanations": [
+        "An elected transit-district board authorizing a standard real-estate negotiating agreement (not a funding award or final contract) by a multi-member vote is routine agency business, not evidence of any individual director's improper involvement -- this is true of Simon just as it would be true of any of BART's other eight directors at the time.",
+        "An Exclusive Negotiating Agreement is a planning/negotiation framework, not a disbursement of funds or final development agreement -- the actual development deal, if finalized, would be a separate, later board action with its own vote record to check.",
+        "Insight Housing's and BRIDGE Housing's co-membership on one development team is the first documented INSTITUTIONAL link between them found in this investigation (as opposed to incidental Bay Area geography), which is itself a notable finding regardless of Simon's role -- it should be recorded and verified on its own merits, not treated as automatically implicating her."
+      ],
+      "missing_records": [
+        "BART board meeting roll-call vote record for 2022-12-01 -- checked directly via bart.legistar.com's Web API 2026-10-04 and confirmed NOT to exist in structured form; an archived video/audio review of the meeting (bart.gov/boardtv) is the only remaining avenue, not an API/document gap",
+        "Primary-source confirmation of Insight Housing's membership on the North Berkeley Housing Partners team (currently sourced only to general web search, not a primary document)",
+        "Any later board action finalizing (or declining to finalize) a development agreement for this project, which would be the more consequential vote if one has occurred"
       ]
     }
   ],
