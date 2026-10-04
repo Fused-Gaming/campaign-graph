@@ -44,9 +44,17 @@ A reliable third-party aggregator (CauseIQ, which republishes dated IRS Form 990
 
 None of these new names have yet been cross-checked against FEC contributor data (blocked, see below) — that cross-check is the natural next step once the rate limit clears, and the plan explicitly asked for every discovered name to feed back into that check.
 
-## FEC data lane: blocked, not abandoned
+## FEC data lane: now complete
 
-`api.open.fec.gov`'s DEMO_KEY (40 calls/hour) is shared across this environment's proxy and has been exhausted for most of this session. Issue #10 tracks the exact batched call plan (committee totals, full Schedule A/B/E pagination, every newly-discovered officer name as a `contributor_name` check, CREPAC/CREIEC committee resolution). An hourly Routine checks remaining budget and executes whatever batch fits automatically. **Nothing about Rep. Simon's actual campaign finances — receipts, disbursements, independent expenditures — has been directly examined yet.** This is the largest remaining gap in the investigation, not a minor one.
+`api.open.fec.gov`'s DEMO_KEY (40 calls/hour, shared across this environment's proxy) made this a multi-hour effort via an hourly Routine (tracked in issue #10), but the full plan is now done. Results, all from direct FEC API queries dated 2026-10-04:
+
+- **Committee totals** (both cycles): real, substantial financial activity ($1.45M/2026, $2.23M/2024 in receipts) — see `committee_totals.json`.
+- **All 29 named officers** across EBALDC, Insight Housing, BRIDGE Housing Corp (+ Southern California subordinate), AvalonBay, and Bridge Association of Realtors: checked individually against Schedule A (itemized contributions to C00834291). **Zero contributions found from any of them.** Several same-surname hits (e.g., a different "Chan" at GLIDE, a different "Lin," a different "Rodriguez") were individually verified by employer/city/occupation and ruled out as different people — see `contributions.json` for the full list.
+- **Employer-string checks** ("Bridge Association of Realtors," "National Association of Realtors," "Proxima Realty"): zero contributions from anyone self-reporting these employers.
+- **CREPAC-Federal** (`C00083279`, "CALIFORNIA REAL ESTATE POLITICAL ACTION COMMITTEE/FEDERAL - CALIFORNIA ASSOCIATION OF REALTORS," legally distinct from the CA-state-only CREPAC, active 1977-2026): **zero contributions and zero independent expenditures** concerning Rep. Simon or her committee.
+- **CREIEC**: confirmed to have **no FEC registration at all** — it operates only at the CA-state level, with no federal vehicle to check.
+
+Full Schedule A itemization (9,667 records across all contributors, not just the entities in this package) was never pursued — it was correctly scoped out early as impractical and not the useful target; the targeted checks above directly answer this investigation's actual question.
 
 ## Explicitly not established (and this investigation should not imply otherwise)
 
@@ -57,4 +65,4 @@ None of these new names have yet been cross-checked against FEC contributor data
 
 ## What would change this memo
 
-Per `investigation.json`'s hypotheses (h1-h5): a primary-source contribution record from any of the newly-discovered officer names or the CREPAC/CREIEC family; the BART board's actual 2022-12-01 roll-call vote; confirmation of Insight Housing's North Berkeley Housing Partners membership against a primary document; or confirmation/correction of the "Bridge" identity assumption itself.
+Per `investigation.json`'s hypotheses (h1-h5): the BART board's actual 2022-12-01 roll-call vote; confirmation of Insight Housing's North Berkeley Housing Partners membership against a primary document; or confirmation/correction of the "Bridge" identity assumption itself. The FEC contribution question (officer names, employer strings, CREPAC/CREIEC) has now been directly checked and found negative across the board — a future contribution, officer change, or a newly-discovered entity not yet in this package's rosters could still change that, but there is no remaining *unchecked* FEC angle for the entities currently in scope.

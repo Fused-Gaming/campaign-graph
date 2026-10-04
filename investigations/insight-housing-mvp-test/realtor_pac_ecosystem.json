@@ -57,11 +57,30 @@
   ],
   "contributions_to_c00834291_found": [],
   "independent_expenditures_concerning_simon_found": [],
+  "fec_checks_completed_2026_10_04": [
+    {
+      "check": "GET /v1/schedules/schedule_a/?committee_id=C00834291&contributor_id=C00083279",
+      "result": "0 results",
+      "meaning": "CREPAC-Federal (C00083279) has made NO contribution of any kind to Rep. Simon's committee (C00834291), in either the 2024 or 2026 cycle, per FEC Schedule A records as of this fetch.",
+      "source": "FEC API, fetched directly 2026-10-04"
+    },
+    {
+      "check": "GET /v1/schedules/schedule_e/?candidate_id=H4CA12154&committee_id=C00083279",
+      "result": "0 results",
+      "meaning": "CREPAC-Federal (C00083279) has made NO independent expenditure (for or against) concerning Rep. Simon's candidacy (H4CA12154), per FEC Schedule E records as of this fetch.",
+      "source": "FEC API, fetched directly 2026-10-04"
+    },
+    {
+      "check": "GET /v1/committees/?q=CREIEC",
+      "result": "0 results",
+      "meaning": "CREIEC (California Real Estate Independent Expenditure Committee) is NOT FEC-registered under that name/acronym at all -- it does not appear to have a federal-level counterpart the way CREPAC does. Consistent with creiec.com's own framing as a state-level vehicle. This resolves the open jurisdiction_note on the CREIEC entity above: it has no identifiable federal committee ID to check contributions/IEs against.",
+      "source": "FEC API, fetched directly 2026-10-04"
+    }
+  ],
+  "lane_4_summary": "Lane 4 (C.A.R. -> CREPAC -> CREIEC -> federal PAC family) is now substantively CLOSED. The federal vehicle that would have been needed for any contribution to Rep. Simon from this PAC family (CREPAC-Federal, C00083279) has been identified, and checked directly: zero contributions, zero independent expenditures concerning Rep. Simon. CREIEC has no federal registration to check at all. The only remaining open item is Tia Hunnicutt's CREPAC-State membership (lane 5), which is a CA-state-candidate PAC relationship, not a federal one, and was never capable of producing a federal contribution regardless.",
   "next_steps": [
-    "HIGHEST PRIORITY: GET /v1/schedules/schedule_a/?committee_id=C00834291&contributor_id=C00083279 -- the actual contribution check for the newly-identified CREPAC-Federal committee (C00083279) against Rep. Simon's committee. Attempted 2026-10-04, hit rate limit before returning a result. This is the one check that would directly test whether this PAC family contributed to Rep. Simon.",
-    "Independent-expenditure check: GET /v1/schedules/schedule_e/?candidate_id=H4CA12154&committee_id=C00083279 for the same committee",
-    "GET /v1/committees/?q=CREPAC and /v1/committees/?q=CREIEC still not run (both hit rate limit 2026-10-04) -- CREIEC's federal registration status (if any) remains unresolved; it may or may not be a separate committee ID from C00083279",
-    "Resolve exact treasurer/structure relationship between C00083279 (federal) and the CA-state CREPAC entity described above -- same parent organization (C.A.R.) per the committee record's affiliated_committee_name field, but legally distinct filings",
-    "Check Cal-Access (still blocked per the Oakland-lobbying lead's notes on Cal-Access access) for CREPAC-State's FPPC filer ID and any contributions to CA state/local candidates connected to this investigation's entities"
+    "Lane 4 is closed pending any new entity discovery. No further FEC calls needed for this lane.",
+    "Resolve exact treasurer/structure relationship between C00083279 (federal) and the CA-state CREPAC entity described above -- same parent organization (C.A.R.) per the committee record's affiliated_committee_name field, but legally distinct filings. Low priority: does not change the zero-contribution finding.",
+    "Check Cal-Access (still blocked per the Oakland-lobbying lead's notes on Cal-Access access) for CREPAC-State's FPPC filer ID and any contributions to CA state/local candidates connected to this investigation's entities -- this is a CA-state question, separate from the federal question this lane was tracking for Rep. Simon."
   ]
 }
