@@ -91,7 +91,7 @@
       "status": "INSUFFICIENT_EVIDENCE",
       "required_elements": [
         "Confirmation (ideally a primary BART project page or signed team agreement, not just general web search) that Insight Housing is actually part of the North Berkeley Housing Partners team alongside BRIDGE Housing",
-        "The actual roll-call vote record for the 2022-12-01 BART board action: was it unanimous, did Simon vote, did she recuse, was she even present",
+        "The actual individual-director vote record for the 2022-12-01 BART board action: was it unanimous, did Simon vote, did she recuse, was she even present -- checked directly against BART's Legistar system 2026-10-04 and found to have NO individually-recorded vote for this item (EventItemRollCallFlag=0, empty votes array), so this element cannot be satisfied from structured records; only an archived meeting video/audio review remains as an avenue, not yet attempted",
         "Any direct financial relationship (compensation, contract, gift) between Simon and any North Berkeley Housing Partners member, separate from her ordinary board-member role in a routine multi-member vote"
       ],
       "supporting_edge_ids": [],
@@ -102,7 +102,7 @@
         "Insight Housing's and BRIDGE Housing's co-membership on one development team is the first documented INSTITUTIONAL link between them found in this investigation (as opposed to incidental Bay Area geography), which is itself a notable finding regardless of Simon's role -- it should be recorded and verified on its own merits, not treated as automatically implicating her."
       ],
       "missing_records": [
-        "BART board meeting roll-call vote record for 2022-12-01 (bart.legistar.com), not yet located",
+        "BART board meeting roll-call vote record for 2022-12-01 -- checked directly via bart.legistar.com's Web API 2026-10-04 and confirmed NOT to exist in structured form; an archived video/audio review of the meeting (bart.gov/boardtv) is the only remaining avenue, not an API/document gap",
         "Primary-source confirmation of Insight Housing's membership on the North Berkeley Housing Partners team (currently sourced only to general web search, not a primary document)",
         "Any later board action finalizing (or declining to finalize) a development agreement for this project, which would be the more consequential vote if one has occurred"
       ]
