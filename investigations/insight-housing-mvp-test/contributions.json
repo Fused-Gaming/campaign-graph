@@ -1,1 +1,45 @@
-[]
+[
+  {
+    "id": "fec-check-c00834291-officer-names-batch1-2026-10-04",
+    "committee_id": "C00834291",
+    "committee_name": "LATEEFAH FOR CONGRESS",
+    "query_type": "contributor_name",
+    "date_checked": "2026-10-04",
+    "source": "FEC API, https://api.open.fec.gov/v1/schedules/schedule_a/?committee_id=C00834291&contributor_name=<name>",
+    "names_checked_zero_or_no_relevant_match": [
+      "Carney (EBALDC CFO) - 0 results",
+      "Lai (EBALDC Chief Strategy Officer) - 0 results",
+      "Higginbotham (EBALDC EVP) - 0 results",
+      "Egan (Insight Housing CEO/CFO) - 0 results",
+      "Upshaw (Insight Housing COO) - 0 results",
+      "Sherman (BRIDGE Housing EVP/CFO, former) - 0 results",
+      "Svensk (BRIDGE Housing GC, disputed) - 0 results",
+      "Watson-Feiner (Insight Housing CFO) - 0 results",
+      "Dancisak (Insight Housing Chief of Staff) - 0 results",
+      "Lund (BRIDGE Housing CFO) - 0 results"
+    ],
+    "names_checked_with_unrelated_matches": [
+      {
+        "name_queried": "Chan (EBALDC CEO)",
+        "result": "11 total records, all for CHAN, EDEN (GLIDE, Special Events Manager, Oakland) or WALKER, CHANTEL (self-employed) -- neither is EBALDC CEO Chan. Not the same person; no relevant match.",
+        "status": "NO_RELEVANT_MATCH"
+      },
+      {
+        "name_queried": "Francis (EBALDC Board Chair)",
+        "result": "3 total records: FRANCIS, LAURA (not employed, Oakland) x2, and MORENO, ALBERT FRANCIS (not employed, Oakland) x1 -- neither matches EBALDC's Board Chair Francis by first name or employer. Not the same person; no relevant match.",
+        "status": "NO_RELEVANT_MATCH"
+      },
+      {
+        "name_queried": "Lin (Insight Housing CFO, former)",
+        "result": "19 total records, surnames/employers checked (Berkowitz Linda, Air Line Pilots Association PAC, Delta Air Lines, Lindsay Alexandra, Sarsour Linda) -- none is Insight Housing's former CFO Lin. Not the same person; no relevant match.",
+        "status": "NO_RELEVANT_MATCH"
+      }
+    ],
+    "names_not_reached_rate_limited": [
+      "Scruggs (EBALDC EVP)",
+      "Lombard (BRIDGE Housing Corp CEO, also SoCal subordinate)",
+      "Laffer (BRIDGE Housing COO/GC, disputed)"
+    ],
+    "note": "All results checked for contributor_employer/occupation/city alignment with the actual officer being searched, not name alone -- per this package's identity-resolution rule, a surname match is not treated as the same person without a corroborating identifier (employer, city, or occupation). Zero contributions found linking any of these named officers to C00834291 so far. Batch stopped on HTTP 429 (OVER_RATE_LIMIT) partway through; remaining names tracked in issue #10."
+  }
+]
