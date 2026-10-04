@@ -81,5 +81,30 @@
       "Stutzman (unverified Insight Housing board-roster name)"
     ],
     "note": "Shared DEMO_KEY pool contention: individual queries within this batch were interleaved with other proxy traffic, producing 429s between successful calls rather than one clean cutoff. Zero contributions found linking any reached officer to C00834291. Remaining 12 names, employer-string checks, and CREPAC/CREIEC resolution still pending -- tracked in issue #10."
+  },
+  {
+    "id": "fec-check-c00834291-officer-names-batch3-2026-10-04",
+    "committee_id": "C00834291",
+    "committee_name": "LATEEFAH FOR CONGRESS",
+    "query_type": "contributor_name",
+    "date_checked": "2026-10-04",
+    "source": "FEC API, https://api.open.fec.gov/v1/schedules/schedule_a/?committee_id=C00834291&contributor_name=<name>",
+    "names_checked_zero_or_no_relevant_match": [
+      "Lombard (BRIDGE Housing Corp CEO, also SoCal subordinate, disputed) - 0 results",
+      "Laffer (BRIDGE Housing COO/GC, disputed) - 0 results",
+      "Lara (Bridge AOR CEO) - 0 results"
+    ],
+    "names_not_reached_rate_limited_or_errored": [
+      "Scruggs (EBALDC EVP) - 429",
+      "Sager (BRIDGE Housing SoCal CEO, disputed) - 429",
+      "Mather (BRIDGE Housing SoCal EVP/CIO) - 429",
+      "Schall (AvalonBay CEO) - 429",
+      "Shenoy (Bridge AOR registered lobbyist) - 429",
+      "Rodriguez (Bridge AOR COO) - connection reset by proxy mid-request, not a rate-limit result, needs clean retry",
+      "Vivo (Bridge AOR CTO) - 429",
+      "Castillo (Bridge AOR director) - 429",
+      "Stutzman (unverified Insight Housing board-roster name) - 429"
+    ],
+    "note": "Zero contributions found linking Lombard/Laffer/Lara to C00834291. 9 names remain, blocked on the same shared-pool contention. Employer-string checks (Bridge Association of Realtors / NAR / Proxima Realty) and CREPAC/CREIEC committee resolution still not attempted -- tracked in issue #10."
   }
 ]
