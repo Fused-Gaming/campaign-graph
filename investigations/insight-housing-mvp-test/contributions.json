@@ -134,5 +134,42 @@
       "Castillo (Bridge AOR director)"
     ],
     "note": "This completes the originally-scoped 29-name officer-roster check except for Sager, Mather, Vivo, and Castillo (4 names), still blocked on shared-pool rate limiting. Zero contributions found linking any officer checked so far (25 of 29) to C00834291. Employer-string checks and CREPAC/CREIEC committee resolution still not attempted -- tracked in issue #10."
+  },
+  {
+    "id": "fec-check-c00834291-officer-names-batch5-final-2026-10-04",
+    "committee_id": "C00834291",
+    "committee_name": "LATEEFAH FOR CONGRESS",
+    "query_type": "contributor_name",
+    "date_checked": "2026-10-04",
+    "source": "FEC API, https://api.open.fec.gov/v1/schedules/schedule_a/?committee_id=C00834291&contributor_name=<name>",
+    "names_checked_zero_or_no_relevant_match": [
+      "Sager (BRIDGE Housing SoCal CEO, disputed) - 0 results",
+      "Vivo (Bridge AOR CTO) - 0 results",
+      "Castillo (Bridge AOR director) - 0 results"
+    ],
+    "names_checked_with_unrelated_matches": [
+      {
+        "name_queried": "Mather (BRIDGE Housing SoCal EVP/CIO)",
+        "result": "2 records: MATHER, OMAR (Amgen, Physician, Thousand Oaks, 2026-06-02 $250 and 2025-10-18 $500) -- employer/occupation does not match BRIDGE Housing. Not the same person; no relevant match.",
+        "status": "NO_RELEVANT_MATCH"
+      }
+    ],
+    "note": "This completes ALL 29 officer names from the original roster across five batches. Zero FEC contributions to C00834291 found for any of them -- every apparent hit, on closer check of employer/occupation/city, is a different person sharing only a surname. See identity_resolution.json's naming-collision rule for the method applied uniformly here."
+  },
+  {
+    "id": "fec-check-c00834291-employer-strings-2026-10-04",
+    "committee_id": "C00834291",
+    "committee_name": "LATEEFAH FOR CONGRESS",
+    "query_type": "contributor_employer",
+    "date_checked": "2026-10-04",
+    "source": "FEC API, https://api.open.fec.gov/v1/schedules/schedule_a/?committee_id=C00834291&contributor_employer=<string>",
+    "employer_strings_checked_zero_results": [
+      "Bridge Association of Realtors - 0 results"
+    ],
+    "employer_strings_not_reached_rate_limited": [
+      "National Association of Realtors",
+      "Proxima Realty"
+    ],
+    "note": "No contributions from anyone self-reporting 'Bridge Association of Realtors' as employer. Remaining 2 employer strings and CREPAC/CREIEC committee resolution (lane 4) still pending -- tracked in issue #10."
   }
 ]
