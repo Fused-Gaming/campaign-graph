@@ -106,5 +106,33 @@
       "Stutzman (unverified Insight Housing board-roster name) - 429"
     ],
     "note": "Zero contributions found linking Lombard/Laffer/Lara to C00834291. 9 names remain, blocked on the same shared-pool contention. Employer-string checks (Bridge Association of Realtors / NAR / Proxima Realty) and CREPAC/CREIEC committee resolution still not attempted -- tracked in issue #10."
+  },
+  {
+    "id": "fec-check-c00834291-officer-names-batch4-2026-10-04",
+    "committee_id": "C00834291",
+    "committee_name": "LATEEFAH FOR CONGRESS",
+    "query_type": "contributor_name",
+    "date_checked": "2026-10-04",
+    "source": "FEC API, https://api.open.fec.gov/v1/schedules/schedule_a/?committee_id=C00834291&contributor_name=<name>",
+    "names_checked_zero_or_no_relevant_match": [
+      "Scruggs (EBALDC EVP) - 0 results",
+      "Schall (AvalonBay CEO) - 0 results",
+      "Shenoy (Bridge AOR registered lobbyist) - 0 results",
+      "Stutzman (unverified Insight Housing board-roster name) - 0 results"
+    ],
+    "names_checked_with_unrelated_matches": [
+      {
+        "name_queried": "Rodriguez (Bridge AOR COO)",
+        "result": "1 record: RODRIGUEZ, JUAN (Bearstar, Consultant, Van Nuys, 2023-03-31, $1000) -- employer does not match Bridge Association of Realtors. Not the same person; no relevant match.",
+        "status": "NO_RELEVANT_MATCH"
+      }
+    ],
+    "names_not_reached_rate_limited": [
+      "Sager (BRIDGE Housing SoCal CEO, disputed)",
+      "Mather (BRIDGE Housing SoCal EVP/CIO)",
+      "Vivo (Bridge AOR CTO)",
+      "Castillo (Bridge AOR director)"
+    ],
+    "note": "This completes the originally-scoped 29-name officer-roster check except for Sager, Mather, Vivo, and Castillo (4 names), still blocked on shared-pool rate limiting. Zero contributions found linking any officer checked so far (25 of 29) to C00834291. Employer-string checks and CREPAC/CREIEC committee resolution still not attempted -- tracked in issue #10."
   }
 ]
