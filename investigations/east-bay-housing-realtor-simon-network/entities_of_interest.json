@@ -1,0 +1,166 @@
+[
+  {
+    "id": "TGT-001",
+    "name": "Lateefah Simon",
+    "entity_type": "PERSON",
+    "resolution_status": "DOCUMENTED",
+    "notes": "Public official/candidate identity; keep office/role time-bounded and separately sourced.",
+    "source_ids": [
+      "SRC-002",
+      "SRC-003",
+      "SRC-004"
+    ]
+  },
+  {
+    "id": "TGT-002",
+    "name": "Lateefah for Congress",
+    "entity_type": "CAMPAIGN_COMMITTEE",
+    "resolution_status": "DOCUMENTED",
+    "identifiers": {
+      "fec_committee_id": "C00834291"
+    },
+    "notes": "FEC committee identity verified; transaction-level contribution edges still require filings.",
+    "source_ids": [
+      "SRC-003"
+    ]
+  },
+  {
+    "id": "TGT-003",
+    "name": "Tia Hunnicutt",
+    "entity_type": "PERSON",
+    "resolution_status": "DOCUMENTED",
+    "notes": "The 2025 NAR roster lists her as the FPC for Rep. Lateefah Simon; scope and dates beyond that roster remain to verify.",
+    "source_ids": [
+      "SRC-002"
+    ]
+  },
+  {
+    "id": "TGT-004",
+    "name": "Insight Housing / Berkeley Food & Housing Project",
+    "entity_type": "NONPROFIT",
+    "resolution_status": "UNRESOLVED",
+    "notes": "Organization's own contact page identifies Insight Housing, formerly BFHP, at Suite 601. Resolve legal-name continuity and EIN from primary filings before merging aliases in graph data.",
+    "source_ids": [
+      "SRC-006"
+    ]
+  },
+  {
+    "id": "TGT-005",
+    "name": "Bridge Association of REALTORS",
+    "entity_type": "TRADE_ASSOCIATION",
+    "resolution_status": "UNRESOLVED",
+    "notes": "Distinct from BRIDGE Housing Corporation and similarly named PACs. A secondary business listing shows Suite 600 at 2855 Telegraph Ave.; organizational identity/address history requires an official record.",
+    "source_ids": [
+      "SRC-007"
+    ]
+  },
+  {
+    "id": "TGT-006",
+    "name": "BRIDGE Housing Corporation",
+    "entity_type": "NONPROFIT",
+    "resolution_status": "UNRESOLVED",
+    "notes": "Keep distinct from Bridge Association of REALTORS unless primary identity evidence proves otherwise.",
+    "source_ids": []
+  },
+  {
+    "id": "TGT-007",
+    "name": "San Francisco Foundation",
+    "entity_type": "FOUNDATION",
+    "resolution_status": "UNRESOLVED",
+    "notes": "Reported $660,000 grant needs underlying award/990/source record; no grant edge created.",
+    "source_ids": [
+      "SRC-008"
+    ]
+  },
+  {
+    "id": "TGT-008",
+    "name": "BART",
+    "entity_type": "GOVERNMENT_AGENCY",
+    "resolution_status": "DOCUMENTED",
+    "notes": "Public agency; item 22-461 record identifies its Board of Directors and agenda action request.",
+    "source_ids": [
+      "SRC-004",
+      "SRC-005"
+    ]
+  },
+  {
+    "id": "TGT-009",
+    "name": "North Berkeley BART TOD",
+    "entity_type": "PROJECT",
+    "resolution_status": "DOCUMENTED",
+    "notes": "BART project page describes the current project; developer-selection and decision records remain to be assembled.",
+    "source_ids": [
+      "SRC-009"
+    ]
+  },
+  {
+    "id": "TGT-010",
+    "name": "Kiran Shenoy",
+    "entity_type": "PERSONS_PENDING_RESOLUTION",
+    "resolution_status": "UNRESOLVED",
+    "notes": "Named in the initial scope; verify exact identity and role from official records. No relationship is asserted.",
+    "source_ids": [
+      "SRC-010"
+    ]
+  },
+  {
+    "id": "TGT-011",
+    "name": "Calleene Egan",
+    "entity_type": "PERSON",
+    "resolution_status": "UNRESOLVED",
+    "notes": "Named in the initial scope; exact identity, role, and any relation to other targets require official source verification. No relationship is asserted.",
+    "source_ids": [
+      "SRC-010"
+    ]
+  },
+  {
+    "id": "TGT-012",
+    "name": "Mark Stutzman",
+    "entity_type": "PERSON",
+    "resolution_status": "UNRESOLVED",
+    "notes": "Named in the initial scope; exact identity, role, and any relation to other targets require official source verification. No relationship is asserted.",
+    "source_ids": [
+      "SRC-010"
+    ]
+  },
+  {
+    "id": "TGT-013",
+    "name": "Susan Stutzman",
+    "entity_type": "PERSON",
+    "resolution_status": "UNRESOLVED",
+    "notes": "Named in the initial scope; exact identity, role, and any relation to other targets require official source verification. No relationship is asserted.",
+    "source_ids": [
+      "SRC-010"
+    ]
+  },
+  {
+    "id": "TGT-014",
+    "name": "Nicole M. Egan",
+    "entity_type": "PERSON",
+    "resolution_status": "UNRESOLVED",
+    "notes": "Named in the initial scope; exact identity, role, and any relation to other targets require official source verification. No relationship is asserted.",
+    "source_ids": [
+      "SRC-010"
+    ]
+  },
+  {
+    "id": "TGT-015",
+    "name": "Nicole Marie Egan",
+    "entity_type": "PERSON",
+    "resolution_status": "UNRESOLVED",
+    "notes": "Named in the initial scope; exact identity, role, and any relation to other targets require official source verification. No relationship is asserted.",
+    "source_ids": [
+      "SRC-010"
+    ]
+  },
+  {
+    "id": "TGT-016",
+    "name": "Matthew Thacker",
+    "entity_type": "PERSON",
+    "resolution_status": "UNRESOLVED",
+    "notes": "Named in the initial scope; exact identity, role, and any relation to other targets require official source verification. No relationship is asserted.",
+    "source_ids": [
+      "SRC-010"
+    ]
+  }
+]

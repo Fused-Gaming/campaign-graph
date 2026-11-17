@@ -1,0 +1,21 @@
+[
+  {
+    "id": "event-bart-22-461-agenda",
+    "title": "BART agenda item 22-461: North Berkeley TOD ENA authorization request",
+    "date": "2022-12-01",
+    "event_type": "agenda_item",
+    "node_ids": [
+      "agency-bart",
+      "project-north-berkeley-bart-tod"
+    ],
+    "edge_ids": [],
+    "source_ids": [
+      "SRC-004",
+      "SRC-005"
+    ],
+    "metadata": {
+      "verification_status": "DOCUMENTED",
+      "limit": "Agenda placement only; final action and individual votes unresolved."
+    }
+  }
+]

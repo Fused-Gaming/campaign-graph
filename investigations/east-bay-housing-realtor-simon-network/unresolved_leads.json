@@ -1,0 +1,115 @@
+[
+  {
+    "id": "LEAD-001",
+    "priority": "HIGH",
+    "topic": "Oakland PEC ReportId 2562",
+    "status": "UNRESOLVED",
+    "source_ids": [
+      "SRC-001"
+    ],
+    "next_step": "Retrieve the report and attachments; capture filer, employer/client, period, contactees, subjects, Schedule D contributions, report amendments, and linked report IDs. Then enumerate all Bridge Association of REALTORS filings by quarter/year.",
+    "edge_policy": "Do not add lobbying or contribution edges before the report is inspected."
+  },
+  {
+    "id": "LEAD-002",
+    "priority": "HIGH",
+    "topic": "BART item 22-461 and Simon's vote/participation",
+    "status": "UNRESOLVED",
+    "source_ids": [
+      "SRC-004",
+      "SRC-005"
+    ],
+    "next_step": "Retrieve approved Dec. 1, 2022 minutes, board packet, roll-call record, video/transcript, action summary, and any later approval of minutes; determine presence, recusal, vote, or no recorded vote from the official record.",
+    "edge_policy": "Vote state remains UNKNOWN until documented."
+  },
+  {
+    "id": "LEAD-003",
+    "priority": "HIGH",
+    "topic": "Reported SFF $660,000 award to Insight Housing/BFHP",
+    "status": "UNRESOLVED",
+    "source_ids": [
+      "SRC-008"
+    ],
+    "next_step": "Locate underlying SFF award and recipient filings: award ID/date/tax and fiscal years/legal recipient/EIN/purpose/project/restrictions/fund or DAF source/recommender/approval authority/agreement/payment schedule. Check recipient 990 Schedule I and SFF grant disclosures.",
+    "edge_policy": "Do not create a money edge from a secondary grant aggregator."
+  },
+  {
+    "id": "LEAD-004",
+    "priority": "MEDIUM",
+    "topic": "2855 Telegraph Avenue suites 600 and 601",
+    "status": "UNRESOLVED",
+    "source_ids": [
+      "SRC-006",
+      "SRC-007"
+    ],
+    "next_step": "Obtain official association and nonprofit records, historical address records, lease/ownership/property-management records where public, and dates of occupancy. Determine whether only same building or shared infrastructure is supported.",
+    "edge_policy": "Suite numbers indicate separate premises; never infer shared office or coordination."
+  },
+  {
+    "id": "LEAD-005",
+    "priority": "MEDIUM",
+    "topic": "FPC role dates, responsibilities, meetings and political activity",
+    "status": "PARTIALLY_DOCUMENTED",
+    "source_ids": [
+      "SRC-002"
+    ],
+    "next_step": "Compare dated NAR/C.A.R./Bridge rosters and communications; collect official FEC contributions/disbursements and Oakland PEC contacts; distinguish personal activity from organizational authorization.",
+    "edge_policy": "The roster does not establish money transfer or lobbying contact."
+  },
+  {
+    "id": "LEAD-006",
+    "priority": "MEDIUM",
+    "topic": "Campaign finance around Lateefah for Congress",
+    "status": "UNRESOLVED",
+    "source_ids": [
+      "SRC-003"
+    ],
+    "next_step": "Download raw FEC transaction filings for C00834291 and related committees; preserve transaction IDs, amendments/refunds/reattributions, dates, contributor employer/occupation, intermediaries and source PDFs. Validate each entity match conservatively.",
+    "edge_policy": "Do not infer bundling, earmarking, conduit use, or coordination from clusters alone."
+  },
+  {
+    "id": "LEAD-007",
+    "priority": "MEDIUM",
+    "topic": "Organization and person identity resolution",
+    "status": "UNRESOLVED",
+    "source_ids": [
+      "SRC-010"
+    ],
+    "next_step": "Resolve legal entities and individuals from official filings and contemporaneous organization records, especially Insight/BFHP aliases, Bridge Association of REALTORS vs BRIDGE Housing vs any Bridge PAC, Nicole M. vs Nicole Marie Egan, and any proposed Egan family relationship.",
+    "edge_policy": "Keep ambiguous people/orgs as distinct nodes; no kinship inference from aggregators."
+  },
+  {
+    "id": "LEAD-008",
+    "priority": "MEDIUM",
+    "topic": "North Berkeley TOD procurement and developer team",
+    "status": "PARTIALLY_DOCUMENTED",
+    "source_ids": [
+      "SRC-004",
+      "SRC-009"
+    ],
+    "next_step": "Retrieve RFQ, submissions, scoring, selection memos, ENA, contracts, public comments, city/BART approvals, funding records, and developer-partner disclosures; build dated project events.",
+    "edge_policy": "Project involvement alone does not establish political influence or a financial interest by any official."
+  },
+  {
+    "id": "LEAD-009",
+    "priority": "LOW",
+    "topic": "Reported BART Request 22-78 and March 2022 conflict memorandum",
+    "status": "UNRESOLVED",
+    "source_ids": [
+      "SRC-010"
+    ],
+    "next_step": "Locate request log and released response; preserve request ID, custodians, correspondence, privilege log, exemption, attachments and disclosure history. Do not describe memorandum contents until obtained.",
+    "edge_policy": "Document existence and content are separate claims."
+  },
+  {
+    "id": "LEAD-010",
+    "priority": "LOW",
+    "topic": "Insight Housing leadership, grants, contractors and CDSS activity",
+    "status": "UNRESOLVED",
+    "source_ids": [
+      "SRC-010"
+    ],
+    "next_step": "Build a source-backed org/board roster by year; reconcile 990s, contracts, grant agreements, public procurement records, and CDSS program records; avoid name-only merges.",
+    "edge_policy": "Government funding or nonprofit board status does not by itself show involvement in any BART decision."
+  }
+]

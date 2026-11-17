@@ -34,6 +34,13 @@ If two instructions conflict, stop the conflicting change and preserve the stric
 - Contradictory and exculpatory evidence is first-class data.
 - Unknown facts remain unknown.
 
+## Evidence labels and public delivery
+
+- Confidence values: A official/primary, B organization record, C reputable secondary, D unverified lead.
+- Hypothesis outcomes are limited to SUPPORTED, PARTIALLY_SUPPORTED, NOT_SUPPORTED, and INSUFFICIENT_EVIDENCE. Timing-only patterns use TEMPORAL_CORRELATION_REQUIRES_INVESTIGATION.
+- Treat evidence as append-only by default; corrections preserve prior provenance.
+- Public packages state scope, review date, methods, limitations, and license. Keep case data under investigations/<slug>/.
+
 ## Political neutrality
 
 Agents may collect and compare documented political records. Agents must not rank candidates, recommend political choices, predict election outcomes, or alter data presentation to favor or disfavor a political actor.

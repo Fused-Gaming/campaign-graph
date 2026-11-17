@@ -1,0 +1,83 @@
+{
+  "slug": "east-bay-housing-realtor-simon-network",
+  "title": "East Bay Housing, REALTOR, Political Finance, and TOD Records",
+  "description": "Evidence-first public-record review of specified nonprofit, real-estate association, campaign-finance, lobbying, philanthropic, government, and transit-oriented-development leads. This is a research scope, not an allegation.",
+  "status": "active",
+  "jurisdictions": [
+    "US-CA",
+    "Oakland, California",
+    "Berkeley, California",
+    "United States federal"
+  ],
+  "entry_nodes": [
+    "person-lateefah-simon",
+    "person-tia-hunnicutt"
+  ],
+  "hypotheses": [
+    {
+      "id": "HYP-001",
+      "statement": "The 2025 NAR REALTOR Political Coordinators roster lists Tia Hunnicutt as Federal Political Coordinator for Rep. Lateefah Simon.",
+      "status": "SUPPORTED",
+      "required_elements": [],
+      "supporting_edge_ids": [],
+      "contradicting_edge_ids": [],
+      "alternative_explanations": [],
+      "missing_records": []
+    },
+    {
+      "id": "HYP-002",
+      "statement": "Lateefah for Congress is the FEC-registered committee identified by C00834291.",
+      "status": "SUPPORTED",
+      "required_elements": [],
+      "supporting_edge_ids": [],
+      "contradicting_edge_ids": [],
+      "alternative_explanations": [],
+      "missing_records": []
+    },
+    {
+      "id": "HYP-003",
+      "statement": "BART recorded an individual vote by Lateefah Simon on item 22-461 on December 1, 2022, and its direction can be established from an official record.",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "required_elements": [],
+      "supporting_edge_ids": [],
+      "contradicting_edge_ids": [],
+      "alternative_explanations": [],
+      "missing_records": []
+    },
+    {
+      "id": "HYP-004",
+      "statement": "San Francisco Foundation awarded exactly $660,000 to Insight Housing / BFHP under an identifiable grant award.",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "required_elements": [],
+      "supporting_edge_ids": [],
+      "contradicting_edge_ids": [],
+      "alternative_explanations": [],
+      "missing_records": []
+    },
+    {
+      "id": "HYP-005",
+      "statement": "The named institutional/financial/access relationships constitute improper influence, prohibited coordination, a conflict, or quid pro quo.",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "required_elements": [],
+      "supporting_edge_ids": [],
+      "contradicting_edge_ids": [],
+      "alternative_explanations": [],
+      "missing_records": []
+    }
+  ],
+  "schema_version": "1.0",
+  "date_range": {
+    "start": null,
+    "end": null
+  },
+  "tags": [
+    "housing",
+    "realtor-association",
+    "campaign-finance",
+    "lobbying",
+    "grants",
+    "bart",
+    "tod"
+  ],
+  "maintainers": []
+}

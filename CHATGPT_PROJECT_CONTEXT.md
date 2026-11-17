@@ -128,3 +128,10 @@ The foundation includes typed node/edge/evidence models, conservative entity res
 ## Reference project
 
 The architecture was inspired by the pipeline pattern in `AlejoPrietoDavalos/twitter_analysis`: collect persistent records, construct directional relationships, analyze a graph, and render interpretable output. Campaign Graph is a clean-room implementation for public-record evidence.
+
+
+## Active investigation packages
+
+- investigations/insight-housing-mvp-test/ remains the existing narrow pipeline test. Keep its scope and records intact.
+- investigations/east-bay-housing-realtor-simon-network/ is a separate research scope for the named nonprofit, REALTOR association, campaign-finance, lobbying, philanthropic, BART, and TOD leads. As of 2026-11-17 it contains one source-backed FPC roster edge; the FEC committee identity and BART agenda item are documented, while vote and grant leads remain unresolved. No contribution, grant-transfer, shared-office, or improper-influence edge is asserted.
+- investigations/_template/ is the reusable starter. Keep manifests aligned with schemas/investigation.schema.json.

@@ -111,3 +111,8 @@ campaign-graph serve --investigation <slug>
 ```
 
 The package loader must validate schemas before adding any edge to a graph.
+
+
+## Public delivery
+
+State review date, neutral scope, methodology, source limits, license, and unresolved leads. Preserve URLs, official record IDs, dates, provenance, confidence, verification status, and contradictory evidence. Secondary-source leads do not establish transfers. Money edges require documented transfer evidence. Adjacent addresses, access, and timing do not establish coordination or causation. Use investigations/_template/ for new packages; keep case-specific changes out of generic engine behavior.

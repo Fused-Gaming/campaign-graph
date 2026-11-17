@@ -1,0 +1,120 @@
+[
+  {
+    "id": "person-lateefah-simon",
+    "label": "Lateefah Simon",
+    "type": "GOVERNMENT_OFFICIAL",
+    "aliases": [
+      "Lateefah Aaliyah Simon"
+    ],
+    "identifiers": {
+      "fec_candidate_id": "H4CA12154"
+    },
+    "metadata": {
+      "verification_status": "DOCUMENTED",
+      "source_ids": [
+        "SRC-002",
+        "SRC-011"
+      ]
+    }
+  },
+  {
+    "id": "person-tia-hunnicutt",
+    "label": "Tia Hunnicutt",
+    "type": "PERSON",
+    "metadata": {
+      "verification_status": "DOCUMENTED",
+      "source_ids": [
+        "SRC-002"
+      ],
+      "scope_note": "2025 roster listing only."
+    }
+  },
+  {
+    "id": "campaign-lateefah-for-congress",
+    "label": "Lateefah for Congress",
+    "type": "CAMPAIGN",
+    "identifiers": {
+      "fec_committee_id": "C00834291"
+    },
+    "metadata": {
+      "verification_status": "DOCUMENTED",
+      "source_ids": [
+        "SRC-003"
+      ]
+    }
+  },
+  {
+    "id": "org-insight-housing",
+    "label": "Insight Housing",
+    "type": "NONPROFIT",
+    "aliases": [
+      "Berkeley Food & Housing Project"
+    ],
+    "metadata": {
+      "verification_status": "DOCUMENTED",
+      "source_ids": [
+        "SRC-006"
+      ],
+      "scope_note": "Confirm legal-name continuity from filings."
+    }
+  },
+  {
+    "id": "org-bridge-association-realtors",
+    "label": "Bridge Association of REALTORS",
+    "type": "TRADE_ASSOCIATION",
+    "metadata": {
+      "verification_status": "UNRESOLVED",
+      "source_ids": [
+        "SRC-007"
+      ],
+      "scope_note": "Secondary listing only; distinct from BRIDGE Housing."
+    }
+  },
+  {
+    "id": "org-bridge-housing-corporation",
+    "label": "BRIDGE Housing Corporation",
+    "type": "NONPROFIT",
+    "metadata": {
+      "verification_status": "UNRESOLVED",
+      "source_ids": [],
+      "scope_note": "Separate target; do not merge with Bridge Association of REALTORS."
+    }
+  },
+  {
+    "id": "org-san-francisco-foundation",
+    "label": "San Francisco Foundation",
+    "type": "FOUNDATION",
+    "metadata": {
+      "verification_status": "UNRESOLVED",
+      "source_ids": [
+        "SRC-008"
+      ],
+      "scope_note": "Grant lead only; no award edge."
+    }
+  },
+  {
+    "id": "agency-bart",
+    "label": "Bay Area Rapid Transit District (BART)",
+    "type": "GOVERNMENT_AGENCY",
+    "metadata": {
+      "verification_status": "DOCUMENTED",
+      "source_ids": [
+        "SRC-004",
+        "SRC-005",
+        "SRC-009"
+      ]
+    }
+  },
+  {
+    "id": "project-north-berkeley-bart-tod",
+    "label": "North Berkeley BART TOD",
+    "type": "PROJECT",
+    "metadata": {
+      "verification_status": "DOCUMENTED",
+      "source_ids": [
+        "SRC-004",
+        "SRC-009"
+      ]
+    }
+  }
+]
