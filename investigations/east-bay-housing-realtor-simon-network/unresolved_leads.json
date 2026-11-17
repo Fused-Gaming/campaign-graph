@@ -49,7 +49,7 @@
     "id": "LEAD-005",
     "priority": "MEDIUM",
     "topic": "FPC role dates, responsibilities, meetings and political activity",
-    "status": "PARTIALLY_DOCUMENTED",
+    "status": "UNRESOLVED",
     "source_ids": [
       "SRC-002"
     ],
@@ -82,7 +82,7 @@
     "id": "LEAD-008",
     "priority": "MEDIUM",
     "topic": "North Berkeley TOD procurement and developer team",
-    "status": "PARTIALLY_DOCUMENTED",
+    "status": "UNRESOLVED",
     "source_ids": [
       "SRC-004",
       "SRC-009"
