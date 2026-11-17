@@ -1,19 +1,17 @@
 # East Bay Housing / REALTOR / Simon / TOD investigation package
 
-This is a neutral public-record research package for investigating the named leads in `investigation.json`. It is not an allegation or a finding of wrongdoing.
+This is a neutral public-record research package for the named leads in investigation.json, not an allegation or finding of wrongdoing.
 
 ## Current state
 
-- Narrow source-backed facts are summarized in `INVESTIGATION_FINDINGS.md`.
-- `sources.json` records source identity, URL, source type, confidence, status, provenance, and limits.
-- `unresolved_leads.json` contains the research queue.
-- `nodes.json` and `edges.json` intentionally remain empty until the repository's canonical schemas are available and the underlying source records have been reviewed.
-- CSVs contain headers only. No unverified totals or transfers are included.
+- One sourced edge records the 2025 roster assignment of Tia Hunnicutt as FPC for Rep. Lateefah Simon.
+- FEC committee identity and the BART agenda item are documented; the BART vote and reported SFF grant remain unresolved.
+- Nodes include the minimum sourced entities. All other scope targets are tracked separately in entities_of_interest.json.
+- No campaign contribution, grant transfer, lobbying contact, adjacent-suite occupancy, shared-office, or improper-influence edge is asserted.
+- CSV ledgers contain headers only.
 
-## Method
+## Method and license
 
-Use primary records first. Preserve every URL, source date, access date, record identifier, original filing, and amendment. Make each claim independently reproducible. Separate money edges from access/influence edges. Log contrary evidence and alternative explanations. Never turn an association or temporal sequence into causation.
+Prefer primary records. Preserve URLs, record identifiers, source/access dates, provenance, confidence, verification status, and contradictory evidence. Separate money from access. Treat timing and adjacency as leads only.
 
-## Public use and license
-
-Campaign Graph is source-available under PolyForm Noncommercial 1.0.0. Commercial use requires a separate written license. This package records leads, source limitations, and unresolved questions; re-check linked records before republication because web pages and filings can change.
+Campaign Graph is source-available under PolyForm Noncommercial 1.0.0. Commercial use requires a separate written license.
