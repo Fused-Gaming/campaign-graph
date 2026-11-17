@@ -19,7 +19,9 @@
       "statement": "The 2025 NAR REALTOR Political Coordinators roster lists Tia Hunnicutt as Federal Political Coordinator for Rep. Lateefah Simon.",
       "status": "SUPPORTED",
       "required_elements": [],
-      "supporting_edge_ids": [],
+      "supporting_edge_ids": [
+        "edge-fpc-tia-hunnicutt-lateefah-simon"
+      ],
       "contradicting_edge_ids": [],
       "alternative_explanations": [],
       "missing_records": []
