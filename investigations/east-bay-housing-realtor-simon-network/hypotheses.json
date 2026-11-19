@@ -1,0 +1,64 @@
+[
+  {
+    "id": "HYP-001",
+    "statement": "The 2025 NAR REALTOR Political Coordinators roster lists Tia Hunnicutt as Federal Political Coordinator for Rep. Lateefah Simon.",
+    "verification_status": "DOCUMENTED",
+    "confidence": "B",
+    "source_ids": [
+      "SRC-002"
+    ],
+    "scope_limit": "Supports the roster listing in that publication only; does not establish lobbying contacts, contributions, coordination, or influence over official action.",
+    "status": "SUPPORTED"
+  },
+  {
+    "id": "HYP-002",
+    "statement": "Lateefah for Congress is the FEC-registered committee identified by C00834291.",
+    "verification_status": "DOCUMENTED",
+    "confidence": "A",
+    "source_ids": [
+      "SRC-003"
+    ],
+    "scope_limit": "Committee identity only; no contribution totals or donor relationships are included in this scaffold.",
+    "status": "SUPPORTED"
+  },
+  {
+    "id": "HYP-003",
+    "statement": "BART recorded an individual vote by Lateefah Simon on item 22-461 on December 1, 2022, and its direction can be established from an official record.",
+    "verification_status": "UNRESOLVED",
+    "confidence": "A",
+    "source_ids": [
+      "SRC-004",
+      "SRC-005"
+    ],
+    "scope_limit": "Official pages reviewed show an agenda item, blank final-action field, and draft minutes status. Do not infer attendance or vote.",
+    "status": "INSUFFICIENT_EVIDENCE"
+  },
+  {
+    "id": "HYP-004",
+    "statement": "San Francisco Foundation awarded exactly $660,000 to Insight Housing / BFHP under an identifiable grant award.",
+    "verification_status": "UNRESOLVED",
+    "confidence": "C",
+    "source_ids": [
+      "SRC-008"
+    ],
+    "scope_limit": "Secondary source only; no money edge until primary award/payment evidence and recipient identity are verified.",
+    "status": "INSUFFICIENT_EVIDENCE"
+  },
+  {
+    "id": "HYP-005",
+    "statement": "The named institutional/financial/access relationships constitute improper influence, prohibited coordination, a conflict, or quid pro quo.",
+    "verification_status": "UNRESOLVED",
+    "confidence": "D",
+    "source_ids": [
+      "SRC-001",
+      "SRC-002",
+      "SRC-003",
+      "SRC-004",
+      "SRC-006",
+      "SRC-007",
+      "SRC-008"
+    ],
+    "scope_limit": "Broad allegation-level hypothesis not established by current sources. Must be decomposed into narrow, element-based questions; association and temporal sequence are insufficient.",
+    "status": "INSUFFICIENT_EVIDENCE"
+  }
+]

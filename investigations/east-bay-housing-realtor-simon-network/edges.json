@@ -1,0 +1,23 @@
+[
+  {
+    "id": "edge-fpc-tia-hunnicutt-lateefah-simon",
+    "source": "person-tia-hunnicutt",
+    "target": "person-lateefah-simon",
+    "type": "FPC_ASSIGNED_TO",
+    "evidence": [
+      {
+        "source_url": "https://realtorparty.realtor/wp-content/uploads/2025/01/2025Roster.pdf",
+        "source_title": "2025 REALTOR Political Coordinators roster",
+        "source_date": null,
+        "accessed_date": "2026-11-17",
+        "source_type": "ORGANIZATION_RECORD",
+        "evidence_quote_or_summary": "Roster row for Lateefah Simon, CA-12, lists Tia Hunnicutt in the Federal Political Coordinator column.",
+        "confidence": "B",
+        "verification_status": "DOCUMENTED"
+      }
+    ],
+    "metadata": {
+      "scope": "2025 roster only"
+    }
+  }
+]
