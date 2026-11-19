@@ -14,14 +14,34 @@
       {
         "date": "2026-09-25",
         "description": "USAspending.gov federal award search for Insight Housing completed. Found substantial federal funding (~$50M across 14 awards, VA/DOL/HUD) but all through standard competitive/formula grant channels with no documented congressional decision-maker or Simon-specific involvement. This resolves the USAspending.gov next-step item without establishing the hypothesized relationship -- see grants.json."
+      },
+      {
+        "date": "2026-10-03",
+        "description": "Pulled the full award-detail record (not just summary fields) for the one award postdating Simon's tenure (CA2234L9T022300). Confirms standard CFDA 14.267 HUD Continuum of Care NOFO grant, agency-scored, no congressional/earmark mechanism. See grants.json."
+      },
+      {
+        "date": "2026-10-03",
+        "description": "Checked Alameda County's open data portal (data.acgov.org, ArcGIS Hub) for grant/contract/vendor datasets naming Insight Housing, scoped to the county's own org (filter[origin]=own) -- zero results for 'Insight Housing', 'grant', and 'contract' queries. The portal genuinely has no such dataset (same situation as City of Berkeley's portal, checked earlier), not a tooling failure -- confirmed by getting real results for broader unscoped queries on the same endpoint."
       }
     ],
     "next_steps": [
-      "Check congressional appropriations/community-project-funding request lists for CA-12",
-      "Check City of Berkeley Housing Trust Fund and CDBG award records for Insight Housing",
-      "Pull award-detail (not just summary) records for the one award postdating Simon's tenure (CA2234L9T022300) to confirm the HUD CoC scoring process and rule out any member-specific role"
+      "Check City of Berkeley Housing Trust Fund and CDBG award records for Insight Housing directly (not via an open-data portal, since neither Berkeley's nor Alameda County's has a usable grant/contract dataset) -- likely requires a direct city/county records request or a different document source"
     ],
     "status": "UNRESOLVED"
+  },
+  {
+    "id": "lead-simon-fy26-fy27-cpf-no-insight-bridge-match",
+    "node_ids": ["person-lateefah-simon", "org-insight-housing", "org-bridge-housing-corporation"],
+    "description": "Checked Rep. Simon's own official Community Project Funding (congressional earmark) request pages for FY26 and FY27 -- the authoritative primary source for what she personally requested appropriations for -- against Insight Housing, BRIDGE Housing Corporation, and Insight's former legal name. Neither organization appears anywhere on either list. This resolves the 'congressional appropriations/earmark request records for CA-12' next step that has been open since the earliest lead in this package.",
+    "checked_sources": [
+      "simon.house.gov/fy26-community-project-funding, fetched directly 2026-10-03 -- 15 projects listed (Oakland, Berkeley, San Leandro, Alameda, Emeryville public agencies, universities, BART, Peralta CCD); none named Insight Housing, BRIDGE Housing, or Berkeley Food and Housing Project",
+      "simon.house.gov/fy27-community-project-funding, fetched directly 2026-10-03 -- 19-20 projects listed (similar public-agency/university/health-center pattern, including a Native American Health Center and an East Oakland Health Center project); none named Insight Housing, BRIDGE Housing, or Berkeley Food and Housing Project"
+    ],
+    "next_steps": [
+      "Check whether Rep. Simon requested CPF funding in any year prior to FY26 (her first full appropriations cycle, since she took office 2025-01-03) -- not applicable for FY25 given her start date, so FY26/FY27 is likely the complete set to date, but confirm no FY25 supplemental request exists",
+      "If 'Bridge' is later confirmed to mean a different entity, re-check these same two pages against that entity's name"
+    ],
+    "status": "RESOLVED_NOT_FOUND"
   },
   {
     "id": "lead-simon-committee-no-bridge-insight-contributions",
@@ -54,10 +74,29 @@
       "data.oaklandca.gov/resource/ss9a-d595.json (Lobbyist Clients master list) queried directly, fetched 2026-09-26: $where=upper(client_name) like '%INSIGHT HOUSING%' OR upper(client_name) like '%BRIDGE HOUSING%' OR upper(client_name) like '%BERKELEY FOOD%' -- 0 results"
     ],
     "next_steps": [
-      "Check whether Insight Housing or BRIDGE Housing itself (not a contracted lobbying firm) ever registered as an in-house lobbyist employer, via the Registered Lobbyist dataset/portal (apps.oaklandca.gov/pec/Lobbyist_Registered.aspx) -- not yet queried",
+      "RESOLVED 2026-10-03: checked whether a distinct 'in-house lobbyist employer' dataset exists separate from the 'Lobbyist Clients' master list already queried -- confirmed via Oakland's full data catalog (api.us.socrata.com domains=data.oaklandca.gov, q=lobbyist, 13 lobbying-related datasets listed) that no such separate dataset exists; Oakland's schema treats an in-house employer the same as a 'client' field, which was already queried with 0 results. This sub-item is fully covered, not just unattempted.",
       "Check year-specific datasets (e.g. Lobbyist Clients 2021, Lobbyist Contacts with Public Officials 2021/2022) individually in case the combined/master dataset queried here has gaps for older years",
-      "Check CA state-level lobbying disclosure (Cal-Access or successor) for either org, separate from the Oakland-local check done here, per rule-ca-state-lobbying-registration in rules_ledger.json",
+      "CA state-level lobbying disclosure (Cal-Access) ATTEMPTED 2026-10-03 and BLOCKED, not yet actually checked: cal-access.sos.ca.gov's lobbying employer/client search returned empty content to WebFetch (JS-driven), powersearch.sos.ca.gov explicitly defers lobbying searches to CAL-ACCESS rather than supporting them itself, and a general web search found no third-party-indexed match for either org (California Civic Data Coalition's calaccess_raw tooling and the SoS's raw tab-delimited bulk-data download exist but require downloading and parsing a full database dump, which hasn't been attempted). This is NOT equivalent-confidence to the Oakland/FEC/USAspending API-backed checks elsewhere in this package -- do not treat the absence of a web-search hit as a checked-and-not-found result for Cal-Access specifically.",
       "Check City of Berkeley's own lobbying/ethics disclosure system if one exists, since Insight Housing is Berkeley-headquartered and most of its documented activity (per grants.json/addresses.json) is not Oakland-specific"
+    ],
+    "status": "UNRESOLVED"
+  },
+  {
+    "id": "lead-bart-north-berkeley-tod-vote-record-needed",
+    "node_ids": ["person-lateefah-simon", "org-bart", "org-bridge-housing-corporation", "org-insight-housing", "org-ebaldc", "org-avalonbay-communities"],
+    "description": "User-directed research (2026-10-03): checked Rep. Simon's prior elected role on the BART Board of Directors (District 7, 2016-2024) for any institutional link to the package's organizations, since her BART tenure is a real CA-local/special-district office separate from her current federal seat. Found BART's board authorized an Exclusive Negotiating Agreement with BRIDGE Housing Corporation for a North Berkeley station Transit-Oriented Development on 2022-12-01, during her tenure, and that Insight Housing is reported (via general web search, not yet a primary source) as a co-member of the same development team ('North Berkeley Housing Partners') alongside BRIDGE Housing, EBALDC, and AvalonBay Communities. This is the first documented institutional link between BRIDGE Housing and Insight Housing found anywhere in this investigation. Recorded in events.json and as hypothesis h5 in investigation.json. The load-bearing gap: Simon's actual participation in the 2022-12-01 vote (presence, vote direction, recusal) has NOT been confirmed -- she is included in the event's node_ids only because she was a sitting board member at the time, not because her personal involvement is established.",
+    "checked_sources": [
+      "bart.gov/news/articles/2022/news20221201 (BART official news release), fetched directly 2026-10-03 -- confirms the ENA authorization, names then-Board-President Rebecca Saltzman, does not name Simon",
+      "Wikipedia (Lateefah_Simon) and KQED (BART reinstatement article), fetched directly 2026-10-03 -- confirms her board tenure dates, district, and that a March 2022 residency-based removal attempt was reversed within two weeks, well before the December vote",
+      "General web search for the North Berkeley Housing Partners development team composition -- names BRIDGE Housing, Insight Housing, EBALDC, and AvalonBay, but this has NOT been confirmed against a primary BART project document or signed team agreement",
+      "bart.legistar.com's public Web API (webapi.legistar.com/v1/bart/), queried directly 2026-10-04: confirmed EventId 1289 is the regular Board meeting of 2022-12-01, and that the North Berkeley ENA item (EventItemId 21666, Matter 22-461, Agenda Item 8-A) was heard under the Planning, Public Affairs, Access, and Legislation Committee (Director Foley, Chairperson) -- not Simon's committee. Directly checked the item's structured vote data: EventItemRollCallFlag=0, votes endpoint returns an empty array. BART's Legistar system does not have an individually-recorded vote for this item at all. The same day's agenda (fetched directly) separately lists 'Director Simon, Chairperson' for Item 9 (Administration Items) -- a different, unrelated agenda section -- confirming she was present/active at the meeting in some capacity that day, but not establishing anything about item 8-A specifically. The EventMinutesFile for this meeting is null/not yet published in Legistar (EventMinutesStatusName: 'Draft' as of last Legistar sync), so even a narrative minutes document, if one exists with more detail than the structured vote fields, was not retrievable via this method."
+    ],
+    "next_steps": [
+      "The roll-call-vote-record next step has now been checked and resolved as negative: no individual vote record exists in BART's Legistar system for this item. The only remaining avenue to learn Simon's individual vote/presence/recusal on 8-A specifically is the archived meeting video/audio at bart.gov/boardtv (or the Zoom recording, if retained) -- a manual watch-through, not an API or document fetch, and not yet attempted.",
+      "Confirm Insight Housing's North Berkeley Housing Partners membership against a primary source (BART's own project page at bart.gov/about/business/tod/north-berkeley, or a signed development/ENA document naming the team)",
+      "Check whether a later, more consequential BART board vote (a final development agreement, not just the ENA) has since occurred, and get its vote record too",
+      "Cross-check EBALDC's and AvalonBay's leadership/officers (once sourced) as additional FEC contributor-name candidates for Simon's committee, per the broader leadership cross-check the user requested",
+      "Check whether Simon's prior BART-era campaign committee (separate from her current congressional committee) received contributions from any North Berkeley Housing Partners member or officer -- this requires Cal-Access or local BART-director campaign filings, not the FEC, since BART director elections are not federal"
     ],
     "status": "UNRESOLVED"
   }
