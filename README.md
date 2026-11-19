@@ -48,6 +48,10 @@ Then open `http://127.0.0.1:8000`.
 
 All coding agents must read `AGENTS.md` first. Tool-specific guidance such as `CLAUDE.md` may add workflow hints but cannot weaken the shared evidence, neutrality, testing, licensing, or entity-resolution rules.
 
+## Roadmap
+
+See [`ROADMAP.md`](ROADMAP.md) for the versioned release schedule and issue-linked implementation milestones.
+
 ## Investigation packages
 
 The engine is deliberately investigation-agnostic. Named or adjacent investigations belong under:
