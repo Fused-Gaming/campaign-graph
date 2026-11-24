@@ -12,7 +12,7 @@ Insight Housing's own contact page lists Suite 601 at 2855 Telegraph Ave. A seco
 
 - **FACT — FPC roster:** the 2025 NAR REALTOR Party roster lists Lateefah Simon for California District 12 and Tia Hunnicutt in the FPC column (`SRC-002`). This supports the roster assignment for that roster year only.
 - **FACT — FEC committee identity:** FEC identifies Lateefah for Congress as committee C00834291 (`SRC-003`). Transaction-level campaign-finance relationships are not yet extracted.
-- **FACT — BART agenda:** BART Legistar item 22-461 concerned authorization for an Exclusive Negotiating Agreement for the North Berkeley BART Station TOD and was scheduled on the Dec. 1, 2022 agenda (`SRC-004`, `SRC-005`). The item page's final-action field is blank. The meeting page showed minutes status Draft at access.
+- **FACT — BART agenda:** BART Legistar item 22-461 concerned authorization for an Exclusive Negotiating Agreement for the North Berkeley BART Station TOD and was scheduled on the Dec. 1, 2022 agenda (`SRC-004`, `SRC-005`). The item page's final-action field is blank. The meeting page showed minutes status Draft at access. **Checked directly against BART's own Legistar Web API (`SRC-012`): the item has no individually-recorded director vote at all** (EventItemRollCallFlag=0, empty votes array) — this is a documented negative, not an unretrieved record. The same day's agenda (`SRC-013`) separately confirms Simon chaired a different, unrelated agenda item (Administration, Item 9) at this meeting — she was present/active in some capacity, but that does not bear on Item 8-A, which fell under a different committee. Only a manual review of BART's archived meeting video/audio remains as a way to learn her individual presence, vote, or recusal on this specific item.
 - **FACT — current Insight Housing address:** its own contact page says the organization was formerly Berkeley Food & Housing Project and publishes 2855 Telegraph Ave., Suite 601 (`SRC-006`). This does not establish the organization's historical presence or legal identity for each period.
 - **FACT — BART project context:** BART's project page describes the North Berkeley TOD and reports city entitlement approvals in December 2024 (`SRC-009`). This does not establish any particular official's vote or financial interest.
 
@@ -30,7 +30,7 @@ The FEC committee is identified (`SRC-003`), but no raw contribution or disburse
 
 ## Government Decisions
 
-The agenda item is verified, but its final action and individual vote are not established by the reviewed page (`SRC-004`, `SRC-005`). Do not infer Simon's attendance or vote from board membership, item placement, or later project status. Obtain approved minutes, roll call, video/transcript, and board action record.
+The agenda item is verified. **A direct check of BART's own Legistar Web API (`SRC-012`) found no individually-recorded vote for this item at all** — the structured record has `EventItemRollCallFlag=0` and an empty votes array, which is consistent with the item passing by voice/consensus vote rather than an individual roll call. This is not a gap in this review's retrieval; BART's own system does not appear to capture individual votes on this item. The agenda (`SRC-013`) confirms Simon chaired a different, unrelated section of the same meeting (Administration, Item 9), establishing her presence/activity that day without bearing on Item 8-A, which was under a different committee (Foley's). Do not infer Simon's attendance, vote, or absence on Item 8-A from board membership, item placement, her chairing a different item, or later project status. Only an archived video/audio review of the meeting (bart.gov/boardtv) remains as a potential source of further information; approved minutes and a board packet do not appear to add a vote tally beyond what the Legistar item record already shows, but have not been independently reviewed in this package.
 
 ## Philanthropic Funding
 
@@ -67,7 +67,7 @@ See `unresolved_leads.json`. Priority questions: contents of Oakland PEC ReportI
 ## Records Needed to Resolve Them
 
 1. Oakland PEC report 2562 and all Bridge Association of REALTORS filings, including amendments and political-contribution schedules.
-2. Approved BART minutes, roll-call or action record, board packet, video/transcript and subsequent minutes approval for Dec. 1, 2022.
+2. Archived BART board meeting video/audio for Dec. 1, 2022 (bart.gov/boardtv) -- a roll-call/vote-tally record has been checked directly via BART's Legistar API and confirmed not to exist in structured form (`SRC-012`), so a video/audio review is the only remaining avenue for Simon's individual presence, vote, or recusal on this item.
 3. SFF award record, grant agreement, payment records, public grant disclosure, recipient Forms 990 and any relevant donor-advised fund documentation.
 4. Official organization records, IRS/state filings, property ownership/lease or public tenancy records for 2855 Telegraph Ave.
 5. FEC itemized receipts, disbursements, refunds and amendments for C00834291 and related committees.

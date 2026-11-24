@@ -39,12 +39,16 @@
     {
       "id": "HYP-003",
       "statement": "BART recorded an individual vote by Lateefah Simon on item 22-461 on December 1, 2022, and its direction can be established from an official record.",
-      "status": "INSUFFICIENT_EVIDENCE",
+      "status": "NOT_SUPPORTED",
       "required_elements": [],
       "supporting_edge_ids": [],
       "contradicting_edge_ids": [],
-      "alternative_explanations": [],
-      "missing_records": []
+      "alternative_explanations": [
+        "The item likely passed by voice/consensus vote rather than an individually-recorded roll call, which is common for BART board items not specifically flagged for roll call."
+      ],
+      "missing_records": [
+        "Archived BART board meeting video/audio (bart.gov/boardtv) for the 2022-12-01 meeting, not yet reviewed -- the only remaining avenue to learn Simon's individual presence, vote, or recusal on this item"
+      ]
     },
     {
       "id": "HYP-004",

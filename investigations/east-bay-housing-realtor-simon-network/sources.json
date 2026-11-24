@@ -130,5 +130,29 @@
     "verification_status": "DOCUMENTED",
     "provenance": "FEC profile for candidate ID H4CA12154.",
     "supports": "Candidate identity only."
+  },
+  {
+    "id": "SRC-012",
+    "title": "BART Legistar Web API: event item record for item 22-461 (EventItemId 21666)",
+    "url": "https://webapi.legistar.com/v1/bart/eventitems/21666",
+    "source_date": "2022-12-01",
+    "accessed_date": "2026-10-04",
+    "source_type": "OFFICIAL_GOVERNMENT_RECORD",
+    "confidence": "A",
+    "verification_status": "DOCUMENTED",
+    "provenance": "BART's own public Legistar Web API structured record for the North Berkeley ENA agenda item (Matter 22-461, Agenda Item 8-A, Dec. 1, 2022 regular meeting, EventId 1289). Field EventItemRollCallFlag=0; EventItemPassedFlag, EventItemMover, and EventItemSeconder are all null. The companion endpoint https://webapi.legistar.com/v1/bart/eventitems/21666/votes returns an empty array. Cross-referenced from investigations/insight-housing-mvp-test/events.json (same underlying fact, fetched independently in that package on 2026-10-04).",
+    "supports": "BART's structured Legistar system has NO individually-recorded director vote for this item at all -- not merely an unpublished or unretrieved one. This is a direct, primary-source answer to whether a roll-call vote record exists: it does not, in this system. It does not establish whether the item passed by voice/consensus vote, nor does it establish Simon's presence, vote, or recusal, which would require a video/audio review of the meeting archive (not yet attempted in either package)."
+  },
+  {
+    "id": "SRC-013",
+    "title": "BART Board Meeting Agenda, December 1, 2022",
+    "url": "https://bart.legistar1.com/bart/meetings/2022/12/1289_A_Board_of_Directors_22-12-01_BOARD_MEETING_AGENDA.pdf",
+    "source_date": "2022-12-01",
+    "accessed_date": "2026-10-04",
+    "source_type": "OFFICIAL_GOVERNMENT_RECORD",
+    "confidence": "A",
+    "verification_status": "DOCUMENTED",
+    "provenance": "Official BART board meeting agenda PDF for Dec. 1, 2022. Item 8-A (the North Berkeley ENA) is listed under Section 8, 'Planning, Public Affairs, Access, and Legislation Items,' chaired by Director Foley. Section 9, 'Administration Items,' on the same agenda lists 'Director Simon, Chairperson.'",
+    "supports": "Confirms Simon was present/active at this specific meeting in some official capacity (chairing a different agenda section), but Item 9 is a separate section from Item 8-A and this does not establish her presence, vote, or absence on the North Berkeley ENA item specifically."
   }
 ]
