@@ -99,5 +99,22 @@
       "Check whether Simon's prior BART-era campaign committee (separate from her current congressional committee) received contributions from any North Berkeley Housing Partners member or officer -- this requires Cal-Access or local BART-director campaign filings, not the FEC, since BART director elections are not federal"
     ],
     "status": "UNRESOLVED"
+  },
+  {
+    "id": "lead-kirnon-geographic-proximity-flagged-unconfirmed",
+    "node_ids": ["org-insight-housing", "person-lateefah-simon"],
+    "description": "User-flagged hypothesis (2026-11-24): a broad FEC donor-history check found a 'Stephen Kirnon, Pepperdine University, Professor' in San Ramon, CA contributing small-dollar amounts to Democratic PACs/causes (see contributions.json's broad-giving-history entry). This is a plausible but UNCONFIRMED match to Insight Housing director 'Dr. Stephen Kirnon.' The user separately noted Kirnon's Pepperdine University affiliation and flagged it against an unverified claim that Rep. Simon has a daughter who is a Pepperdine graduate and attorney, and flagged San Ramon's geographic proximity to Simon's district as 'can't be coincidental.'",
+    "checked_sources": [
+      "FEC Schedule A broad contributor_name search (2026-11-24) -- see contributions.json. Confirms Kirnon's real donor history and city (San Ramon, CA) and occupation (Professor), but has NO field connecting him to Rep. Simon, her family, or any BART/Insight Housing/BRIDGE Housing matter.",
+      "Web search (2026-11-24) on CA-12's traditional district boundaries: multiple sources (Ballotpedia, Wikipedia) describe CA-12 as historically an Alameda-County-only district (Oakland, Berkeley, Emeryville, Alameda, Albany, Piedmont, most of San Leandro), with San Ramon traditionally in CA-10 (Contra Costa County), NOT CA-12 -- i.e., San Ramon is NOT established to be in Simon's district under the map that has applied historically. Boundaries changed under California's Proposition 50 redistricting (approved November 2025); the CURRENT map was not confirmed from an authoritative source (CA Secretary of State or county registrar district-lookup tool) in this pass, so this is not a settled fact either way.",
+      "No source checked in this investigation states or implies that Rep. Simon has a daughter who attended Pepperdine University or is an attorney. This claim is UNVERIFIED and UNSOURCED as of this entry -- it was asserted by the user in conversation, not found in any primary or secondary record checked by this package."
+    ],
+    "next_steps": [
+      "Independently verify (or refute) whether Rep. Simon has a daughter, and if so, whether she attended Pepperdine University and is an attorney -- this foundational claim has not been checked against any source yet.",
+      "If that claim is confirmed, establish whether Stephen Kirnon (Pepperdine Professor) has ANY documented connection to her specifically (taught her, advised her, is named alongside her in any record) -- shared institutional affiliation alone (professor vs. alumna, possibly different department, possibly different years) is not evidence of a personal connection and should not be treated as one.",
+      "Confirm CA-12's CURRENT district boundaries (post-Prop-50) via the CA Secretary of State's official district-lookup tool or county registrar, rather than general web search results, before asserting or denying that San Ramon is 'close to home' for Simon in any meaningful sense.",
+      "Do not promote this to a graph edge or treat it as established until at least two independent identifiers link Kirnon specifically to Simon or her family -- per this package's own identity-resolution rule, geographic proximity and shared-institution coincidence are explicitly insufficient on their own."
+    ],
+    "status": "UNRESOLVED -- flagged on user request, foundational claim (Simon's daughter) itself unverified"
   }
 ]

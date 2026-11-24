@@ -1,0 +1,232 @@
+{
+  "schema_version": "1.0",
+  "investigation_slug": "insight-housing-mvp-test",
+  "generated_at": "2026-11-24",
+  "generated_by": "scripts/build_money_flow.py",
+  "nodes": [
+    {
+      "id": "committee-c00834291",
+      "label": "LATEEFAH FOR CONGRESS (C00834291)",
+      "node_type": "committee",
+      "investigation_node_id": null
+    },
+    {
+      "id": "category-individual-itemized",
+      "label": "Individual contributions (itemized)",
+      "node_type": "category",
+      "investigation_node_id": null
+    },
+    {
+      "id": "category-individual-unitemized",
+      "label": "Individual contributions (unitemized)",
+      "node_type": "category",
+      "investigation_node_id": null
+    },
+    {
+      "id": "category-other-committee-contributions",
+      "label": "Other political committee contributions",
+      "node_type": "category",
+      "investigation_node_id": null
+    },
+    {
+      "id": "category-operating-expenditures",
+      "label": "Operating expenditures",
+      "node_type": "category",
+      "investigation_node_id": null
+    },
+    {
+      "id": "category-refunds",
+      "label": "Contribution refunds",
+      "node_type": "category",
+      "investigation_node_id": null
+    },
+    {
+      "id": "category-other-disbursements",
+      "label": "Other disbursements",
+      "node_type": "category",
+      "investigation_node_id": null
+    }
+  ],
+  "edges": [
+    {
+      "id": "flow-insight-housing-mvp-test-1",
+      "source_id": "category-individual-itemized",
+      "target_id": "committee-c00834291",
+      "amount_usd": 1042462.97,
+      "flow_type": "contribution",
+      "period_start": "2025-01-01",
+      "period_end": "2026-06-30",
+      "transaction_count": null,
+      "confidence": "A",
+      "source_url": "https://api.open.fec.gov/v1/committee/C00834291/totals/",
+      "source_title": "FEC committee totals API, cycle 2026",
+      "accessed_date": "2026-10-03",
+      "note": "Aggregate figure from FEC committee totals, cycle 2026. Not itemized."
+    },
+    {
+      "id": "flow-insight-housing-mvp-test-2",
+      "source_id": "category-individual-unitemized",
+      "target_id": "committee-c00834291",
+      "amount_usd": 85221.32,
+      "flow_type": "contribution",
+      "period_start": "2025-01-01",
+      "period_end": "2026-06-30",
+      "transaction_count": null,
+      "confidence": "A",
+      "source_url": "https://api.open.fec.gov/v1/committee/C00834291/totals/",
+      "source_title": "FEC committee totals API, cycle 2026",
+      "accessed_date": "2026-10-03",
+      "note": "Aggregate figure from FEC committee totals, cycle 2026. Not itemized."
+    },
+    {
+      "id": "flow-insight-housing-mvp-test-3",
+      "source_id": "category-other-committee-contributions",
+      "target_id": "committee-c00834291",
+      "amount_usd": 261420.93,
+      "flow_type": "contribution",
+      "period_start": "2025-01-01",
+      "period_end": "2026-06-30",
+      "transaction_count": null,
+      "confidence": "A",
+      "source_url": "https://api.open.fec.gov/v1/committee/C00834291/totals/",
+      "source_title": "FEC committee totals API, cycle 2026",
+      "accessed_date": "2026-10-03",
+      "note": "Aggregate figure from FEC committee totals, cycle 2026. Not itemized."
+    },
+    {
+      "id": "flow-insight-housing-mvp-test-4",
+      "source_id": "committee-c00834291",
+      "target_id": "category-operating-expenditures",
+      "amount_usd": 840533.32,
+      "flow_type": "disbursement",
+      "period_start": "2025-01-01",
+      "period_end": "2026-06-30",
+      "transaction_count": null,
+      "confidence": "A",
+      "source_url": "https://api.open.fec.gov/v1/committee/C00834291/totals/",
+      "source_title": "FEC committee totals API, cycle 2026",
+      "accessed_date": "2026-10-03",
+      "note": "Aggregate figure from FEC committee totals, cycle 2026. Not itemized."
+    },
+    {
+      "id": "flow-insight-housing-mvp-test-5",
+      "source_id": "committee-c00834291",
+      "target_id": "category-refunds",
+      "amount_usd": 3398.0,
+      "flow_type": "refund",
+      "period_start": "2025-01-01",
+      "period_end": "2026-06-30",
+      "transaction_count": null,
+      "confidence": "A",
+      "source_url": "https://api.open.fec.gov/v1/committee/C00834291/totals/",
+      "source_title": "FEC committee totals API, cycle 2026",
+      "accessed_date": "2026-10-03",
+      "note": "Aggregate figure from FEC committee totals, cycle 2026. Not itemized."
+    },
+    {
+      "id": "flow-insight-housing-mvp-test-6",
+      "source_id": "committee-c00834291",
+      "target_id": "category-other-disbursements",
+      "amount_usd": 116723.0,
+      "flow_type": "disbursement",
+      "period_start": "2025-01-01",
+      "period_end": "2026-06-30",
+      "transaction_count": null,
+      "confidence": "A",
+      "source_url": "https://api.open.fec.gov/v1/committee/C00834291/totals/",
+      "source_title": "FEC committee totals API, cycle 2026",
+      "accessed_date": "2026-10-03",
+      "note": "Aggregate figure from FEC committee totals, cycle 2026. Not itemized."
+    },
+    {
+      "id": "flow-insight-housing-mvp-test-7",
+      "source_id": "category-individual-itemized",
+      "target_id": "committee-c00834291",
+      "amount_usd": 1688676.94,
+      "flow_type": "contribution",
+      "period_start": "2023-02-28",
+      "period_end": "2024-12-31",
+      "transaction_count": null,
+      "confidence": "A",
+      "source_url": "https://api.open.fec.gov/v1/committee/C00834291/totals/",
+      "source_title": "FEC committee totals API, cycle 2024",
+      "accessed_date": "2026-10-03",
+      "note": "Aggregate figure from FEC committee totals, cycle 2024. Not itemized."
+    },
+    {
+      "id": "flow-insight-housing-mvp-test-8",
+      "source_id": "category-individual-unitemized",
+      "target_id": "committee-c00834291",
+      "amount_usd": 224728.0,
+      "flow_type": "contribution",
+      "period_start": "2023-02-28",
+      "period_end": "2024-12-31",
+      "transaction_count": null,
+      "confidence": "A",
+      "source_url": "https://api.open.fec.gov/v1/committee/C00834291/totals/",
+      "source_title": "FEC committee totals API, cycle 2024",
+      "accessed_date": "2026-10-03",
+      "note": "Aggregate figure from FEC committee totals, cycle 2024. Not itemized."
+    },
+    {
+      "id": "flow-insight-housing-mvp-test-9",
+      "source_id": "category-other-committee-contributions",
+      "target_id": "committee-c00834291",
+      "amount_usd": 270574.01,
+      "flow_type": "contribution",
+      "period_start": "2023-02-28",
+      "period_end": "2024-12-31",
+      "transaction_count": null,
+      "confidence": "A",
+      "source_url": "https://api.open.fec.gov/v1/committee/C00834291/totals/",
+      "source_title": "FEC committee totals API, cycle 2024",
+      "accessed_date": "2026-10-03",
+      "note": "Aggregate figure from FEC committee totals, cycle 2024. Not itemized."
+    },
+    {
+      "id": "flow-insight-housing-mvp-test-10",
+      "source_id": "committee-c00834291",
+      "target_id": "category-operating-expenditures",
+      "amount_usd": 1905606.65,
+      "flow_type": "disbursement",
+      "period_start": "2023-02-28",
+      "period_end": "2024-12-31",
+      "transaction_count": null,
+      "confidence": "A",
+      "source_url": "https://api.open.fec.gov/v1/committee/C00834291/totals/",
+      "source_title": "FEC committee totals API, cycle 2024",
+      "accessed_date": "2026-10-03",
+      "note": "Aggregate figure from FEC committee totals, cycle 2024. Not itemized."
+    },
+    {
+      "id": "flow-insight-housing-mvp-test-11",
+      "source_id": "committee-c00834291",
+      "target_id": "category-refunds",
+      "amount_usd": 22915.51,
+      "flow_type": "refund",
+      "period_start": "2023-02-28",
+      "period_end": "2024-12-31",
+      "transaction_count": null,
+      "confidence": "A",
+      "source_url": "https://api.open.fec.gov/v1/committee/C00834291/totals/",
+      "source_title": "FEC committee totals API, cycle 2024",
+      "accessed_date": "2026-10-03",
+      "note": "Aggregate figure from FEC committee totals, cycle 2024. Not itemized."
+    },
+    {
+      "id": "flow-insight-housing-mvp-test-12",
+      "source_id": "committee-c00834291",
+      "target_id": "category-other-disbursements",
+      "amount_usd": 40194.79,
+      "flow_type": "disbursement",
+      "period_start": "2023-02-28",
+      "period_end": "2024-12-31",
+      "transaction_count": null,
+      "confidence": "A",
+      "source_url": "https://api.open.fec.gov/v1/committee/C00834291/totals/",
+      "source_title": "FEC committee totals API, cycle 2024",
+      "accessed_date": "2026-10-03",
+      "note": "Aggregate figure from FEC committee totals, cycle 2024. Not itemized."
+    }
+  ]
+}

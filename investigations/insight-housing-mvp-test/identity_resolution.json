@@ -62,11 +62,23 @@
       "id": "identity-item-egan-cfo-vs-ceo-contradiction",
       "node_ids": ["org-insight-housing"],
       "description": "Calleene Egan's title at Insight Housing is directly contradicted between two sources: general web-search synthesis (used since 2026-09-24) says Chief Executive Officer; CauseIQ's dated 990-derived key-personnel listing (fetched directly 2026-10-03) says Chief Financial Officer, 'as of 2025-05-15,' $323,112. CauseIQ also lists TWO OTHER people with CFO-family titles at different dates (Kani Lin, 'as of 2025-03-17'; Kathryn Watson-Feiner, 'as of 2026-05-08') -- read together this looks like CFO turnover across roughly a year, which would make a CEO claim for Egan plausible if she was promoted, or the original CEO search result could simply be wrong/stale. Neither possibility is confirmed.",
-      "status": "CONTRADICTED",
+      "status": "RESOLVED_CEO_CONFIRMED_PRIMARY_SOURCE",
+      "resolution": "RESOLVED 2026-11-24 by reading the actual IRS Form 990 e-file XML directly (not a secondary aggregator): Insight Housing, EIN 94-2979073, FY2023-07-01 to 2024-06-30, filed 2025-05-15, Object ID 202531359349316408, obtained from the IRS's own public bulk e-file index (apps.irs.gov/pub/epostcard/990/xml/2025/index_2025.csv -> ProPublica's API first identified the filing/EIN/object metadata at projects.propublica.org/nonprofits/api/v2/organizations/942979073.json, but ProPublica's own PDF download endpoint returned HTTP 403/captcha both via curl and via an independent WebFetch agent attempt -- the IRS's own bulk XML index was used instead and succeeded). Part VII, Section A lists 'Calleene Egan | Chief Executive Officer' and, separately, 'Kani Lin | Chief Financial Officer.' Egan is CEO; CauseIQ's CFO claim for her was an aggregator error (most likely a name/title mis-pairing while scraping the same Part VII table -- it used the identical 2025-05-15 filing date as this primary source, strongly suggesting it pulled the right filing but the wrong row).",
       "next_steps": [
-        "Read an actual Insight Housing IRS Form 990 Part VII directly (still blocked per the officer-names dead-end logged elsewhere in this file) to get dated, primary-source title history rather than relying on two disagreeing secondary aggregators",
-        "If insighthousing.org ever becomes fetchable from this environment, check its leadership/team page directly",
-        "Do not use 'CEO' or 'CFO' for Egan in any new edge or finding until this is resolved -- both roles.json entries for her are flagged accordingly"
+        "RESOLVED -- no further action needed for Egan's title specifically.",
+        "Watson-Feiner's CFO claim ('as of 2026-05-08') postdates this filing's period and is NOT addressed by it -- she may be a later, real successor to Lin, not yet confirmed against a primary source. A future 990 filing (FY2024-25, not yet available) would be the next primary-source check for her.",
+        "If insighthousing.org ever becomes fetchable from this environment, it could still add org-published (not just IRS-filed) confirmation, but is no longer required to settle this specific contradiction."
+      ]
+    },
+    {
+      "id": "identity-item-stutzman-board-seat-confirmed",
+      "node_ids": ["org-insight-housing"],
+      "description": "Mark Stutzman previously appeared only in a bulk, web-search-sourced board-roster entry (role-insight-housing-board-partial-roster), not individually verified.",
+      "status": "RESOLVED_BOARD_SEAT_CONFIRMED_PRIMARY_SOURCE",
+      "resolution": "RESOLVED 2026-11-24: the same primary-source IRS 990 e-file XML read for the Egan contradiction (see identity-item-egan-cfo-vs-ceo-contradiction) lists 'Mark Stutzman | Director' in Part VII, Section A -- confirming his current board seat at Insight Housing from a primary filing, not just a web-search synthesis.",
+      "next_steps": [
+        "This confirms ONLY the board seat, not any other identifying detail (address, employer, other affiliations) and does NOT establish any relationship to 'Susan Stutzman' (named in the original research scope) or to any FEC contributor named Stutzman -- do not infer either without an independent identifier.",
+        "The sibling east-bay-housing-realtor-simon-network package tracks Mark Stutzman, Susan Stutzman, Nicole M. Egan, Nicole Marie Egan, and Matthew Thacker as still-UNRESOLVED entities of interest (TGT-012 through TGT-016) -- NONE of these appear in this primary-source 990 read except Mark Stutzman's board seat (now confirmed) and Calleene Egan (confirmed CEO, not related to 'Nicole Egan' by anything found here). This is recorded as a negative-control data point for the other names, not proof of no connection."
       ]
     },
     {
