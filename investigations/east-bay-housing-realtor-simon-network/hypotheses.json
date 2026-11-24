@@ -24,14 +24,16 @@
   {
     "id": "HYP-003",
     "statement": "BART recorded an individual vote by Lateefah Simon on item 22-461 on December 1, 2022, and its direction can be established from an official record.",
-    "verification_status": "UNRESOLVED",
+    "verification_status": "DOCUMENTED",
     "confidence": "A",
     "source_ids": [
       "SRC-004",
-      "SRC-005"
+      "SRC-005",
+      "SRC-012",
+      "SRC-013"
     ],
-    "scope_limit": "Official pages reviewed show an agenda item, blank final-action field, and draft minutes status. Do not infer attendance or vote.",
-    "status": "INSUFFICIENT_EVIDENCE"
+    "scope_limit": "BART's own Legistar Web API has no individually-recorded director vote for this item at all (RollCallFlag=0, empty votes array) -- this is now a documented negative, not an unretrieved record. Simon's presence, vote, or recusal on this specific item remains unknown; she is confirmed present/active at the same meeting chairing a different, unrelated agenda item. Only a manual review of archived meeting video/audio could add further information.",
+    "status": "NOT_SUPPORTED"
   },
   {
     "id": "HYP-004",
