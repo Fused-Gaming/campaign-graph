@@ -5,6 +5,12 @@
   "generated_by": "scripts/build_money_flow.py",
   "nodes": [
     {
+      "id": "committee-c00834291",
+      "label": "LATEEFAH FOR CONGRESS (C00834291)",
+      "node_type": "committee",
+      "investigation_node_id": null
+    },
+    {
       "id": "category-individual-itemized",
       "label": "Individual contributions (itemized)",
       "node_type": "category",
@@ -38,12 +44,6 @@
       "id": "category-other-disbursements",
       "label": "Other disbursements",
       "node_type": "category",
-      "investigation_node_id": null
-    },
-    {
-      "id": "committee-c00834291",
-      "label": "LATEEFAH FOR CONGRESS (C00834291)",
-      "node_type": "committee",
       "investigation_node_id": null
     }
   ],

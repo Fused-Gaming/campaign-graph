@@ -109,6 +109,12 @@ function fmtUsd(n) {
   return "$" + n.toLocaleString(undefined, { maximumFractionDigits: 0 });
 }
 
+function escapeHtml(s) {
+  return String(s ?? "").replace(/[&<>"']/g, (c) => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
+  }[c]));
+}
+
 function render(data) {
   d3.select("#chart").selectAll("*").remove();
   d3.select("#no-data").style("display", "none");
@@ -156,11 +162,11 @@ function render(data) {
         .style("left", (event.clientX + 14) + "px")
         .style("top", (event.clientY + 10) + "px")
         .html(`
-          <strong>${fmtUsd(e.amount_usd)}</strong> — ${e.flow_type}<br/>
-          ${e.period_start ?? ""}${e.period_end ? " to " + e.period_end : ""}<br/>
-          Confidence ${e.confidence} &middot; ${e.source_title}<br/>
-          ${e.note ? e.note + "<br/>" : ""}
-          <a href="${e.source_url}" target="_blank" rel="noopener">source &rarr;</a>
+          <strong>${fmtUsd(e.amount_usd)}</strong> — ${escapeHtml(e.flow_type)}<br/>
+          ${escapeHtml(e.period_start ?? "")}${e.period_end ? " to " + escapeHtml(e.period_end) : ""}<br/>
+          Confidence ${escapeHtml(e.confidence)} &middot; ${escapeHtml(e.source_title)}<br/>
+          ${e.note ? escapeHtml(e.note) + "<br/>" : ""}
+          <a href="${escapeHtml(e.source_url)}" target="_blank" rel="noopener">source &rarr;</a>
         `);
     })
     .on("mouseleave", () => tooltip.style("opacity", 0));
@@ -181,7 +187,7 @@ function render(data) {
         .style("opacity", 1)
         .style("left", (event.clientX + 14) + "px")
         .style("top", (event.clientY + 10) + "px")
-        .html(`<strong>${d.label}</strong><br/>${fmtUsd(d.value || 0)} total through this node`);
+        .html(`<strong>${escapeHtml(d.label)}</strong><br/>${fmtUsd(d.value || 0)} total through this node`);
     })
     .on("mouseleave", () => tooltip.style("opacity", 0));
 
