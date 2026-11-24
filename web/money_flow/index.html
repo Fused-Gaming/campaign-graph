@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Money-flow prototype (Sankey)</title>
+<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #6b7280;
+    --node-fill: #334155;
+    --conf-a: #2563eb;
+    --conf-b: #2563eb;
+    --conf-c: #d97706;
+    --conf-d: #9ca3af;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0f172a;
+      --fg: #e5e7eb;
+      --muted: #9ca3af;
+      --node-fill: #cbd5e1;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0f172a;
+    --fg: #e5e7eb;
+    --muted: #9ca3af;
+    --node-fill: #cbd5e1;
+  }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin: 0;
+    padding: 16px;
+  }
+  h1 { font-size: 1.1rem; margin: 0 0 4px; }
+  .subtitle { color: var(--muted); font-size: 0.85rem; margin-bottom: 16px; }
+  .controls { margin-bottom: 12px; font-size: 0.85rem; }
+  .controls label { margin-right: 12px; }
+  #chart { width: 100%; max-width: 100%; overflow-x: auto; }
+  .node rect { fill: var(--node-fill); stroke: var(--bg); stroke-width: 1px; cursor: pointer; }
+  .node text {
+    fill: var(--fg);
+    font-size: 11px;
+    pointer-events: none;
+  }
+  .link { fill: none; stroke-opacity: 0.45; cursor: pointer; }
+  .link.conf-A, .link.conf-B { stroke: var(--conf-a); stroke-opacity: 0.55; }
+  .link.conf-C { stroke: var(--conf-c); stroke-opacity: 0.45; stroke-dasharray: 2 2; }
+  .link.conf-D { stroke: var(--conf-d); stroke-opacity: 0.3; stroke-dasharray: 2 4; }
+  .link:hover { stroke-opacity: 0.8; }
+  .legend { font-size: 0.78rem; color: var(--muted); margin-top: 10px; }
+  .legend span { margin-right: 16px; }
+  .swatch { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 4px; vertical-align: middle; }
+  #tooltip {
+    position: fixed;
+    pointer-events: none;
+    background: var(--node-fill);
+    color: var(--bg);
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    max-width: 320px;
+    opacity: 0;
+    transition: opacity 0.1s;
+    z-index: 10;
+  }
+  #tooltip a { color: inherit; }
+  #no-data { color: var(--muted); font-size: 0.9rem; }
+</style>
+</head>
+<body>
+  <h1>Money-flow prototype — Sankey view</h1>
+  <p class="subtitle">
+    Draft, under review (see <code>docs/MONEY_FLOW_SPEC.md</code>). Reads a single
+    <code>money_flow.json</code> file; link width = dollar amount, link style = confidence.
+    This is a view of recorded aggregate/itemized flows only — no inferred multi-hop chains.
+  </p>
+  <div class="controls">
+    <label>Investigation:
+      <select id="slug-select">
+        <option value="../../investigations/insight-housing-mvp-test/money_flow.json">insight-housing-mvp-test</option>
+      </select>
+    </label>
+  </div>
+  <div id="chart"></div>
+  <div id="no-data" style="display:none">
+    Could not load data via <code>fetch()</code>. If you opened this file directly
+    (<code>file://</code>), run a local server from the <strong>repository root</strong>
+    instead (the data path is relative to the page URL, and the data file lives outside
+    this directory), e.g. <code>python -m http.server 8000</code> from the repo root, then
+    open <code>http://localhost:8000/web/money_flow/</code>.
+  </div>
+  <div class="legend">
+    <span><span class="swatch" style="background:var(--conf-a)"></span>Confidence A/B (official / organization record)</span>
+    <span><span class="swatch" style="background:var(--conf-c)"></span>Confidence C (reputable secondary, dashed)</span>
+    <span><span class="swatch" style="background:var(--conf-d)"></span>Confidence D (unverified lead, faint + dashed)</span>
+  </div>
+  <div id="tooltip"></div>
+
+<script>
+const tooltip = d3.select("#tooltip");
+
+function fmtUsd(n) {
+  return "$" + n.toLocaleString(undefined, { maximumFractionDigits: 0 });
+}
+
+function render(data) {
+  d3.select("#chart").selectAll("*").remove();
+  d3.select("#no-data").style("display", "none");
+
+  const width = Math.max(760, document.getElementById("chart").clientWidth);
+  const height = 420;
+
+  const svg = d3.select("#chart")
+    .append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+  const nodeIndex = new Map(data.nodes.map((n, i) => [n.id, i]));
+  const sankeyNodes = data.nodes.map(n => ({ ...n }));
+  const sankeyLinks = data.edges.map(e => ({
+    source: nodeIndex.get(e.source_id),
+    target: nodeIndex.get(e.target_id),
+    value: e.amount_usd,
+    raw: e,
+  }));
+
+  const { sankey, sankeyLinkHorizontal } = d3;
+  const layout = sankey()
+    .nodeId((_, i) => i)
+    .nodeWidth(16)
+    .nodePadding(18)
+    .extent([[1, 10], [width - 1, height - 10]]);
+
+  const graph = layout({
+    nodes: sankeyNodes.map(d => ({ ...d })),
+    links: sankeyLinks.map(d => ({ ...d })),
+  });
+
+  svg.append("g")
+    .selectAll("path")
+    .data(graph.links)
+    .join("path")
+    .attr("class", d => `link conf-${d.raw.confidence}`)
+    .attr("d", sankeyLinkHorizontal())
+    .attr("stroke-width", d => Math.max(1, d.width))
+    .on("mousemove", (event, d) => {
+      const e = d.raw;
+      tooltip
+        .style("opacity", 1)
+        .style("left", (event.clientX + 14) + "px")
+        .style("top", (event.clientY + 10) + "px")
+        .html(`
+          <strong>${fmtUsd(e.amount_usd)}</strong> — ${e.flow_type}<br/>
+          ${e.period_start ?? ""}${e.period_end ? " to " + e.period_end : ""}<br/>
+          Confidence ${e.confidence} &middot; ${e.source_title}<br/>
+          ${e.note ? e.note + "<br/>" : ""}
+          <a href="${e.source_url}" target="_blank" rel="noopener">source &rarr;</a>
+        `);
+    })
+    .on("mouseleave", () => tooltip.style("opacity", 0));
+
+  const node = svg.append("g")
+    .selectAll("g")
+    .data(graph.nodes)
+    .join("g")
+    .attr("class", "node");
+
+  node.append("rect")
+    .attr("x", d => d.x0)
+    .attr("y", d => d.y0)
+    .attr("width", d => d.x1 - d.x0)
+    .attr("height", d => Math.max(1, d.y1 - d.y0))
+    .on("mousemove", (event, d) => {
+      tooltip
+        .style("opacity", 1)
+        .style("left", (event.clientX + 14) + "px")
+        .style("top", (event.clientY + 10) + "px")
+        .html(`<strong>${d.label}</strong><br/>${fmtUsd(d.value || 0)} total through this node`);
+    })
+    .on("mouseleave", () => tooltip.style("opacity", 0));
+
+  node.append("text")
+    .attr("x", d => d.x0 < width / 2 ? d.x1 + 6 : d.x0 - 6)
+    .attr("y", d => (d.y0 + d.y1) / 2)
+    .attr("dy", "0.35em")
+    .attr("text-anchor", d => d.x0 < width / 2 ? "start" : "end")
+    .text(d => d.label);
+}
+
+function load(path) {
+  fetch(path)
+    .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(render)
+    .catch(() => {
+      d3.select("#chart").selectAll("*").remove();
+      d3.select("#no-data").style("display", "block");
+    });
+}
+
+document.getElementById("slug-select").addEventListener("change", (e) => load(e.target.value));
+load(document.getElementById("slug-select").value);
+</script>
+</body>
+</html>
