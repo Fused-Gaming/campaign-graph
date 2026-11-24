@@ -12,15 +12,17 @@
   },
   {
     "id": "LEAD-002",
-    "priority": "HIGH",
+    "priority": "MEDIUM",
     "topic": "BART item 22-461 and Simon's vote/participation",
-    "status": "UNRESOLVED",
+    "status": "PARTIALLY_RESOLVED",
     "source_ids": [
       "SRC-004",
-      "SRC-005"
+      "SRC-005",
+      "SRC-012",
+      "SRC-013"
     ],
-    "next_step": "Retrieve approved Dec. 1, 2022 minutes, board packet, roll-call record, video/transcript, action summary, and any later approval of minutes; determine presence, recusal, vote, or no recorded vote from the official record.",
-    "edge_policy": "Vote state remains UNKNOWN until documented."
+    "next_step": "BART's own Legistar Web API (webapi.legistar.com/v1/bart/eventitems/21666 and its /votes endpoint) has been checked directly: there is no individually-recorded director vote for this item in BART's structured system at all (RollCallFlag=0, empty votes array), and the agenda confirms the item was heard under a different committee (Foley's, not Simon's -- she chaired a different item, 9, that same day). This resolves the record-retrieval question (the vote record does not exist in this system) but not the underlying question of Simon's presence/vote/recusal. The only remaining avenue is a manual review of BART's archived meeting video/audio (bart.gov/boardtv), not yet attempted.",
+    "edge_policy": "Vote state remains UNKNOWN until documented. The absence of a structured vote record is itself now documented and should not be re-researched via Legistar's event-item API; only a video/audio review can add further information."
   },
   {
     "id": "LEAD-003",
