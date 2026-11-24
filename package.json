@@ -1,6 +1,6 @@
 {
   "name": "campaign-graph-tooling",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "description": "Repository tooling and release evidence gate for Campaign Graph",
   "license": "SEE LICENSE IN LICENSE",
