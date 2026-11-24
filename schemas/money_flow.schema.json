@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Money-flow file (Sankey view source data)",
+  "type": "object",
+  "required": ["schema_version", "investigation_slug", "nodes", "edges"],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "investigation_slug": {"type": "string"},
+    "generated_at": {"type": ["string", "null"], "format": "date"},
+    "generated_by": {"type": ["string", "null"]},
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "label", "node_type"],
+        "properties": {
+          "id": {"type": "string"},
+          "label": {"type": "string"},
+          "node_type": {
+            "enum": ["committee", "pac", "vendor", "foundation", "category", "person", "org"]
+          },
+          "investigation_node_id": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id", "source_id", "target_id", "amount_usd", "flow_type",
+          "confidence", "source_url", "source_title", "accessed_date"
+        ],
+        "properties": {
+          "id": {"type": "string"},
+          "source_id": {"type": "string"},
+          "target_id": {"type": "string"},
+          "amount_usd": {"type": "number", "minimum": 0},
+          "flow_type": {
+            "enum": ["contribution", "disbursement", "refund", "grant", "transfer", "conduit_contribution"]
+          },
+          "period_start": {"type": ["string", "null"], "format": "date"},
+          "period_end": {"type": ["string", "null"], "format": "date"},
+          "transaction_count": {"type": ["integer", "null"], "minimum": 0},
+          "confidence": {"enum": ["A", "B", "C", "D"]},
+          "source_url": {"type": "string"},
+          "source_title": {"type": "string"},
+          "accessed_date": {"type": "string", "format": "date"},
+          "note": {"type": ["string", "null"]}
+        }
+      }
+    }
+  }
+}
