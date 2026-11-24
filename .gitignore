@@ -5,3 +5,4 @@ build/
 *.pyc
 *.egg-info/
 .DS_Store
+release-artifacts/
