@@ -215,5 +215,132 @@
     ],
     "names_not_reached_rate_limited": [],
     "note_2": "All 18 of 18 names checked. Zero relevant matches. Alter's single hit (Linda Lee Alter, Philadelphia PA, self-employed artist, $300 earmarked via EMILYS LIST/WOMEN VOTE conduit, 2024-01-11) does not match Dr. Harrison Alter (Insight Housing director) -- different first name, location, and occupation. This closes out the FEC check for every board/officer name currently recorded in this package."
+  },
+  {
+    "id": "fec-check-broad-general-giving-history-insight-housing-officers-2026-11-24",
+    "committee_id": null,
+    "committee_name": null,
+    "query_type": "contributor_name (no committee_id filter -- checks ANY FEC-itemized contribution nationwide, to any committee/candidate/PAC, not just C00834291)",
+    "date_checked": "2026-11-24",
+    "source": "FEC API, https://api.open.fec.gov/v1/schedules/schedule_a/?contributor_name=<Last, First> (no committee_id parameter)",
+    "purpose": "User-directed broadening of the officer/board-name FEC check: not just 'did they give to Rep. Simon's committee' (already checked, zero matches -- see the other entries in this file), but 'do they have ANY FEC-itemized political giving history at all, including to PACs.' This is a different question from the prior checks and is reported with explicit caution: a city/occupation match to the known Insight Housing officer is NOT a confirmed identity merge under this package's two-independent-identifier rule -- it is reported as a plausible, unconfirmed correspondence, and no node/edge has been created from it.",
+    "results": [
+      {
+        "name_queried": "Egan, Calleene",
+        "total_records": 0,
+        "assessment": "No FEC-itemized contribution record exists nationwide under this name."
+      },
+      {
+        "name_queried": "Upshaw, Angela",
+        "total_records": 0,
+        "assessment": "No FEC-itemized contribution record exists nationwide under this name."
+      },
+      {
+        "name_queried": "Lin, Kani",
+        "total_records": 0,
+        "assessment": "114 records returned are all FEC's fuzzy substring matches on 'KANI' against unrelated surnames (Kaniasty, Kanicki, Kanitra) -- none is actually 'Lin, Kani'. No real match."
+      },
+      {
+        "name_queried": "Stutzman, Mark",
+        "total_records": 326,
+        "assessment": "Sampled records show at least three different real people named Mark Stutzman nationwide (a CTO in Gardiner NY, a self-employed attorney in Escondido CA, an unemployed donor in Park City UT) -- none sampled is from Berkeley/Oakland CA or lists an Insight Housing/nonprofit-housing employer. Given the volume (326 records), this is NOT an exhaustive check of every record; no Bay-Area match was found in the sample pulled. Not further pursued given budget -- flagged as incomplete, not negative."
+      },
+      {
+        "name_queried": "Peeks, Thomas",
+        "total_records": 7,
+        "assessment": "PLAUSIBLE MATCH (unconfirmed): one record -- 'PEEKS, THOMAS, not employed, $100, 2023-08-11, Oakland CA -> ACTBLUE' -- is consistent in city with Insight Housing's Board President. Other records in the same name (Thomas E. Peeks Mr., retired, Montgomery AL, donations to Romney/Trump/Roby) are clearly a different person. No contribution to C00834291 appears. Employer field ('not employed') does not confirm an Insight Housing connection."
+      },
+      {
+        "name_queried": "Vondeling, Alexandra",
+        "total_records": 13,
+        "assessment": "PLAUSIBLE MATCH (unconfirmed): all 13 records are 'VONDELING, ALEXANDRA, architect (Revision Architecture / Opticos Design), Berkeley CA -> ACTBLUE', 2016-2017, small-dollar ($15-$40). City matches Insight Housing's Board VP. No contribution to C00834291 (dates predate her apparent Insight Housing role and Simon's candidacy)."
+      },
+      {
+        "name_queried": "Rogon, Will",
+        "total_records": 0,
+        "assessment": "No FEC-itemized contribution record exists nationwide under this name."
+      },
+      {
+        "name_queried": "Anderson, Jessica",
+        "total_records": 3149,
+        "assessment": "Name too common to meaningfully check this way -- sampled records are fuzzy matches to unrelated people (Anderson-Webber in Wisconsin, Andersonsmith in Michigan). Not pursued further; would need an independent identifier (exact employer, city) to narrow 3,149 records to anything meaningful."
+      },
+      {
+        "name_queried": "Rogin, Alex",
+        "total_records": 100,
+        "assessment": "PLAUSIBLE MATCH (unconfirmed): sampled records are 'ROGIN, ALEXANDER, JPMorgan Chase, Senior Underwriter, Orinda CA -> ACTBLUE', small-dollar, 2023-2026. Orinda is in the same Bay Area/Contra Costa region as Insight Housing's Board Treasurer. Employer (JPMorgan Chase) does not confirm or deny an Insight Housing board connection -- board members routinely have unrelated day jobs. No contribution to C00834291 found in the sample."
+      },
+      {
+        "name_queried": "Barshay, Scot",
+        "total_records": 89,
+        "assessment": "NOT A MATCH: sampled records are 'BARSHAY, SCOTT' (note spelling), a Paul Weiss attorney in Armonk NY making large ($1,000-$3,500) contributions to national-profile campaigns (Josh for Jersey, AIPAC PAC, Sullivan Victory Fund) -- a different, more prominent person than Insight Housing's director 'Scot Barshay'. Different spelling, different coast, different financial scale."
+      },
+      {
+        "name_queried": "Antin, Tamar",
+        "total_records": 33,
+        "assessment": "PLAUSIBLE MATCH (unconfirmed): all sampled records are 'ANTIN, TAMAR, Prevention Research Center, Researcher, Berkeley CA -> ACTBLUE', recurring $1 micro-donations 2019. Prevention Research Center (PIRE) is a real Berkeley public-health research institute. City and professional-researcher profile are consistent with Insight Housing's director. No contribution to C00834291 found (dates predate Simon's candidacy)."
+      },
+      {
+        "name_queried": "Falk, Don",
+        "total_records": 2026,
+        "assessment": "Volume far too large to sample meaningfully without a narrower identifier -- most sampled records are fuzzy matches on 'Falkenhagen'/'Falkenstein', not 'Falk, Don'. One real 'FALK, DON, University of Arizona, Professor, Albuquerque NM' record found, which is NOT a Bay Area match. Not pursued further given budget; flagged as incomplete, not negative. Next step: narrow with contributor_city=Berkeley or contributor_city=Oakland if this name becomes a higher priority."
+      },
+      {
+        "name_queried": "Novin, Iman",
+        "total_records": 49,
+        "assessment": "STRONG PLAUSIBLE MATCH (unconfirmed): all sampled records are 'NOVIN, IMAN, Novin Development Corp, Affordable Housing Developer / Real Estate, Walnut Creek CA'. The occupation ('affordable housing developer') is a strong contextual match to Insight Housing's director Iman Novin. Destinations: California Democratic Party, Iranian American Democrats of California PAC, Democratic Party of Contra Costa County, DNC (earmarked via ACTBLUE), and Sepi Shyne for Congress (a different, unrelated Southern California candidate) -- NONE involve Rep. Simon or C00834291 in any way."
+      },
+      {
+        "name_queried": "Ernst, Sam",
+        "total_records": 164,
+        "assessment": "PLAUSIBLE MATCH (unconfirmed): real match found -- 'ERNST, SAMUEL, Westcliff University, Professor, Berkeley CA -> ACTBLUE', small-dollar. Berkeley city matches Insight Housing's director Sam Ernst. Most of the 164 records are fuzzy matches to unrelated people (Ernst-Fortin in NY, Ernst Samantha in PA/IL). No contribution to C00834291 found in the sample."
+      },
+      {
+        "name_queried": "Omi, Kimi",
+        "total_records": 6,
+        "assessment": "STRONG PLAUSIBLE MATCH (unconfirmed): all 6 records are 'OMI, KIMI, Kaiser Permanente, Hospital Administrator, Oakland CA', small-dollar ($10-$100), 2024, including one to HARRIS FOR PRESIDENT. City and consistent name/employer across every record strongly suggest one real person; plausibly Insight Housing's director Kimi Omi. No contribution to C00834291 found."
+      },
+      {
+        "name_queried": "Alter, Harrison",
+        "total_records": 115,
+        "assessment": "STRONG PLAUSIBLE MATCH (unconfirmed): all sampled records are 'ALTER, HARRISON, Alameda County, Physician, Berkeley CA', recurring $100/month-pattern donations to ACTBLUE and 'THE SCHOOL BOARD PROJECT' PAC. 'Dr.' prefix on Insight Housing's director and 'Physician' occupation here are a strong contextual match, as is Berkeley city and Alameda County employer. No contribution to C00834291 found."
+      },
+      {
+        "name_queried": "Kirnon, Stephen",
+        "total_records": 34,
+        "assessment": "PLAUSIBLE MATCH (unconfirmed): all sampled records are 'KIRNON, STEPHEN, Pepperdine University, Professor, San Ramon CA', including one to HARRIS FOR PRESIDENT. San Ramon is in the same Bay Area region as Insight Housing (though not Berkeley/Oakland specifically). 'Dr.' prefix on Insight Housing's director and 'Professor' occupation here are consistent. No contribution to C00834291 found."
+      },
+      {
+        "name_queried": "Vaden, Archie",
+        "total_records": 0,
+        "assessment": "No FEC-itemized contribution record exists nationwide under this name."
+      },
+      {
+        "name_queried": "Hada, Amisha",
+        "total_records": 0,
+        "assessment": "No FEC-itemized contribution record exists nationwide under this name."
+      },
+      {
+        "name_queried": "Villegas, Lawrence",
+        "total_records": 2,
+        "assessment": "NOT A MATCH: both records are from 'LAWRENCE VILLEGAS VICTORY FUND', a candidate committee for a different person named Lawrence Villegas who ran for Congress himself (VILLEGAS FOR CONGRESS) -- this is a committee-level transfer, not an individual contribution by Insight Housing's Lawrence Villegas. Unrelated name coincidence."
+      },
+      {
+        "name_queried": "Treggiri, Kathleen",
+        "total_records": 0,
+        "assessment": "No FEC-itemized contribution record exists nationwide under this name."
+      },
+      {
+        "name_queried": "Sharpe, Amory",
+        "total_records": 16,
+        "assessment": "STRONG PLAUSIBLE MATCH (unconfirmed): all sampled records are 'SHARPE, AMORY, TNDC, Non Profit Executive, San Francisco CA -> ACTBLUE', small-dollar. TNDC (Tenderloin Neighborhood Development Corporation) is a real, well-known SF affordable-housing nonprofit, directly consistent with Insight Housing's former Director of Fund Development working in the same sector. No contribution to C00834291 found."
+      }
+    ],
+    "overall_finding": "Across all 22 names checked (broad, no-committee-filter search), NOT ONE contribution to C00834291 (Lateefah for Congress) or any destination involving Rep. Simon was found anywhere in the sampled records. Several names show plausible (unconfirmed, city/occupation-consistent) matches to real people with ordinary small-dollar Democratic political-giving histories via ACTBLUE and mainstream state/national party committees -- this is routine civic participation, not evidence of any connection to this investigation's subjects. Per this package's rules, none of these plausible matches have been merged into a confirmed identity or used to create any new node/edge; they are recorded here as a researched, bounded lead only.",
+    "incomplete_due_to_volume": [
+      "Stutzman, Mark (326 records, only ~8 sampled)",
+      "Falk, Don (2,026 records, only ~8 sampled, dominated by fuzzy name matches)",
+      "Anderson, Jessica (3,149 records -- not meaningfully searchable by name alone)"
+    ]
   }
 ]
