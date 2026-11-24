@@ -1,6 +1,6 @@
 # Findings memo: Insight Housing / BRIDGE Housing / Lateefah Simon MVP investigation
 
-**Status:** in progress, evidence-first pipeline validation. **This memo reflects the record as of 2026-10-03 and will go stale as the underlying JSON ledgers change — treat it as a snapshot, not the source of truth. The JSON files in this directory are canonical; if this memo and a JSON file disagree, the JSON file is right.**
+**Status:** in progress, evidence-first pipeline validation. **This memo reflects the record as of 2026-11-24 and will go stale as the underlying JSON ledgers change — treat it as a snapshot, not the source of truth. The JSON files in this directory are canonical; if this memo and a JSON file disagree, the JSON file is right.**
 
 ## What this is
 
@@ -34,15 +34,15 @@ This is recorded carefully and should not be over-read: Rep. Simon is included i
 - No congressional decision-maker involvement in any of the 16 federal awards found; neither nonprofit appears in Rep. Simon's own FY26/FY27 Community Project Funding (earmark) request pages.
 - Neither Berkeley's nor Alameda County's open-data portals have any grant/contract/vendor dataset at all — confirmed by getting real results for broader queries on the same endpoints, not a tooling failure.
 
-## Leadership data: real names found, with honest contradictions preserved
+## Leadership data: real names found, two contradictions since resolved from primary sources
 
-A reliable third-party aggregator (CauseIQ, which republishes dated IRS Form 990 Part VII key-personnel data) substantially deepened officer rosters for Insight Housing, BRIDGE Housing Corporation (and its Southern California subordinate), EBALDC, and the Bridge Association of REALTORS. Two genuine contradictions surfaced and were preserved rather than silently resolved:
+A reliable third-party aggregator (CauseIQ, which republishes dated IRS Form 990 Part VII key-personnel data) substantially deepened officer rosters for Insight Housing, BRIDGE Housing Corporation (and its Southern California subordinate), EBALDC, and the Bridge Association of REALTORS. Two genuine contradictions surfaced; one is now resolved:
 
-1. **Calleene Egan** is CEO per earlier web-search synthesis, but CFO per CauseIQ's dated 990 data.
-2. **BRIDGE Housing Corporation's General Counsel**: Hallock Svensk per the org's own site (Sept. 24), Lisa Laffer per CauseIQ (Jan. 2026).
+1. **Calleene Egan** — CEO per earlier web-search synthesis, CFO per CauseIQ's dated 990 data. **RESOLVED 2026-11-24**: a direct read of Insight Housing's actual IRS Form 990 e-file XML (FY2023-24, filed 2025-05-15, fetched from the IRS's own public bulk e-file index after ProPublica's PDF endpoint blocked both a direct fetch and an independent WebFetch-agent attempt with a captcha) confirms **Egan is Chief Executive Officer**. CauseIQ's CFO claim used the identical filing date, strongly suggesting it mis-paired her name with Kani Lin's CFO title while scraping the same table — an aggregator error, not a real second title. The same primary-source read also confirmed Angela Upshaw as COO, Kani Lin as CFO (as of that filing), and — as a bonus — **Mark Stutzman's board seat**, resolving his status from "unverified bulk web-search name" to primary-source-confirmed director. 14 other board/officer names were newly confirmed by name and exact title from the same filing.
+2. **BRIDGE Housing Corporation's General Counsel**: Hallock Svensk per the org's own site (Sept. 24), Lisa Laffer per CauseIQ (Jan. 2026). Still unresolved — this is a different organization's filing, not addressed by the Insight Housing 990 read above.
 3. (Minor, not a hard contradiction) **BRIDGE Housing - Southern California's CEO**: Ken Lombard and Nadia Sager both listed within days of each other — plausibly an org-wide-president-vs-subsidiary-operational-CEO structure, not confirmed.
 
-None of these new names have yet been cross-checked against FEC contributor data (blocked, see below) — that cross-check is the natural next step once the rate limit clears, and the plan explicitly asked for every discovered name to feed back into that check.
+Egan, Upshaw, Lin, and Stutzman specifically were already cross-checked against FEC contributor data for Rep. Simon's committee (C00834291) before this 990 read, with zero matches found for any of them. The 18 other board/officer names newly confirmed by this 990 read (Peeks, Vondeling, Rogon, Anderson, Rogin, Barshay, Antin, Falk, Novin, Ernst, Omi, Alter, Kirnon, Vaden, Hada, Villegas, Treggiri, Sharpe) have now also been checked (2026-11-24) — zero relevant matches for any of them; two same-surname hits (a different Anderson, a different Ernst) and one (a different Alter) were individually ruled out on employer/location/occupation. See `contributions.json`.
 
 ## FEC data lane: now complete
 
